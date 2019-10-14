@@ -1,0 +1,78 @@
+<!doctype HTML>
+<!-- This tag is mostly historical, it defines that HTML fits Standard -->
+<!-- Skipping it page would be rendered in Quirk Mode, which does not guarantee many CSS rules -->
+
+<!-- <html> defines an HTML document -->
+<html>
+    
+<!-- <head> defines information about the document -->
+    <head>
+        <!-- Defines a title for the document -->
+        <title>HTML basic tags by example</title>
+
+        <!-- Meta-tags define meta-information of a document -->
+        
+        <!-- Document charset -->
+        <meta charset="UTF-8">
+
+        <!-- <meta http-equiv> attrubute is HTTP meta-information -->
+        <!--refresh every 30 secionds-->
+        <meta http-equiv="refresh" content="30">
+
+        <!--content-type text/html -->
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+        <!-- TODO: try preferred CSS -->
+        <!-- <meta http-equiv="default-style" content="the document's preferred stylesheet"> -->
+
+        <!-- Some of them in form of pairs <name:content> -->
+        <!-- Dociment description -->
+        <meta name="description" content="Working examples of basic HTML tags">
+
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+
+        <!-- Document author -->
+        <meta name="author" content="Yurii Cherkasov">
+
+        <!-- The viewport is the user's visible area of a web page. 
+        It varies with the device, and will be smaller on a mobile phone than on a computer screen 
+        The initial-scale=1.0 part sets the initial zoom level -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+
+    <!-- Defines the document's body -->
+    <body>
+        
+        <!-- Headings from 1 to 6 
+            Headings tell ONLY about the document structure, not about the style
+        -->
+        <h1>This is the demonstration of headings</h1>
+        <h2>Subheading 2</h2>
+        <h3>Subheading 3</h3>
+        <h4>Subheading 4</h4>
+        <h5>Subheading 5</h5>
+        <h6>Subheading 6</h6>
+
+        <p lang="en-us">Headings have levels from 1 to 6 </p> 
+        
+        <p lang="en-us">Headings tell ONLY about the document structure, not about the style. 
+            This is so-called <b>Structural markup</b> </p> 
+
+        <p lang="en-us">
+            Browsers automatically add some space (margin) before and after each paragraph element. 
+            <br>The margins can be modified with CSS (with the margin properties)
+            <br>&lt;br&gt; tag is a single line break
+        </p>
+
+        <!-- Horizontal line defines a thematic break -->
+        <hr>
+        <p>
+            The &lt;hr&gt; tag defines a thematic break in an HTML page (e.g. a shift of topic).
+            Also it is used to separate content (or define a change) in an HTML page.        
+        </p>
+
+    </body>
+
+</html>

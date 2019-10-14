@@ -1,0 +1,234 @@
+<!doctype HTML>
+<html>
+    
+    <head>
+        <title>HTML lists and table tags by example</title>
+        
+        <!-- Meta-tags See meta-tags in 01_01_html_basics -->
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Working examples of table and list HTML5 tags">
+        <meta name="author" content="Yurii Cherkasov">
+        
+    </head>
+
+
+    <body>
+        
+        <h1>Lists</h1>
+
+        <h2>Notes about lists</h2>
+        <ul>
+            <li>Each item in the list is placed between an opening &lt;li&gt; tag and a closing &lt;/li&gt; tag. 
+                (The li stands for list item.)</li>        
+            <li>Lists can contain only &lt;li&gt; elements, no text</li>
+            <li>
+                    Sometimes you may see a type attribute used with the &lt;ol&gt; of &lt;ul&gt; element to specify the type of
+                    numbering (numbers, letters, roman numerals and so on) or bullets (circles, squares, diamonds and so on)
+                    <br>It is better to use the <b>CSS</b> <i>liststyle-type property</i>.
+            </li>
+        </ul>
+
+        <h2>Unordered lists</h2>
+
+        <p>
+            Browsers indent lists inordered by default. Sometimes you may see a type attribute used with the &lt;ul&gt;
+            element to specify the type of bullet point (circles, squares, diamonds and so on). 
+            <br>It is better to use the <b>CSS</b> <i>liststyle-type property</i>.
+        </p>
+        <p>
+            Tag &lt;ul&gt; tag defined unordered list<br>
+            <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul> 
+        </p>
+
+        <h2>Ordered lists</h2>
+
+        <p>
+            Browsers indent lists ordered by default. Sometimes you may see a type attribute used with the &lt;ol&gt; 
+            element to specify the type of numbering (numbers, letters, roman numerals and so on). 
+            <br>It is better to use the <b>CSS</b> <i>liststyle-type property</i>.
+        </p>
+        <p>
+            Tag &lt;ol&gt; tag defined ordered list<br>
+            <ol>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol> 
+        </p>
+    
+        <h2>Description lists</h2>
+        
+        <p>
+            The defnition list is created with the &lt;dl&gt; element and usually consists of a series of terms and
+            their defnitions.
+            <br>Inside the &lt;dl&gt; element you will usually see pairs of &lt;dt&gt; and &lt;dd&gt; elements.
+            <br>Inside a &lt;dd&gt; tag you can put paragraphs, line breaks, images, links, lists, etc.
+            <br>Sometimes you might see a list where there are two terms used for the same defnition or two 
+            different defnitions for the same term.
+        </p>
+        <p>
+            <dl>
+                <dt>Sashimi</dt>
+                <dd>Sliced raw fish that is served with condiments such as shredded daikon radish or ginger root, 
+                    wasabi and soy sauce.
+                </dd>
+                <dt>Scale</dt>
+                <dd>
+                    A device used to accurately measure the weight of ingredients
+                </dd>
+                <dd>
+                    A technique by which the scales are removed from the skin of a fish
+                </dd>
+                <dt>Scamorze</dt>
+                <dt>Scamorzo</dt>
+                <dd>
+                    An Italian cheese usually made from whole cow's milk (although it was traditionally made from buffalo milk)
+                </dd>
+            </dl>
+        </p>
+
+        <h2>Nested lists</h2>
+
+        <p>
+            You can put a second list inside an &lt;li&gt; element to create a sublist or nested list.
+            Browsers display nested lists indented further than the parent list.
+            <br>In nested unordered lists, the browser will usually changethe style of the bullet point too.
+            <br>In ordered, you should use CSS to style numerals.
+        </p>
+
+        <p>
+            <ul>
+                <li>Mousses</li>
+                <li>Pastries
+                    <ul>
+                        <li>Croissant</li>
+                        <li>Mille-feuille</li>
+                        <li>Palmier</li>
+                        <li>Profiterole</li>
+                    </ul>
+                </li>
+                <li>Tarts</li>
+            </ul>
+        </p>
+
+        <h1>Tables</h1>
+
+        <!-- Starting from here define default table style-->
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+        </style>
+
+        <h2>Table basics</h2>
+
+        <p>
+            The &lt;table&gt; element is used to create a table. The contents of the table are written out row by row.
+            <br>To indicate the start of each row using the opening <code>&lt;tr&gt;</code> tag. 
+            The <code>&lt;tr&gt;</code> stands for table row.
+            <br>Each cell of a table is represented using a <code>&lt;td&gt;</code> element. 
+            The <code>&lt;td&gt;</code> stands for table data.
+            <br>the &lt;td&gt; element defines a table header.
+            <br>A more complex HTML table may also include 
+            &lt;caption&gt;, &lt;col&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt; elements.
+            <br>There are a number of table attributes, like "align", "bgcolor", "border", "cellpadding", "cellspacing", 
+            "frame", "rules", "summary", and "width". These attributes are obsolete and not supported in HTML5.
+            <br>Use CSS styling instead
+        </p>
+
+        <h2>Table caption, header and footer</h2>
+
+        <h3>Horizontal headers</h3>
+
+        <p>
+            &lt;caption&gt; tag goes straight after the opening &lt;table&gt; tag.
+        </p>
+
+        <table>
+            <caption>Phone book</caption>
+            <tr>
+                <th>Name</th>
+                <th>Telephone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <td>Jeff Bezos</td>
+                <td>666 88 313</td>
+            </tr>
+
+        </table>
+
+        <h3>Vertical headers</h3>
+
+        <table>
+            <caption>Phone book</caption>
+            <tr>
+                <th>First Name:</th>
+                <td>Bill Gates</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <th>Telephone:</th>
+                <td>555 77 854</td>
+                <td>666 88 313</td>
+            </tr>
+        </table>
+
+        <h2>Table headerings</h2>
+
+        <h2>Spanning cells</h2>
+
+        <h3>Cell that spans two columns:</h3>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 854</td>
+                <td>555 77 855</td>
+            </tr>
+            <tr>
+                <td>Jeff Bezos</td>
+                <td>666 77 854</td>
+                <td>777 88 855</td>
+            </tr>
+    
+        </table>
+
+        <h3>Cell that spans two rows:</h3>
+
+        <table>
+            <tr>
+                <th>First Name:</th>
+                <td>Bill Gates</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone:</th>
+                <td>555 77 854</td>
+                <td>666 77 854</td>
+            </tr>
+            <tr>
+                <td>555 77 855</td>
+                <td>777 88 855</td>
+            </tr>
+        </table>
+
+        <h2>Table styling</h2>
+
+        <h2>Table scripting</h2>
+
+    </body>
+
+</html>
