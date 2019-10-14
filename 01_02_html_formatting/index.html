@@ -1,5 +1,6 @@
 <!doctype HTML>
-<html>
+
+<html lang="en" title="HTML formatting tags by example">
 
 <head>
     <title>HTML formatting tags by example</title>
@@ -16,7 +17,7 @@
 
     <h1>Demonstration of formatting tags</h1>
     <h2>Structural markup</h2>
-    
+
 
     <h3>Text formatting</h3>
     <p>
@@ -27,13 +28,13 @@
         <br>Subcript example, &lt;sub&gt; tag: The amount of CO<sub>2</sub> in the atmosphere grew by 2ppm in 2009
         <br>Use the &lt;mark&gt; tag if you want to <mark>highlight</mark> parts of your text
         <br>The &lt;small&gt; tag defines <small>smaller</small> text (and other side comments)
-        <br>The &lt;u&gt; tag represents some text that should be <u>stylistically different</u> from normal text, 
+        <br>The &lt;u&gt; tag represents some text that should be <u>stylistically different</u> from normal text,
         such as misspelled words
     </p>
 
 
     <h3>Date and time</h3>
-    The &lt;time&gt; tag defines a human-readable date/time (see source for examples): 
+    The &lt;time&gt; tag defines a human-readable date/time (see source for examples):
     <br>We open at <time>10:00</time> every morning
     <br>I have a date on <time datetime="2019-02-14 20:00">Valentines day</time>
 
@@ -42,7 +43,7 @@
     <p>The &lt;ins&gt; element can be used to show content that has been <ins>inserted</ins> into a document</p>
     <p>The &lt;del&gt; element can show text that has been <del>deleted</del> from it</p>
     <p>
-        The content of a &lt;ins&gt; element is usually underlined, 
+        The content of a &lt;ins&gt; element is usually underlined,
         while the content of a &lt;del&gt; element usually has a line through it.
     </p>
     <p>
@@ -57,8 +58,8 @@
     <h3>Text direction</h3>
     <p>
         Use &lt;bdo&gt; tag, right-to-left text example (notice, by symbols, not words):
-        <br><bdo dir="rtl">This text will go right-to-left</bdo> 
-        <br><bdo dir="ltr">This text is explicitly left-to-right, even though also uses &lt;bdo&gt;, which is default</bdo> 
+        <br><bdo dir="rtl">This text will go right-to-left</bdo>
+        <br><bdo dir="ltr">This text is explicitly left-to-right, even though also uses &lt;bdo&gt;, which is default</bdo>
     </p>
     <p>
         This text containd &lt;bdi&gt; tag; it shows the browser, that this content may have different direction,
@@ -68,7 +69,7 @@
 
     <h3>Pre-formatted text</h3>
     <p>
-        Text in a &lt;pre&gt; element is displayed in a fixed-width font (usually Courier), 
+        Text in a &lt;pre&gt; element is displayed in a fixed-width font (usually Courier),
         and it preserves both spaces and line breaks:
     </p>
     <pre>
@@ -82,49 +83,48 @@
         Use &lt;code&gt; tag to define a piece of computer code. It is a phrase tag
         <code>std::complex<double> c1(1., 2.);</code>
     </p>
-    <p>
-        Other phrase tags are: 
-        <ul>
-            <li> &lt;em&gt; 	Renders as emphasized text </li>
-            <li> &lt;strong&gt; 	Defines important text </li>
-            <li> &lt;code&gt; 	Defines a piece of computer code </li>
-            <li> &lt;samp&gt; 	Defines sample output from a computer program </li>
-            <li> &lt;kbd&gt; 	Defines keyboard input </li>
-            <li> &lt;var&gt; 	Defines a variable </li>
-        </ul>
-        <br>See example in source code:<br>
+    Other phrase tags are:
+    <ul>
+        <li> &lt;em&gt 	Renders as emphasized text </li>
+        <li> &lt;strong&gt; Defines important text </li>
+        <li> &lt;code&gt; Defines a piece of computer code </li>
+        <li> &lt;samp&gt; Defines sample output from a computer program </li>
+        <li> &lt;kbd&gt; Defines keyboard input </li>
+        <li> &lt;var&gt; Defines a variable </li>
+    </ul>
+    <br>See example in source code:<br>
 
-        <em>Emphasized text</em><br>
-        <strong>Strong text</strong><br>
-        <code>A piece of computer code</code><br>
-        <samp>Sample output from a computer program</samp><br>
-        <kbd>Keyboard input</kbd><br>
-        <var>Variable</var>
-    </p>
+    <em>Emphasized text</em><br>
+    <strong>Strong text</strong><br>
+    <code>A piece of computer code</code><br>
+    <samp>Sample output from a computer program</samp><br>
+    <kbd>Keyboard input</kbd><br>
+    <var>Variable</var>
 
 
     <h3>Display meter or progress bar</h3>
+
     <p>
         The &lt;meter&gt; tag defines a scalar measurement within a known range, or a fractional value.
         <br>Examples: Disk usage, the relevance of a query result, etc.
-
-        <p>Display a meter:</p>
-        
-        <br><meter value="2" min="0" max="10">2 out of 10</meter> 
-        &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;
-        <br> <meter value="0.6">60%</meter> 
-        &lt;meter value="0.6"&gt;60%&lt;/meter&gt; 
-
-        <br><br> <b>Note!</b> The &lt;meter&gt;  tag should not be used to indicate dynamic progress (as in a progress bar). 
-        For progress bars, use the &lt;progress&gt; tag:
-
-        <br> <progress value="22" max="100"></progress>  &lt;progress value="22" max="100"&gt;&lt;/progress&gt;
     </p>
 
-    
+    <p>Display a meter:</p>
+
+    <br><meter value="2" min="0" max="10">2 out of 10</meter>
+    &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;
+    <br> <meter value="0.6">60%</meter>
+    &lt;meter value="0.6"&gt;60%&lt;/meter&gt;
+
+    <br><br> <b>Note!</b> The &lt;meter&gt;  tag should not be used to indicate dynamic progress (as in a progress bar).
+    For progress bars, use the &lt;progress&gt; tag:
+
+    <br> <progress value="22" max="100"></progress>  &lt;progress value="22" max="100"&gt;&lt;/progress&gt;
+
     <h2>Semantic markup</h2>
 
     <h3>&lt;strong&gt; and &lt;em&gt;</h3>
+
     <p>
         The use of the &lt;strong&gt; tag: <strong> element </strong> indicates that its content has strong
         importance.
@@ -174,37 +174,40 @@
         Safari and Chrome do not change its appearance.
     </p>
     <p>
-        Use of &lt;abbr&gt; tag: 
+        Use of &lt;abbr&gt; tag:
         <abbr>Prof.</abbr> Stephen Hawking is a theoretical physicist and cosmologist.
         <br>If you use an abbreviation or an acronym, then the element can be used.
         A title attribute on the opening tag is used to specify the full term
     </p>
     <p>
         The &lt;address&gt; element has quite a specifc use: to contain contact details for the author of the page.
-        <br>It can contain a physical address, but it does not have to. 
-        For example, it may also contain a phone number or email address. 
+        <br>It can contain a physical address, but it does not have to.
+        For example, it may also contain a phone number or email address.
         Browsers often display the content of the &lt;address&gt; element in italics. Example:
-            <address>
-                    <p><a href="mailto:homer@example.org">
-                    homer@example.org</a></p>
-                    <p>742 Evergreen Terrace, Springfield.</p>
-            </address>
     </p>
 
-    
+    <!-- address tag is not allowed within p tag-->
+    <address>
+        <p><a href="mailto:homer@example.org">
+            homer@example.org</a></p>
+        <p>742 Evergreen Terrace, Springfield.</p>
+    </address>
+
     <h3>The template tag</h3>
 
-        <p>Content inside a template tag is hidden from the client (see page source)</p>
+        <p>
+            Content inside a template tag is hidden from the client (see page source).
+            Could be used for sketches, unfinished code etc.
+        </p>
         <!-- This content is not displayed -->
         <template>
-            <h2>Flower</h2>
-            <img src="img_white_flower.jpg" width="214" height="204">
+            <h2>Schrodinger cat</h2>
+            <!-- "alt" required attribute specifies an alternate text for an image,
+            which is displayed when it is impossible to load it -->
+            <img src="schrodinger_cat.jpeg" width="348" height="348" alt="">
         </template>
 
         <p>Templates could be used from JavaScript code</p>
-
-</body>
-</html>
 
 </body>
 
