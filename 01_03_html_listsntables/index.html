@@ -12,7 +12,10 @@
         
     </head>
 
-    <!-- Define default table style -->
+    <!-- Define default table style
+    Let's say, border is set using the CSS border property
+    If you want the borders to collapse into one border, add the CSS border-collapse property
+    -->
     <style>
         table, th, td {
             border: 1px solid black;
@@ -87,20 +90,15 @@
         
         <p>
             The definition list is created with the 
-            <code>&lt;dl&gt;</code> 
-            element and usually consists of a series of terms and
+            <code>&lt;dl&gt;</code> element and usually consists of a series of terms and
             their definitions.
             <br>Inside the 
-            <code>&lt;dl&gt;</code> 
-            element you will usually see pairs of 
-            <code>&lt;dt&gt;</code> 
-            and 
-            <code>&lt;dd&gt;</code> 
-            elements.
+            <code>&lt;dl&gt;</code> element you will usually see pairs of
+            <code>&lt;dt&gt;</code> and
+            <code>&lt;dd&gt;</code> elements.
             
             <br>Inside a 
-            <code>&lt;dd&gt;</code> 
-            tag you can put paragraphs, line breaks, images, links, lists, etc.
+            <code>&lt;dd&gt;</code> tag you can put paragraphs, line breaks, images, links, lists, etc.
             <br>Sometimes you might see a list where there are two terms used for the same definition or two 
             different definitions for the same term.
         </p>
@@ -129,8 +127,7 @@
 
         <p>
             You can put a second list inside an 
-            <code>&lt;li&gt;</code> 
-            element to create a sublist or nested list.
+            <code>&lt;li&gt;</code> element to create a sublist or nested list.
             Browsers display nested lists indented further than the parent list.
             <br>In nested unordered lists, the browser will usually changethe style of the bullet point too.
             <br>In ordered, you should use CSS to style numerals.
@@ -155,24 +152,19 @@
 
         <p>
             The 
-            <code>&lt;table&gt;</code> 
-            element is used to create a table. The contents of the table are written out row by row.
+            <code>&lt;table&gt;</code> element is used to create a table. The contents of the table are written out row by row.
             <br>To indicate the start of each row using the opening
             <code>&lt;tr&gt;</code>
             tag.
             The
-            <code>&lt;tr&gt;</code>
-            stands for table row.
+            <code>&lt;tr&gt;</code> stands for table row.
 
             <br>Each cell of a table is represented using a
-            <code>&lt;td&gt;</code>
-            element.
+            <code>&lt;td&gt;</code> element.
             The
-            <code>&lt;td&gt;</code>
-            stands for table data.
+            <code>&lt;td&gt;</code> stands for table data.
             <br>the
-            <code>&lt;td&gt;</code>
-            element defines a table header.
+            <code>&lt;td&gt;</code> element defines a table header.
             <br>A more complex HTML table may also include
             <code>&lt;caption&gt;</code>,
             <code>&lt;col&gt;</code>,
@@ -190,7 +182,8 @@
         <h3>Horizontal headers</h3>
 
         <p>
-            <code>&lt;caption&gt;</code> tag goes straight after the opening <code>&lt;table&gt;</code> tag.
+            <code>&lt;caption&gt;</code> tag goes straight after the opening
+            <code>&lt;table&gt;</code> tag.
         </p>
 
         <table>
@@ -226,13 +219,23 @@
             </tr>
         </table>
 
-        <h2>Table headerings</h2>
-
         <h2>Spanning cells</h2>
+
+        <p>
+            Sometimes you may need the entries in a table to stretch across more than one column or row.
+            The
+            <code>colspan</code> or
+            <code>rowspan</code>
+            attribute can be used on a
+            <code>&lt;th&gt;</code> or
+            <code>&lt;td&gt;</code>
+            element and indicates how many columns that cell should run across.
+        </p>
 
         <h3>Cell that spans two columns:</h3>
 
         <table>
+            <caption>Phone book</caption>
             <tr>
                 <th>Name</th>
                 <th colspan="2">Telephone</th>
@@ -269,9 +272,74 @@
             </tr>
         </table>
 
+        <h2>Table header and footer</h2>
+
+        <p>
+            There are three elements that help distinguish between the main content of the table and the first and last
+            rows (which can contain different content) and  style these sections in a different manner
+            than the rest of the table (using CSS rules)
+        </p>
+
+        <p>
+            <code>&lt;thead&gt;</code> is a headings of the table, The body should sit inside the
+            <code>&lt;tbody&gt;</code> element, The footer belongs inside the
+            <code>&lt;tfoot&gt;</code> element.
+        </p>
+
+        <table>
+            <!-- Headers for all columns -->
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Income</th>
+                    <th>Expenditure</th>
+                </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+                <tr>
+                    <th>1st January</th>
+                    <td>250</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <th>2nd January</th>
+                    <td>285</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <th>31st January</th>
+                    <td>129</td>
+                    <td>64</td>
+                </tr>
+            </tbody>
+
+            <!-- Footer, e.g. for total results -->
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>7824</td>
+                    <td>1241</td>
+                </tr>
+            </tfoot>
+        </table>
+
         <h2>Table styling</h2>
 
-        <h2>Table scripting</h2>
+        <p>
+            There are some outdated attributes which you should not use on new websites. You may,
+            however, come across some of them when looking at older code, so I will mention them here.
+            All of these attributes have been replaced by the use of CSS. For example, you could set style attributes
+            like <code>width</code>,
+            <code>cellpadding</code>,
+            <code>cellspacing</code>, border and background color etc.
+        </p>
+
+        <template>
+            <!-- Complete after JS week -->
+            <h2>Table scripting</h2>
+        </template>
+
 
     </body>
 
