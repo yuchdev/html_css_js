@@ -69,10 +69,241 @@
         </ul>
 
 
-        <h1>Login form example</h1>
+        <h1>Text Forms</h1>
 
+        <h2>Form definition</h2>
 
+        <p>
+            The best known form on the web is probably the search box that sits right in the middle of
+            Google's homepage.<br>
+            The <code>&lt;form&gt;</code> is a tag used to create an HTML form in browser for custom user input.
+        </p>
+
+        Any form controls live inside a <code>&lt;form&gt;</code> element.<br>
+        The <code>&lt;form&gt;</code> element can contain one or more of the following form elements:
+
+        <ul>
+            <li><code>&lt;input&gt;</code></li>
+            <li><code>&lt;textarea&gt;</code></li>
+            <li><code>&lt;button&gt;</code></li>
+            <li><code>&lt;select&gt;</code></li>
+            <li><code>&lt;option&gt;</code></li>
+            <li><code>&lt;optgroup&gt;</code></li>
+            <li><code>&lt;fieldset&gt;</code></li>
+            <li><code>&lt;label&gt;</code></li>
+            <li><code>&lt;output&gt;</code></li>
+        </ul>
+
+        <p>
+            The <code>&lt;form&gt;</code> element should always carry the
+            <code>action</code> attribute, and also usually have
+            <code>method</code> and <code>id</code>attributes.<br>
+        </p>
+
+        <h3>action</h3>
+        Action attribute provides value of the URL page on the server,
+        that will receive the form information, when it's submitted
+
+        <h3>method</h3>
+        Method attribute may carry one of two values, <code>get</code> or <code>post</code>.
+        You can read details about both of them at
+        <a href="https://www.w3schools.com/tags/ref_httpmethods.asp">W3School HTTP Reference</a>
+        Here are some reasons to use one of them:
+        <ul>
+            <li>GET is good for short and unimportant pieces of data, as it has length restriction</li>
+            <li>GET is cached and saved in browser history, don't use it for any sensitive data</li>
+            <li>POST has no limits on length, it could be used to send large pieces of data, like file</li>
+            <li>POST does not leave traces in cache and browser history, use it for sensitive and private data</li>
+        </ul>
+
+        <h3>id</h3>
+        <code>id</code> attribute is used for unique identification of HTML element on the page,
+        to access it from CSS stylesheet or JavaScript.
+
+        <h3>Other attributes</h3>
+        The <code>&lt;form&gt;</code> tag has several other useful attributes. <code>autocomplete</code> turns on and off
+        automatic form completion, <code>enctype</code> specifies how the form data should be encoded
+        while submitting it to the server, <code>novalidate</code> turns off form validation.
+
+        <h2>Input types <code>text</code> and <code>password</code></h2>
+
+        Single-line text input used for a single line of text such as logins, email addresses and names.<br>
+        Password input is like a single line text box but it masks the characters entered.<br>
+
+        <h3>Login form example</h3>
+
+        Here's an example of login form:
+
+        <form action="http://localhost:3000/login">
+            <p>Username:
+                <input type="text" name="username" maxlength="30" />
+            </p>
+            <p>Password:
+                <input type="password" name="password" maxlength="30" />
+            </p>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>
+            Type <code>text</code> or <code>password</code> are specific for single-line input forms,
+            <code>name</code> is a server-side form identifier,
+            <code>maxlength</code> is a very basic validation restricting the number of characters to enter.
+        </p>
+
+        <p>
+            Even if the password is hidden on the screen, this does not mean that the data in a password
+            control is sent securely to the server. For full security, the server needs to be set up to communicate
+            with users' browsers using Secure Sockets Layer (SSL) and HTTPS protocol.
+        </p>
+
+        <h3>Tag <code>input</code> attributes</h3>
+
+        <ul>
+            <li>
+                <code>accept</code> is a specific the for file input dialog box (only for <code>type="file"</code>).
+                It specifies a filter for file extension and media type
+            </li>
+            <li>
+                <code>alt</code> specifies an alternate text for images (only for <code>type="image"</code>)
+            </li>
+            <li>
+                <code>autocomplete</code> specifies if <code>&lt;input&gt;</code> element have autocomplete enabled
+            </li>
+            <li>
+                <code>autofocus</code> specifies if <code>&lt;input&gt;</code> element
+                should automatically get focus when the page loads
+            </li>
+            <li>
+                <code>checked</code> specifies that an <code>&lt;input&gt;</code> element should be pre-selected
+                when the page loads (for <code>type="checkbox"</code> or <code>type="radio"</code>)
+            </li>
+            <li>
+                <code>disabled</code> specifies that an <code>&lt;input&gt;</code> element should be disabled
+            </li>
+            <li>
+                <code>form</code> specifies the form ID the <code>&lt;input&gt;</code> element belongs to
+            </li>
+            <li>
+                <code>height</code> and <code>width</code> specifies size if <code>type="image"</code> only
+            </li>
+            <li>
+                <code>list</code> refers to a <code>&lt;datalist&gt;</code> element ID that contains pre-defined options
+                for an <code>&lt;input&gt;</code> element
+            </li>
+            <li>
+                <code>maxlength</code> specifies the maximum number of characters allowed in
+                <code>&lt;input&gt;</code> element, specific for text-based elements only
+            </li>
+            <li>
+                <code>min</code> specifies minimum number or date
+            </li>
+            <li>
+                <code>multiple</code> specifies that a user can enter more than one value in
+                <code>&lt;input&gt;</code> element
+            </li>
+            <li>
+                <code>pattern</code> specifies a regular expression for the
+                <code>&lt;input&gt;</code> element validation
+            </li>
+            <li>
+                <code>placeholder</code> is a short text hint that describes the expected value
+            </li>
+            <li>
+                <code>readonly</code> specifies if input field is read-only
+            </li>
+            <li>
+                <code>required</code> specifies that an input field must have a value before submitting the form
+            </li>
+            <li>
+                <code>src</code> specifies the URL of the image to use as a submit button
+                (only for <code>type="image"</code>)
+            </li>
+        </ul>
+
+        <h2>Multiline text input - <code>textarea</code></h2>
+
+        <p>
+            The <code>&lt;textarea&gt;</code> element is used to create a mutliline text input.
+            Unlike other input elements this is not an empty element,
+            it should therefore have an opening and a closing tag.
+            Any text that appears between the opening
+            <code>&lt;textarea&gt;</code> and closing
+            <code>&lt;/textarea&gt;</code> tags will appear in the text box when the page loads.
+        </p>
+        <p>
+            If the user does not delete any text between these tags, this message will be sent to the server.
+            It's a common practice to JavaScript to clear this information when the user clicks in the text area.
+        </p>
+
+        <h3>Comment section example</h3>
+
+        <form action="http://localhost:3000/comment">
+            <p>Comment:</p>
+            <textarea name="comments">Enter your comment here...</textarea>
+            <input type="submit" value="Submit">
+        </form>
+        
         <h1>Selection controls</h1>
+
+        <p>
+            Radio buttons allow users to pick just one of a number of options and checkboxes allow users to select
+            (and unselect) one or more options in answer
+        </p>
+
+        <h2>Radio button</h2>
+
+        <form action="http://localhost:3000/action_page">
+            <p>Please select your gender:</p>
+            <input type="radio" name="gender" value="male" checked="checked"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Not specified<br>
+
+            <p>Please select your age:</p>
+            <input type="radio" name="age" value="30" checked="checked"> 0 - 30<br>
+            <input type="radio" name="age" value="60"> 31 - 60<br>
+            <input type="radio" name="age" value="100"> 61 - 100<br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        Group of Radio buttons is defined by name attribute<br>
+        Note, that <code>checked="checked"</code> specifies a default selection, since one option is selected, it can't
+        be unselected without selecting other option.
+
+        <h2>Checkbox</h2>
+
+        <form action="http://localhost:3000/action_page">
+            <p>Possible way of transportation:</p>
+            <input type="checkbox" name="vehicle1" value="Car"> Car<br>
+            <input type="checkbox" name="vehicle2" value="Plane"> Plane<br>
+            <input type="checkbox" name="vehicle3" value="Boat" checked> Boat<br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Dropdown list</h2>
+
+        The <code>&lt;select&gt;</code> element is used to create a drop down list box.
+        It contains two or more <code>&lt;option&gt;</code> elements.
+
+        <form action="http://www.example.com/profile.php">
+            <select>
+                <p>Pick up your model:</p>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+        </form>
+
+        <p>
+            Dropdown list provides the same functionality as radio buttons. Consider two factors designing your UI
+            <ol>
+                <li>If users need to see all options at a glance, radio buttons are better suited</li>
+                <li>If there is a long list of options (like a list of countries), drop down list boxes work bette</li>
+            </ol>
+        </p>
+
+        <h2>Multiple select list</h2>
 
     </body>
 
