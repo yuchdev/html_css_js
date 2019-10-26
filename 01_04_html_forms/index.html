@@ -311,6 +311,21 @@ Here's an example of login form:
     <input type="submit">
 </form>
 
+<h2>Output form</h2>
+
+<p>
+    HTML5 is able to perform simple calculations based on user input.
+    The <code>&lt;output&gt;</code> tag represents the result of that calculations
+</p>
+
+<form oninput="x.value=parseInt(a.value) + parseInt(b.value)"> 0
+    <input type="range" id="a" value="50">
+    100 +
+    <input type="number" id="b" value="50">
+    =
+    <output name="x" for="a b"></output>
+</form>
+
 <h1>Selection controls</h1>
 
 <p>
