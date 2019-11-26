@@ -145,15 +145,18 @@ Password input is like a single line text box but it masks the characters entere
 Here's an example of login form:
 
 <form action="http://localhost:3000/login">
-    <p>
-        <label for="login_form_username">Username:</label>
-        <input id="login_form_username" maxlength="30" name="username" type="text"/>
-    </p>
-    <p>
-        <label for="login_form_password">Password:</label>
-        <input id="login_form_password" maxlength="30" name="password" type="password"/>
-    </p>
+    <fieldset>
+        <legend>Submit form</legend>
+        <p>
+            <label for="login_form_username">Username:</label>
+            <input id="login_form_username" maxlength="30" name="username" type="text"/>
+        </p>
+        <p>
+            <label for="login_form_password">Password:</label>
+            <input id="login_form_password" maxlength="30" name="password" type="password"/>
+        </p>
     <input type="submit" value="Submit">
+        </fieldset>
 </form>
 
 <p>
