@@ -14,7 +14,39 @@
 
 <body>
 
-<h1>Forms in HTML5</h1>
+<h2 id="forms_html5">Forms in HTML5</h2>
+
+<h3 id="table_contents">Table of Contents</h3>
+
+<a href="#forms_html5">1. Forms in HTML5</a><br>
+&nbsp;&nbsp;<a href="#table_contents">1.1 Table of Contents</a></br>
+<a href="#text_forms">2. Text Forms</a></br>
+&nbsp;&nbsp;<a href="#form_definition">2.1 Form definition</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_action">a. action</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_method">b. method</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_id">c. id</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_other_attributes">d. Other attributes</a></br>
+&nbsp;&nbsp;<a href="#form_labeling">2.2 Form labeling</a></br>
+&nbsp;&nbsp;<a href="#input_types">2.3 Input types text and password</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#login_form_example">a. Login form example</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tag_input_attributes">b. Tag input attributes</a></br>
+&nbsp;&nbsp;<a href="#multiline_text_input">2.4 Multiline text input</a></br>
+<a href="#date_email_url">3. Date, email and URL input</a></br>
+&nbsp;&nbsp;<a href="#date_input">3.1 Date input</a></br>
+&nbsp;&nbsp;<a href="#email_url_input">3.2 Email and URL input</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#contact_detailed_example">a Contact detailed example</a></br>
+&nbsp;&nbsp;<a href="#basic_validation">3.3 Basic validation</a></br>
+&nbsp;&nbsp;<a href="#output_form">3.4 Output form</a></br>
+<a href="#selection_control">4. Selection controls</a></br>
+&nbsp;&nbsp;<a href="#radio_button">4.1 Radio button</a></br>
+&nbsp;&nbsp;<a href="#checkbox">4.2 Checkbox</a></br>
+&nbsp;&nbsp;<a href="#dropdown_list">4.3 Dropdown list</a></br>
+&nbsp;&nbsp;<a href="#multiline_select_list">4.4 Multiple select list</a></br>
+<a href="#buttons">5. Buttons</a></br>
+&nbsp;&nbsp;<a href="#plain_button">5.1 Plain button</a></br>
+&nbsp;&nbsp;<a href="#file_input_box">5.2 File input box</a></br>
+&nbsp;&nbsp;<a href="#submit_button">5.3 Submit button</a></br>
+&nbsp;&nbsp;<a href="#image_button">5.4 Image button</a></br>
 
 <p>
     Traditionally, the term 'form' has referred to a printed document that contains
@@ -69,9 +101,9 @@
 </ul>
 
 
-<h1>Text Forms</h1>
+<h2 id="text_forms">Text Forms</h2>
 
-<h2>Form definition</h2>
+<h3 id="form_definition">Form definition</h3>
 
 <p>
     The best known form on the web is probably the search box that sits right in the middle of
@@ -100,11 +132,11 @@ The <code>&lt;form&gt;</code> element can contain one or more of the following f
     <code>method</code> and <code>id</code>attributes.<br>
 </p>
 
-<h3>action</h3>
+<h4 id="form_action">action</h4>
 Action attribute provides value of the URL page on the server,
 that will receive the form information, when it's submitted
 
-<h3>method</h3>
+<h4 id="form_method">method</h4>
 Method attribute may carry one of two values, <code>get</code> or <code>post</code>.
 You can read details about both of them at
 <a href="https://www.w3schools.com/tags/ref_httpmethods.asp">W3School HTTP Reference</a>
@@ -116,16 +148,16 @@ Here are some reasons to use one of them:
     <li>POST does not leave traces in cache and browser history, use it for sensitive and private data</li>
 </ul>
 
-<h3>id</h3>
+<h4 id="form_id">id</h4>
 <code>id</code> attribute is used for unique identification of HTML element on the page,
 to access it from CSS stylesheet or JavaScript.
 
-<h3>Other attributes</h3>
+<h4 id="form_other_attributes">Other attributes</h4>
 The <code>&lt;form&gt;</code> tag has several other useful attributes. <code>autocomplete</code> turns on and off
 automatic form completion, <code>enctype</code> specifies how the form data should be encoded
 while submitting it to the server, <code>novalidate</code> turns off form validation.
 
-<h2>Form labeling</h2>
+<h3 id="form_labeling">Form labeling</h3>
 
 Each form control should have its own <code>&lt;label&gt;</code> element.
 The <code>&lt;label&gt;</code> tag defines a label for tags like
@@ -135,12 +167,12 @@ The <code>&lt;label&gt;</code> element does not render as anything special for t
 However, it provides a usability improvement for mouse users,
 because if the user clicks on the text within the <code>&lt;label&gt;</code> element, it toggles the control.
 
-<h2>Input types <code>text</code> and <code>password</code></h2>
+<h3 id="input_types">Input types <code>text</code> and <code>password</code></h3>
 
 Single-line text input used for a single line of text such as logins, email addresses and names.<br>
 Password input is like a single line text box but it masks the characters entered.<br>
 
-<h3>Login form example</h3>
+<h4 id="login_form_example">Login form example</h4>
 
 Here's an example of login form:
 
@@ -171,7 +203,7 @@ Here's an example of login form:
     with users' browsers using Secure Sockets Layer (SSL) and HTTPS protocol.
 </p>
 
-<h3>Tag <code>input</code> attributes</h3>
+<h4 id="tag_input_attributes">Tag <code>input</code> attributes</h4>
 
 <ul>
     <li>
@@ -235,7 +267,7 @@ Here's an example of login form:
     </li>
 </ul>
 
-<h2>Multiline text input - <code>textarea</code></h2>
+<h3 id="multiline_text_input">Multiline text input - <code>textarea</code></h3>
 
 <p>
     The <code>&lt;textarea&gt;</code> element is used to create a mutliline text input.
@@ -250,17 +282,19 @@ Here's an example of login form:
     It's a common practice to JavaScript to clear this information when the user clicks in the text area.
 </p>
 
-<h3>Comment section example</h3>
+<h4 id="comment_section_example">Comment section example</h4>
 
 <form action="http://localhost:3000/comment">
     <p>Comment:</p>
-    <textarea id="comment_text" name="comments">Enter your comment here...</textarea>
+    <label for="comment_form">Comment form
+        <textarea id="comment_text" name="comments">Enter your comment here...</textarea>
+    </label>
     <input id="comment_form" name="comment" type="submit" value="Submit">
 </form>
 
-<h2>Date, email and URL input</h2>
+<h2 id="date_email_url">Date, email and URL input</h2>
 
-<h3>Grouping elements</h3>
+<h3 id="grouping_elements">Grouping elements</h3>
 
 <p>
     You can group related form controls together inside the <code>&lt;fieldset&gt;</code> element.
@@ -270,14 +304,14 @@ Here's an example of login form:
     directly after the opening <code>&lt;fieldset&gt;</code> tag and contains a box caption
 </p>
 
-<h3>Date input</h3>
+<h3 id="date_input">Date input</h3>
 
 <p>
     The appearance of the date input changes across different browsers. Older browsers that
     do not recognize these inputs will just treat them as a single line text box.
 </p>
 
-<h3>Email and URL input</h3>
+<h3 id="email_url_input">Email and URL input</h3>
 
 <p>
     Browsers that support HTML5 basic validation will check that the provided
@@ -285,7 +319,7 @@ Here's an example of login form:
     keyboard to display the keys you are most likely to need when entering an email address.
 </p>
 
-<h3>Contact detailed example</h3>
+<h4 id="contact_detailed_example">Contact detailed example</h4>
 
 <form action="http://localhost:3000/contact">
     <fieldset>
@@ -298,7 +332,7 @@ Here's an example of login form:
     </fieldset>
 </form>
 
-<h2>Basic validation</h2>
+<h3 id="basic_validation">Basic validation</h3>
 
 <p>
     Traditionally input validation is performed by JavaScript, however, HTML5 also has
@@ -314,29 +348,30 @@ Here's an example of login form:
     <input type="submit">
 </form>
 
-<h2>Output form</h2>
+<h3 id="output_form">Output form</h3>
 
 <p>
     HTML5 is able to perform simple calculations based on user input.
     The <code>&lt;output&gt;</code> tag represents the result of that calculations
 </p>
 
-<form oninput="x.value=parseInt(a.value) + parseInt(b.value)"> 0
-    <input type="range" id="a" value="50">
-    100 +
-    <input type="number" id="b" value="50">
+<form oninput="x.value=parseInt(a.value) + parseInt(b.value)">
+    <label for="range_form">Range form<input type="range" id="a" value="50"></label>
+    <label for="b">Number form
+        100 + <input type="number_form" id="b" value="50">
+    </label>
     =
     <output name="x" for="a b"></output>
 </form>
 
-<h1>Selection controls</h1>
+<h2 id="selection_control">Selection controls</h2>
 
 <p>
     Radio buttons allow users to pick just one of a number of options and checkboxes allow users to select
     (and unselect) one or more options in answer
 </p>
 
-<h2>Radio button</h2>
+<h3 id="radio_button">Radio button</h3>
 
 <form action="http://localhost:3000/action_page">
     <p>Please select your gender:</p>
@@ -358,7 +393,7 @@ Here's an example of login form:
     be unselected without selecting other option.
 </p>
 
-<h2>Checkbox</h2>
+<h3 id="checkbox">Checkbox</h3>
 
 <form action="http://localhost:3000/action_page">
     <p>Possible way of transportation:</p>
@@ -368,14 +403,14 @@ Here's an example of login form:
     <input type="submit" value="Submit">
 </form>
 
-<h2>Dropdown list</h2>
+<h3 id="dropdown_list">Dropdown list</h3>
 
 The <code>&lt;select&gt;</code> element is used to create a drop down list box.
 It contains two or more <code>&lt;option&gt;</code> elements.
 
 <form action="http://localhost:3000/action_page">
     <p>Pick up your model:</p>
-    <select id="dropdown_car_model">
+    < id="dropdown_car_model">
         <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
         <option value="opel">Opel</option>
@@ -392,7 +427,7 @@ It contains two or more <code>&lt;option&gt;</code> elements.
     <li>If there is a long list of options (like a list of countries), drop down list boxes work better</li>
 </ol>
 
-<h2>Multiple select list</h2>
+<h3 id="multiline_select_list">Multiple select list</h3>
 
 Drop down is turning into select box by adding the <code>size</code> attribute.
 Users are allowed to select multiple options from this list by adding the
@@ -413,9 +448,9 @@ Multilist works not equally good in all browsers.
     </select>
 </form>
 
-<h1>Buttons</h1>
+<h2 id="buttons">Buttons</h2>
 
-<h2>Plain button</h2>
+<h3 id="plain_button">Plain button</h3>
 <p>
     The <code>&lt;button&gt;</code> tag defines a clickable button.
     Inside a <code>&lt;button&gt;</code> element you can put content, like text or images.
@@ -425,7 +460,7 @@ Multilist works not equally good in all browsers.
 
 <button type="button" onclick="alert('Hello world!')">Click Me!</button>
 
-<h2>File input box</h2>
+<h3 id="file_input_box">File input box</h3>
 
 <p>
     This type of input <code>type="file"</code> creates a text input box
@@ -439,7 +474,7 @@ Multilist works not equally good in all browsers.
     <input type="submit" value="Upload"/>
 </form>
 
-<h2>Submit button</h2>
+<h3 id="submit_button">Submit button</h3>
 
 The submit button is used to send a form to the server. The <code>value</code> attribute is used to
 control the text that appears on a button. Submit button without a value have some default value,
@@ -451,7 +486,7 @@ defined by browser, like <i>"Submit Query"</i>
     <input id="button_email_submit1" type="submit" name="subscribe"/>
 </form>
 
-<h2>Image button</h2>
+<h3 id="image_button">Image button</h3>
 
 <form action="http://localhost:3000/action_page">
     Your email:
