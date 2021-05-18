@@ -18,37 +18,44 @@
     <h1>Demonstration of formatting tags</h1>
     <h2>Structural markup</h2>
 
-
     <h3>Text formatting</h3>
     <p>
         Structural markup changes visual appearance of the text.
-        <br>Tag &lt;b&gt;:<b> Bold text</b>
-        <br>Tag &lt;i&gt;:<i> Italic text</i>
-        <br>Supserscript example, &lt;sup&gt; tag: 4<sup>th</sup> September
-        <br>Subcript example, &lt;sub&gt; tag: The amount of CO<sub>2</sub> in the atmosphere grew by 2ppm in 2009
-        <br>Use the &lt;mark&gt; tag if you want to <mark>highlight</mark> parts of your text
-        <br>The &lt;small&gt; tag defines <small>smaller</small> text (and other side comments)
-        <br>The &lt;u&gt; tag represents some text that should be <u>stylistically different</u> from normal text,
-        such as misspelled words
+        <br>Tag <code>&lt;b&gt;</code>:<b> Bold text</b>
+        <br>Tag <code>&lt;i&gt;</code>:<i> Italic text</i>
+        <br>Superscript example, <code>&lt;sup&gt;</code> tag: 4<sup>th</sup> September
+        <br>Subscript example, <code>&lt;sub&gt;</code> tag:
+        The amount of CO<sub>2</sub> in the atmosphere grew by 2ppm in 2009
+        <br>Use the <code>&lt;mark&gt;</code> tag if you want to <mark>highlight</mark> parts of your text
+        <br>The <code>&lt;small&gt;</code> tag defines <small>smaller</small> text (and other side comments)
+        <br>The <code>&lt;u&gt;</code> tag represents some text that should be <u>stylistically different</u>
+        from normal text, such as misspelled words
     </p>
 
 
     <h3>Date and time</h3>
-    The &lt;time&gt; tag defines a human-readable date/time (see source for examples):
+    The <code>&lt;time&gt;</code> tag defines a human-readable date/time (see source for examples):
     <br>We open at <time>10:00</time> every morning
     <br>I have a date on <time datetime="2019-02-14 20:00">Valentines day</time>
 
 
     <h3>Insert and delete</h3>
-    <p>The &lt;ins&gt; element can be used to show content that has been <ins>inserted</ins> into a document</p>
-    <p>The &lt;del&gt; element can show text that has been <del>deleted</del> from it</p>
     <p>
-        The content of a &lt;ins&gt; element is usually underlined,
-        while the content of a &lt;del&gt; element usually has a line through it.
+        The <code>&lt;ins&gt;</code> element can be used to show content that has been <ins>inserted</ins>
+        into a document
     </p>
     <p>
-        The &lt;s&gt; element indicates something that is no longer accurate or relevant (but that should not be deleted).
-        Visually the content of an &lt;s&gt; element will usually be displayed with a line through the center. Example:
+        The <code>&lt;del&gt;</code> element can show text that has been <del>deleted</del> from it
+    </p>
+    <p>
+        The content of a <code>&lt;ins&gt;</code> element is usually underlined,
+        while the content of a <code>&lt;del&gt;</code> element usually has a line through it.
+    </p>
+    <p>
+        The <code>&lt;s&gt;</code> element indicates something that is no longer accurate or relevant
+        (but that should not be deleted).
+        Visually the content of an <code>&lt;s&gt;</code> element will usually be displayed
+        with a line through the center. Example:
         <br>Laptop computer:
         <br><s>Was $995</s>
         <br>Now only $375
@@ -57,19 +64,21 @@
 
     <h3>Text direction</h3>
     <p>
-        Use &lt;bdo&gt; tag, right-to-left text example (notice, by symbols, not words):
+        Use <code>&lt;bdo&gt;</code> tag, right-to-left text example (notice, by symbols, not words):
         <br><bdo dir="rtl">This text will go right-to-left</bdo>
-        <br><bdo dir="ltr">This text is explicitly left-to-right, even though also uses &lt;bdo&gt;, which is default</bdo>
+        <br><bdo dir="ltr">This text is explicitly left-to-right,
+        even though also uses <code>&lt;bdo&gt;</code>, which is default</bdo>
     </p>
     <p>
-        This text containd &lt;bdi&gt; tag; it shows the browser, that this content may have different direction,
+        This text contains <code>&lt;bdi&gt;</code> tag; it shows the browser,
+        that this content may have different direction,
         for example Arabic word in English text: <bdi>إيان</bdi>
     </p>
 
 
     <h3>Pre-formatted text</h3>
     <p>
-        Text in a &lt;pre&gt; element is displayed in a fixed-width font (usually Courier),
+        Text in a <code>&lt;pre&gt;</code> element is displayed in a fixed-width font (usually Courier),
         and it preserves both spaces and line breaks:
     </p>
     <pre>
@@ -80,17 +89,17 @@
 
     <h3>Code example</h3>
     <p>
-        Use &lt;code&gt; tag to define a piece of computer code. It is a phrase tag
-        <code>std::complex<double> c1(1., 2.);</code>
+        Use <code>&lt;code&gt;</code> tag to define a piece of computer code. It is a phrase tag
+        <code>std::complex&lt;double&gt; c1(1., 2.);</code>
     </p>
     Other phrase tags are:
     <ul>
-        <li> &lt;em&gt 	Renders as emphasized text </li>
-        <li> &lt;strong&gt; Defines important text </li>
-        <li> &lt;code&gt; Defines a piece of computer code </li>
-        <li> &lt;samp&gt; Defines sample output from a computer program </li>
-        <li> &lt;kbd&gt; Defines keyboard input </li>
-        <li> &lt;var&gt; Defines a variable </li>
+        <li><code>&lt;em&gt;</code> 	Renders as emphasized text </li>
+        <li><code>&lt;strong&gt;</code> Defines important text </li>
+        <li><code>&lt;code&gt;</code> Defines a piece of computer code </li>
+        <li><code>&lt;samp&gt;</code> Defines sample output from a computer program </li>
+        <li><code>&lt;kbd&gt;</code> Defines keyboard input </li>
+        <li><code>&lt;var&gt;</code> Defines a variable </li>
     </ul>
     <br>See example in source code:<br>
 
@@ -105,51 +114,52 @@
     <h3>Display meter or progress bar</h3>
 
     <p>
-        The &lt;meter&gt; tag defines a scalar measurement within a known range, or a fractional value.
+        The <code>&lt;meter&gt;</code> tag defines a scalar measurement within a known range, or a fractional value.
         <br>Examples: Disk usage, the relevance of a query result, etc.
     </p>
 
     <p>Display a meter:</p>
 
     <br><meter value="2" min="0" max="10">2 out of 10</meter>
-    &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;
+    <code>&lt;meter value="2" min="0" max="10"&gt;</code>2 out of 10<code>&lt;/meter&gt;</code>
     <br> <meter value="0.6">60%</meter>
-    &lt;meter value="0.6"&gt;60%&lt;/meter&gt;
+    <code>&lt;meter value="0.6"&gt;</code>60%<code>&lt;/meter&gt;</code>
 
-    <br><br> <b>Note!</b> The &lt;meter&gt;  tag should not be used to indicate dynamic progress (as in a progress bar).
-    For progress bars, use the &lt;progress&gt; tag:
+    <br><br> <b>Note!</b> The <code>&lt;meter&gt;</code> tag should not be used to indicate dynamic progress 
+    (as in a progress bar). For progress bars, use the <code>&lt;progress&gt;</code> tag:
 
-    <br> <progress value="22" max="100"></progress>  &lt;progress value="22" max="100"&gt;&lt;/progress&gt;
+    <br> <progress value="22" max="100"></progress>
+    <code>&lt;progress value="22" max="100"&gt;&lt;/progress&gt;</code>
 
     <h2>Semantic markup</h2>
 
-    <h3>&lt;strong&gt; and &lt;em&gt;</h3>
+    <h3><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code></h3>
 
     <p>
-        The use of the &lt;strong&gt; tag: <strong> element </strong> indicates that its content has strong
-        importance.
+        The use of the <code>&lt;strong&gt;</code> tag: <strong> element </strong> indicates 
+        that its content has strong importance.
         For example, the words contained in this element might be said with strong emphasis.
         By default, browsers will show the contents of a strong element in bold.
-        <br>The use of the &lt;em&gt; tag: the <em> element </em> indicates <em>emphasis</em> that subtly changes the
-        meaning of a sentence.
-        By default browsers will show the contents of an &lt;em&gt; element in italic.
+        <br>The use of the <code>&lt;em&gt;</code> tag: the <em> element </em> indicates <em>emphasis</em> 
+        that subtly changes the meaning of a sentence.
+        By default browsers will show the contents of an <code>&lt;em&gt;</code> element in italic.
     </p>
 
 
     <h3>Blockquote and quotations</h3>
-    The &lt;blockquote&gt; element is used for longer quotes that take up an entire paragraph.
-    Note how the &lt;p&gt; element is still used inside the &lt;blockquote&gt; element.
+    The <code>&lt;blockquote&gt;</code> element is used for longer quotes that take up an entire paragraph.
+    Note how the <code>&lt;p&gt;</code> element is still used inside the <code>&lt;blockquote&gt;</code> element.
     <blockquote cite="https://www.w3schools.com/tags/tag_blockquote.asp">
         <p>
-            Browsers tend to indent the contents of the &lt;blockquote&gt; element, however you should not
+            Browsers tend to indent the contents of the <code>&lt;blockquote&gt;</code> element, however you should not
             use this element just to indent a piece of text, rather you should achieve this effect using CSS.
         </p>
     </blockquote>
     <i>HTML and CSS, Jon Ducket</i>
     <p>
-        The &lt;q&gt; element is used for shorter quotes that sit within a paragraph.
-        Browsers are supposed to put quotes around the &lt;q&gt; element, however Internet Explorer does not —
-        therefore many people avoid using the &lt;q&gt; element.
+        The <code>&lt;q&gt;</code> element is used for shorter quotes that sit within a paragraph.
+        Browsers are supposed to put quotes around the <code>&lt;q&gt;</code> element,
+        however Internet Explorer does not — therefore many people avoid using the <code>&lt;q&gt;</code> element.
         <q cite="https://www.w3schools.com/tags/tag_cite.asp">
             Both elements may use the <b>cite</b> attribute to indicate where the quote is from
         </q> <i>(HTML and CSS, Jon Ducket)</i>
@@ -157,7 +167,7 @@
     </p>
 
 
-    <h3>Abbriveations, acronyms and references</h3>
+    <h3>Abbreviations, acronyms and references</h3>
     When you are referencing a piece of work such as a book, flm or research paper,
     the &lt;cite&gt; element can be used to indicate where the citation is from. Example:
 
@@ -167,23 +177,24 @@
         worldwide
     </p>
     <p>
-        The frst time you explain some new terminology (perhaps an academic concept or some jargon) in a document,
-        it is known as the <dfn>defning</dfn> instance of it.
-        The &lt;dfn&rt; element is used to indicate the defning instance of a new term.
-        Some browsers show the content of the &lt;dfn&gt; element in italics.
+        The first time you explain some new terminology (perhaps an academic concept or some jargon) in a document,
+        it is known as the <dfn>defining</dfn> instance of it.
+        The <code>&lt;dfn&gt;</code> element is used to indicate the defining instance of a new term.
+        Some browsers show the content of the <code>&lt;dfn&gt;</code> element in italics.
         Safari and Chrome do not change its appearance.
     </p>
     <p>
-        Use of &lt;abbr&gt; tag:
-        <abbr>Prof.</abbr> Stephen Hawking is a theoretical physicist and cosmologist.
+        Use of <code>&lt;abbr title="Professor"&gt;</code> tag:
+        <abbr title="Professor">Prof.</abbr> Stephen Hawking is a theoretical physicist and cosmologist.
         <br>If you use an abbreviation or an acronym, then the element can be used.
         A title attribute on the opening tag is used to specify the full term
     </p>
     <p>
-        The &lt;address&gt; element has quite a specifc use: to contain contact details for the author of the page.
+        The <code>&lt;address&gt;</code> element has quite a specific use: 
+        to contain contact details for the author of the page.
         <br>It can contain a physical address, but it does not have to.
         For example, it may also contain a phone number or email address.
-        Browsers often display the content of the &lt;address&gt; element in italics. Example:
+        Browsers often display the content of the <code>&lt;address&gt;</code> element in italics. Example:
     </p>
 
     <!-- address tag is not allowed within p tag-->
