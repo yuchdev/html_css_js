@@ -1,0 +1,645 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <title>HTML forms and user input</title>
+
+    <!-- Meta-tags See meta-tags in 01_01_html_basics -->
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Examples of forms and other user interactions using HTML5 tags">
+    <meta name="author" content="Yurii Cherkasov">
+
+</head>
+
+<body>
+
+<h2 id="forms_html5">Forms in HTML5</h2>
+
+<h3 id="table_contents">Table of Contents</h3>
+
+<a href="#forms_html5">1. Forms in HTML5</a><br>
+&nbsp;&nbsp;<a href="#table_contents">1.1 Table of Contents</a><br/>
+
+<a href="#text_forms">2. Text Forms</a><br/>
+&nbsp;&nbsp;<a href="#form_definition">2.1 Form definition</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_action">a. action</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_method">b. method</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_id">c. id</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#form_other_attributes">d. Other attributes</a><br/>
+&nbsp;&nbsp;<a href="#form_labeling">2.2 Form labeling</a><br/>
+&nbsp;&nbsp;<a href="#input_types">2.3 Input types text and password</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#login_form_example">a. Login form example</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tag_input_attributes">b. Tag input attributes</a><br/>
+&nbsp;&nbsp;<a href="#multiline_text_input">2.4 Multiline text input</a><br/>
+
+<a href="#date_email_url">3. Date, email and URL input</a><br/>
+&nbsp;&nbsp;<a href="#date_input">3.1 Date input</a><br/>
+&nbsp;&nbsp;<a href="#email_url_input">3.2 Email and URL input</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#contact_detailed_example">a Contact detailed example</a><br/>
+&nbsp;&nbsp;<a href="#basic_validation">3.3 Basic validation</a><br/>
+&nbsp;&nbsp;<a href="#output_form">3.4 Output form</a><br/>
+
+<a href="#input_control">4. Input controls</a><br/>
+&nbsp;&nbsp;<a href="#input_control_definition">4.1 Input control definition</a><br/>
+&nbsp;&nbsp;<a href="#all_input_types">4.2 All input control types</a><br/>
+&nbsp;&nbsp;<a href="#radio_button">4.3 Radio button</a><br/>
+&nbsp;&nbsp;<a href="#checkbox">4.4 Checkbox</a><br/>
+&nbsp;&nbsp;<a href="#input_datetime">4.5 Datetime</a><br/>
+&nbsp;&nbsp;<a href="#input_datetime_local">4.6 Datetime local</a><br/>
+&nbsp;&nbsp;<a href="#input_hidden">4.7 Hidden</a><br/>
+&nbsp;&nbsp;<a href="#input_reset">4.8 Reset</a><br/>
+&nbsp;&nbsp;<a href="#input_search">4.9 Search</a><br/>
+&nbsp;&nbsp;<a href="#input_phone">4.10 Phone number</a><br/>
+&nbsp;&nbsp;<a href="#plain_button">5.11 Plain button</a><br/>
+&nbsp;&nbsp;<a href="#file_input_box">5.12 File input box</a><br/>
+&nbsp;&nbsp;<a href="#submit_button">5.13 Submit button</a><br/>
+&nbsp;&nbsp;<a href="#image_button">5.14 Image button</a><br/>
+
+<a href="#option_list">5. Option lists</a><br/>
+&nbsp;&nbsp;<a href="#dropdown_list">4.5 Dropdown list</a><br/>
+&nbsp;&nbsp;<a href="#multiline_select_list">4.6 Multiple select list</a><br/>
+
+
+<p>
+    Traditionally, the term 'form' has referred to a printed document that contains
+    spaces for you to fill in information.
+    HTML borrows the concept of a form to refer to different elements that allow you
+    to collect information from visitors to your site.
+</p>
+
+<p>
+    Whether you are adding a simple search box to your website or
+    you need to create more complicated applications, HTML5 forms
+    give you a set of elements to collect data from your users.
+</p>
+
+<ul>
+    <li>
+        Adding text
+        <ul>
+            <li>Simple text</li>
+            <li>Password</li>
+            <li>Multiline text (text area)</li>
+            <li>Date input</li>
+            <li>Email and URL input</li>
+            <li>Search input</li>
+        </ul>
+    </li>
+    <li>
+        Making choices
+        <ul>
+            <li>Radio buttons</li>
+            <li>Checkboxes</li>
+            <li>Comboboxes</li>
+            <li>Multiple select boxes</li>
+        </ul>
+    </li>
+    <li>
+        Submitting data
+        <ul>
+            <li>Submit buttons</li>
+            <li>Image buttons</li>
+            <li>Upload file forms</li>
+        </ul>
+    </li>
+    <li>
+        Formatting and validation
+        <ul>
+            <li>Group box</li>
+            <li>Labels</li>
+            <li>Basic form validation</li>
+        </ul>
+    </li>
+</ul>
+
+
+<h2 id="text_forms">Text Forms</h2>
+
+<h3 id="form_definition">Form definition</h3>
+
+<p>
+    The best known form on the web is probably the search box that sits right in the middle of
+    Google's homepage.<br>
+    The <code>&lt;form&gt;</code> is a tag used to create an HTML form in browser for custom user input.
+</p>
+
+Any form controls live inside a <code>&lt;form&gt;</code> element.<br>
+The <code>&lt;form&gt;</code> element can contain one or more of the following form elements:
+
+<ul>
+    <li><code>&lt;input&gt;</code></li>
+    <li><code>&lt;textarea&gt;</code></li>
+    <li><code>&lt;button&gt;</code></li>
+    <li><code>&lt;select&gt;</code></li>
+    <li><code>&lt;option&gt;</code></li>
+    <li><code>&lt;optgroup&gt;</code></li>
+    <li><code>&lt;fieldset&gt;</code></li>
+    <li><code>&lt;label&gt;</code></li>
+    <li><code>&lt;output&gt;</code></li>
+</ul>
+
+<p>
+    The <code>&lt;form&gt;</code> element should always carry the
+    <code>action</code> attribute, and also usually have
+    <code>method</code> and <code>id</code>attributes.<br>
+</p>
+
+<h4 id="form_action">action</h4>
+Action attribute provides value of the URL page on the server,
+that will receive the form information, when it's submitted
+
+<h4 id="form_method">method</h4>
+Method attribute may carry one of two values, <code>get</code> or <code>post</code>.
+You can read details about both of them at
+<a href="https://www.w3schools.com/tags/ref_httpmethods.asp">W3School HTTP Reference</a>
+Here are some reasons to use one of them:
+<ul>
+    <li>GET is good for short and unimportant pieces of data, as it has length restriction</li>
+    <li>GET is cached and saved in browser history, don't use it for any sensitive data</li>
+    <li>POST has no limits on length, it could be used to send large pieces of data, like file</li>
+    <li>POST does not leave traces in cache and browser history, use it for sensitive and private data</li>
+</ul>
+
+<h4 id="form_id">id</h4>
+<code>id</code> attribute is used for unique identification of HTML element on the page,
+to access it from CSS stylesheet or JavaScript.
+
+<h4 id="form_other_attributes">Other attributes</h4>
+The <code>&lt;form&gt;</code> tag has several other useful attributes. <code>autocomplete</code> turns on and off
+automatic form completion, <code>enctype</code> specifies how the form data should be encoded
+while submitting it to the server, <code>novalidate</code> turns off form validation.
+
+<h3 id="form_labeling">Form labeling</h3>
+
+Each form control should have its own <code>&lt;label&gt;</code> element.
+The <code>&lt;label&gt;</code> tag defines a label for tags like
+<code>&lt;button&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;input&gt;</code>,
+<code>&lt;meter&gt;</code>, <code>&lt;progress&gt;</code> and <code>&lt;select&gt;</code>.
+The <code>&lt;label&gt;</code> element does not render as anything special for the user.
+However, it provides a usability improvement for mouse users,
+because if the user clicks on the text within the <code>&lt;label&gt;</code> element, it toggles the control.
+
+<h3 id="input_types">Input types <code>text</code> and <code>password</code></h3>
+
+Single-line text input used for a single line of text such as logins, email addresses and names.<br>
+Password input is like a single line text box but it masks the characters entered.<br>
+
+<h4 id="login_form_example">Login form example</h4>
+
+Here's an example of login form:
+
+<form action="http://localhost:3000/login">
+    <fieldset>
+        <legend>Login form</legend>
+        <p>
+            <label for="login_form_username">Username:</label>
+            <input id="login_form_username" maxlength="30" name="username" type="text"/>
+        </p>
+        <p>
+            <label for="login_form_password">Password:</label>
+            <input id="login_form_password" maxlength="30" name="password" type="password"/>
+        </p>
+    <input type="submit" value="Submit">
+        </fieldset>
+</form>
+
+<p>
+    Type <code>text</code> or <code>password</code> are specific for single-line input forms,
+    <code>name</code> is a server-side form identifier,
+    <code>maxlength</code> is a very basic validation restricting the number of characters to enter.
+</p>
+
+<p>
+    Even if the password is hidden on the screen, this does not mean that the data in a password
+    control is sent securely to the server. For full security, the server needs to be set up to communicate
+    with users' browsers using Secure Sockets Layer (SSL) and HTTPS protocol.
+</p>
+
+<h4 id="tag_input_attributes">Tag <code>input</code> attributes</h4>
+
+<ul>
+    <li>
+        <code>accept</code> is a specific the for file input dialog box (only for <code>type="file"</code>).
+        It specifies a filter for file extension and media type
+    </li>
+    <li>
+        <code>alt</code> specifies an alternate text for images (only for <code>type="image"</code>)
+    </li>
+    <li>
+        <code>autocomplete</code> specifies if <code>&lt;input&gt;</code> element have autocomplete enabled
+    </li>
+    <li>
+        <code>autofocus</code> specifies if <code>&lt;input&gt;</code> element
+        should automatically get focus when the page loads
+    </li>
+    <li>
+        <code>checked</code> specifies that an <code>&lt;input&gt;</code> element should be pre-selected
+        when the page loads (for <code>type="checkbox"</code> or <code>type="radio"</code>)
+    </li>
+    <li>
+        <code>disabled</code> specifies that an <code>&lt;input&gt;</code> element should be disabled
+    </li>
+    <li>
+        <code>form</code> specifies the form ID the <code>&lt;input&gt;</code> element belongs to
+    </li>
+    <li>
+        <code>height</code> and <code>width</code> specifies size if <code>type="image"</code> only
+    </li>
+    <li>
+        <code>list</code> refers to a <code>&lt;datalist&gt;</code> element ID that contains pre-defined options
+        for an <code>&lt;input&gt;</code> element
+    </li>
+    <li>
+        <code>maxlength</code> specifies the maximum number of characters allowed in
+        <code>&lt;input&gt;</code> element, specific for text-based elements only
+    </li>
+    <li>
+        <code>min</code> specifies minimum number or date
+    </li>
+    <li>
+        <code>multiple</code> specifies that a user can enter more than one value in
+        <code>&lt;input&gt;</code> element
+    </li>
+    <li>
+        <code>pattern</code> specifies a regular expression for the
+        <code>&lt;input&gt;</code> element validation
+    </li>
+    <li>
+        <code>placeholder</code> is a short text hint that describes the expected value
+    </li>
+    <li>
+        <code>readonly</code> specifies if input field is read-only
+    </li>
+    <li>
+        <code>required</code> specifies that an input field must have a value before submitting the form
+    </li>
+    <li>
+        <code>src</code> specifies the URL of the image to use as a submit button
+        (only for <code>type="image"</code>)
+    </li>
+</ul>
+
+<h3 id="multiline_text_input">Multiline text input - <code>textarea</code></h3>
+
+<p>
+    The <code>&lt;textarea&gt;</code> element is used to create a mutliline text input.
+    Unlike other input elements this is not an empty element,
+    it should therefore have an opening and a closing tag.
+    Any text that appears between the opening
+    <code>&lt;textarea&gt;</code> and closing
+    <code>&lt;/textarea&gt;</code> tags will appear in the text box when the page loads.
+</p>
+<p>
+    If the user does not delete any text between these tags, this message will be sent to the server.
+    It's a common practice to JavaScript to clear this information when the user clicks in the text area.
+</p>
+
+<h4 id="comment_section_example">Comment section example</h4>
+
+<form action="http://localhost:3000/comment">
+    <p>Comment:</p>
+    <label for="comment_form">Comment form
+        <textarea id="comment_text" name="comments">Enter your comment here...</textarea>
+    </label>
+    <input id="comment_form" name="comment" type="submit" value="Submit">
+</form>
+
+<h2 id="date_email_url">Date, email and URL input</h2>
+
+<h3 id="grouping_elements">Grouping elements</h3>
+
+<p>
+    You can group related form controls together inside the <code>&lt;fieldset&gt;</code> element.
+    This is particularly helpful for longer forms. Most browsers will show the
+    <code>&lt;fieldset&gt;</code> as a groupbox in standard GUI. It's appearance could be adjusted using CSS
+    <br/>The <code>&lt;legend&gt;</code> element can come
+    directly after the opening <code>&lt;fieldset&gt;</code> tag and contains a box caption
+</p>
+
+<h3 id="date_input">Date input</h3>
+
+<p>
+    The appearance of the date input changes across different browsers. Older browsers that
+    do not recognize these inputs will just treat them as a single line text box.
+</p>
+
+<h3 id="email_url_input">Email and URL input</h3>
+
+<p>
+    Browsers that support HTML5 basic validation will check that the provided
+    information is in the correct format of email/URL. Mobile browsers also optimize their
+    keyboard to display the keys you are most likely to need when entering an email address.
+</p>
+
+<h4 id="contact_detailed_example">Contact detailed example</h4>
+
+<form action="http://localhost:3000/contact">
+    <fieldset>
+        <legend>Contact details</legend>
+        <label>Email:<input type="text" name="email"/></label><br/>
+        <br/>
+        <label>Mobile:<input type="text" name="mobile"/></label><br/>
+        <br/>
+        <label>Homepage: <input type="text" name="homepage"/></label><br/>
+        <br/>
+        <label>Birth date: <input type="date" name="birthdate"/></label><br/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+</form>
+
+<h3 id="basic_validation">Basic validation</h3>
+
+<p>
+    Traditionally input validation is performed by JavaScript, however, HTML5 also has
+    basic validation facilities. Simpliest one is just check if the input field is not empty using attribute
+    <code>required="required"</code>. The <code>pattern</code> attribute specifies
+    a regular expression that the <code>&lt;input&gt;</code> value is checked against on form submission.<br/>
+    The <code>pattern</code> attribute does not supported in older browsers.
+</p>
+
+<form action="http://localhost:3000/country_code">
+    Country code:
+    <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+    <input type="submit">
+</form>
+
+<h3 id="output_form">Output form</h3>
+
+<p>
+    HTML5 is able to perform simple calculations based on user input.
+    The <code>&lt;output&gt;</code> tag represents the result of that calculations
+</p>
+
+<form oninput="x.value=parseInt(a.value) + parseInt(b.value)">
+    <label for="a">Range form:<input type="range" id="a" value="50"></label><br/>
+    <br/>
+    <label for="b">Number form:
+        100 + <input type="number" id="b" value="50">
+    </label>
+    =
+    <output name="x" for="a b"></output>
+</form>
+
+<h2 id="input_control">Input controls</h2>
+
+<h3 id="input_control_definition">Input control definition</h3>
+
+<ul>
+    <li>The <code>&lt;input&gt;</code> tag specifies an input field where the user can enter data</li>
+    <li>The <code>&lt;input&gt;</code> element is the most important form element</li>
+    <li>The <code>&lt;input&gt;</code> element can be displayed in several ways, depending on the type attribute</li>
+</ul>
+
+<h3 id="all_input_types">All input control types</h3>
+
+<ul>
+    <li><code>type="button"</code></li>
+    <li><code>type="checkbox"</code></li>
+    <li><code>type="color"</code></li>
+    <li><code>type="date"</code></li>
+    <li><code>type="datetime-local"</code></li>
+    <li><code>type="email"</code></li>
+    <li><code>type="file"</code></li>
+    <li><code>type="hidden"</code></li>
+    <li><code>type="image"</code></li>
+    <li><code>type="month"</code></li>
+    <li><code>type="number"</code></li>
+    <li><code>type="password"</code></li>
+    <li><code>type="radio"</code></li>
+    <li><code>type="range"</code></li>
+    <li><code>type="reset"</code></li>
+    <li><code>type="search"</code></li>
+    <li><code>type="submit"</code></li>
+    <li><code>type="tel"</code></li>
+    <li><code>type="text" (default)</code></li>
+    <li><code>type="time"</code></li>
+    <li><code>type="url"</code></li>
+    <li><code>type="week"</code></li>
+
+</ul>
+
+<p>
+    TODO: more detailed compare
+    Radio buttons allow users to pick just one of a number of options and checkboxes allow users to select
+    (and unselect) one or more options in answer
+</p>
+
+<h3 id="radio_button">Radio button</h3>
+
+<form action="http://localhost:3000/action_page">
+    <fieldset>
+        <legend>Please select your gender</legend>
+        <label for="radio_gender_male">
+            <input id="radio_gender_male" type="radio" name="gender" value="male" checked="checked"> Male<br>
+        </label>
+        <label for="radio_gender_female">
+            <input id="radio_gender_female" type="radio" name="gender" value="female"> Female<br>
+        </label>
+        <label for="radio_gender_na">
+            <input id="radio_gender_na" type="radio" name="gender" value="other"> Not specified<br>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Please select your age</legend>
+        <label for="radio_age_030">
+            <input id="radio_age_030" type="radio" name="age" value="30" checked="checked"> 0 - 30<br>
+        </label>
+        <label for="radio_age_3160">
+            <input id="radio_age_3160" type="radio" name="age" value="60"> 31 - 60<br>
+        </label>
+        <label for="radio_age_61100">
+            <input id="radio_age_61100" type="radio" name="age" value="100"> 61 - 100<br>
+        </label>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+</form>
+
+<p>
+    Group of Radio buttons is defined by name attribute<br>
+    Note, that <code>checked="checked"</code> specifies a default selection, since one option is selected, it can't
+    be unselected without selecting other option.
+</p>
+
+<h3 id="checkbox">Checkbox</h3>
+
+<form action="http://localhost:3000/action_page">
+    <fieldset>
+        <legend>Possible way of transportation</legend>
+        <label for="checkbox_vehicle_car">
+            <input id="checkbox_vehicle_car" type="checkbox" name="vehicle1" value="Car"> Car<br>
+        </label>
+        <label for="checkbox_vehicle_plane">
+            <input id="checkbox_vehicle_plane" type="checkbox" name="vehicle2" value="Plane"> Plane<br>
+        </label>
+        <label for="checkbox_vehicle_boat">
+            <input id="checkbox_vehicle_boat" type="checkbox" name="vehicle3" value="Boat" checked> Boat<br><br>
+        </label>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+<h3 id="input_color">Color</h3>
+
+<label> Color
+    <input type="color" name="input_color_example">
+</label>
+
+<h3 id="input_datetime">Datetime</h3>
+
+<label>Datetime
+    <input type="date" name="input_date_example">
+    <input type="week" name="input_week_example">
+    <input type="month" name="input_month_example">
+    <input type="time" name="input_time_example">
+</label>
+
+<h3 id="input_datetime_local">Datetime local</h3>
+
+<label>Datetime local
+    <input type="datetime-local" name="input_datetime_example">
+</label>
+
+<h3 id="input_hidden">Hidden</h3>
+
+<label>Hidden
+    <input type="hidden" name="input_hidden_example">
+</label>
+
+<h3 id="input_reset">Reset</h3>
+
+<label>Reset
+    <input type="reset" name="input_reset_example">
+</label>
+
+<h3 id="input_search">Search</h3>
+
+<label>Better than Google
+    <input type="search" name="input_search_example">
+</label>
+
+<h3 id="input_phone">Phone number</h3>
+
+<label>Phone number
+    <input type="tel" name="input_phone_example">
+</label>
+
+<h3 id="plain_button">Plain button</h3>
+<p>
+    The <code>&lt;button&gt;</code> tag defines a clickable button.
+    Inside a <code>&lt;button&gt;</code> element you can put content, like text or images.
+    This is the difference between this element and buttons created with the <code>&lt;input&gt;</code> element.
+    You can combine any text and images between the opening and closing <code>&lt;button&gt;</code> tags.
+</p>
+
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
+<h3 id="file_input_box">File input box</h3>
+
+<p>
+    This type of input <code>type="file"</code> creates a text input box
+    followed by a <code>Browse</code> button. When you are allowing users to upload files,
+    the method attribute on the <code>&lt;form&gt;</code> element must have a value of POST.
+</p>
+
+<form action="http://localhost:3000/action_page" method="post">
+    <fieldset>
+        <legend>Upload your song in MP3 format</legend>
+        <input type="file" name="user-song"/>
+        <input type="submit" value="Upload"/>
+    </fieldset>
+</form>
+
+<h3 id="submit_button">Submit button</h3>
+
+The submit button is used to send a form to the server. The <code>value</code> attribute is used to
+control the text that appears on a button. Submit button without a value have some default value,
+defined by browser, like <i>"Submit Query"</i>
+
+<form action="http://localhost:3000/action_page">
+    <fieldset>
+        <legend>This is URL form and submit button without a value</legend>
+        <label for="text_email_submit1">
+            <input id="text_email_submit1" type="url" name="email"/>
+        </label>
+        <input id="button_email_submit1" type="submit" name="subscribe"/>
+    </fieldset>
+</form>
+
+<h3 id="image_button">Image button</h3>
+
+<form action="http://localhost:3000/action_page">
+    <fieldset>
+        <legend>Enter your email</legend>
+        <label for="text_email_submit2">
+            <input id="text_email_submit2" type="email" name="email">
+        </label>
+        <br/>
+        <input id="button_email_submit2" type="image" src="img/img_submit.gif" alt="Submit" width="48" height="48">
+    </fieldset>
+</form>
+
+<p>
+    <b>Note:</b>
+    The input <code>type="image"</code> sends the X and Y coordinates
+    of the click that activated the image button.
+</p>
+
+<h2 id="option_list">Option list input</h2>
+
+<h3 id="dropdown_list">Dropdown list</h3>
+
+The <code>&lt;select&gt;</code> element is used to create a drop down list box.
+It contains two or more <code>&lt;option&gt;</code> elements.
+
+<form action="http://localhost:3000/action_page">
+    <label for="dropdown_car_model">Pick up your model:
+        <select id="dropdown_car_model">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+    </label>
+</form>
+
+<p>
+    Dropdown list provides the same functionality as radio buttons. Consider two factors designing your UI
+</p>
+
+<ol>
+    <li>If users need to see all options at a glance, radio buttons are better suited</li>
+    <li>If there is a long list of options (like a list of countries), drop down list boxes work better</li>
+</ol>
+
+<h3 id="multiline_select_list">Multiple select list</h3>
+
+Drop down is turning into select box by adding the <code>size</code> attribute.
+Users are allowed to select multiple options from this list by adding the
+<code>multiple</code> attribute with a value of multiple.<br>
+In general, it's a good idea to tell users if he can select more than one options.<br>
+Multilist works not equally good in all browsers.
+
+<form action="http://localhost:3000/action_page">
+    <p>
+        Installed operating systems (You can select more than one option by holding
+        down control on a PC or command key on a Mac while selecting different options)
+    </p>
+    <label for="multiselect_os">Select OSes you use daily:
+        <br/>
+        <select id="multiselect_os" multiple="multiple" name="os" size="3">
+            <option value="windows" selected="selected">Windows</option>
+            <option value="macos">MacOS</option>
+            <option value="linux" selected="selected">Linux</option>
+            <option value="freebsd">FreeBSD</option>
+        </select>
+    </label>
+</form>
+
+
+</body>
+
+</html>
