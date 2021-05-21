@@ -1,0 +1,53 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <title>HTML audio and video support</title>
+
+    <!-- Meta-tags See meta-tags in 01_01_html_basics -->
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Examples of HTML5 tags related to links and images">
+    <meta name="author" content="Yurii Cherkasov">
+
+</head>
+
+<body>
+
+<h1 id="html5_audio">HTML5 audio</h1>
+
+<p>
+    The <code>&lt;audio&gt;</code> tag is used to embed sound content in a document,
+    such as music or other audio streams.
+    The <code>&lt;audio&gt;</code> tag contains one or more <code>&lt;source&gt;</code> tags
+    with different audio sources.
+    The browser will choose the first source it supports.
+    <br>There are three supported audio formats in HTML: MP3, WAV, and OGG.
+</p>
+
+<audio controls>
+    <source src="audio/horse.ogg" type="audio/ogg">
+    <source src="audio/horse.mp3" type="audio/mpeg">
+    This text will be displayed if the browser does not support the <code>&lt;audio&gt;</code> tag.
+</audio>
+
+<h1 id="html5_video">HTML5 video</h1>
+
+<p>
+    The <code>&lt;video&gt;</code> tag is used to embed video content in a document,
+    such as a movie clip or other video streams.
+    Just like <code>&lt;audio&gt;</code>, the <code>&lt;video&gt;</code> tag contains one or more
+    <code>&lt;source&gt;</code> tags with different video sources.
+    The browser will choose the first source it supports.
+    <br>There are three supported video formats in HTML: MP4, WebM, and OGG.
+</p>
+
+<video width="320" height="240" controls>
+    <source src="video/movie.mp4" type="video/mp4">
+    <source src="video/movie.ogg" type="video/ogg">
+    This text will be displayed if the browser does not support the <code>&lt;video&gt;</code> tag.
+</video>
+
+</body>
+
+</html>
