@@ -42,6 +42,12 @@
     also known as an <i>absolute URL</i>.
     A local link (a link to a page within the same website) is specified with a <i>relative URL</i>
     (without the "https://www" part).
+    If all the pages of the site are in the same folder,
+    then the the <code>href</code> attribute is just the name of the file.
+    If you use folder name without the name of a file, in this case the web server will try to show
+    the <code>index.html</code> page.
+    A forward slash in the relative URL will link to the homepage for the entire site,
+    and a forward slash followed by a file name will return that file in the root directory.
 </p>
 
 <p>
@@ -258,7 +264,19 @@
     <a href="#nav_tag">&lt;nav&gt; tag</a>
 </nav>
 
+<h2 id="email_links">Email links</h2>
+
+<p>
+    If the value of the <code>href</code> attribute starts with <code>mailto:</code>
+    and is followed by the email address, such link will open default email application and prepare the message
+    to the email mentioned in the link.
+
+    <a href="mailto:atatat@example.com">atatat@example.com</a>
+</p>
+
 <h1 id="images">HTML5 and images</h1>
+
+<h2 id="image_tag">Image tag</h2>
 
 <p>
     Images can improve the design and the appearance of a web page.
@@ -270,7 +288,7 @@
 <img src="img/manule.jpg" alt="Manule">
 
 <p>
-    If the <img> tag is empty, it contains attributes only, and does not have a closing tag.
+    If the <code>&lt;img&gt;</code> tag is empty, it contains attributes only, and does not have a closing tag.
     It has two required attributes: <code>src</code> and <code>alt</code>.
 </p>
 
@@ -285,6 +303,268 @@
     The broken link icon and the alt text are shown if the browser cannot find the image.
 </p>
 
+<h2 id="image_attr">Image optional attributes</h2>
+
+<ul>
+    <li>
+        <code>crossorigin</code> allows images from third-party sites that allow cross-origin access
+        to be used with canvas; possible values are <code>anonymous</code> and <code>use-credentials</code>
+    </li>
+
+    <li>
+        <code>width</code>, <code>height</code> are width and height in pixels. Recommended to reserve space
+        on the page, in case of the image has been replaced with broken link icon, to preserve the size.
+    </li>
+
+    <li>
+        <code>ismap</code> is a boolean attribute. When present, it specifies that the image is part
+        of a server-side image map (an image map is an image with clickable areas).
+        When clicking on a server-side image map, the click coordinates are sent to the server as a URL query string.
+        The ismap attribute is allowed only if the <code>&lt;img&gt;</code> element
+        is a descendant of an <code>&lt;a&gt;</code> element with a valid <code>href</code> attribute.
+    </li>
+
+    <li>
+        <code>loading</code> attribute specifies whether a browser should load an image immediately
+        or to defer loading of off-screen images until for example the user scrolls near them.
+        Default value is <code>loading="eager"</code>.
+        Add <code>loading="lazy"</code> only to images which are positioned below the fold.
+    </li>
+
+    <li>
+        <code>longdesc</code> attribute specifies a hyperlink to a detailed description of an image.
+        <br>Possible values:
+        <ul>
+            <li>An id to another element</li>
+            <li>An absolute URL (<code>longdesc="https://www.example.com/description.txt"</code>)</li>
+            <li>A relative URL (<code>longdesc="description.txt"</code>)</li>
+        </ul>
+    </li>
+
+    <li>
+        <code>referrerpolicy</code> attribute specifies which referrer information to use when fetching an image.
+        Possible values are the same as <code>&lt;a&gt;</code> tag.
+    </li>
+    <li>
+        <code>sizes</code> attribute specifies image sizes for different page layouts
+    </li>
+
+    <li>
+        <code>srcset</code> is a list of URLs which specifies a list of images to use in different situations
+    </li>
+
+    <li>
+        <code>usemap</code> attribute specifies an image as a client-side image map
+        (an image map is an image with clickable areas).
+        The <code>usemap</code> attribute is associated with a <code>&lt;map&gt;</code> element's name attribute,
+        and creates a relationship between the <code>&lt;img&gt;</code> and the <code>&lt;map&gt;</code>.
+        <br>Note: The usemap attribute cannot be used if the <code>&lt;img&gt;</code> element
+        is a descendant of an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element.
+    </li>
+
+</ul>
+
+<h2 id="image_map">Image Maps</h2>
+
+<p>
+    The HTML <code>&lt;map&gt;</code> tag defines an image map.
+    An image map is an image with clickable areas.
+    The areas are defined with one or more <code>&lt;area&gt;</code> tags,
+    that defines the clickable areas in the image map.
+
+    The required name attribute of the <code>&lt;map&gt;</code> element is
+    <code>usemap</code> attribute and creates a relationship between the image and the map.
+
+    Server-side image map uses click coordinates, which are being sent with the HTTP request.
+    Client-side image map operates with images and web-pages already existing on the client-side.
+</p>
+
+<p>
+    Try to click on the computer, phone, or the cup of coffee in the image below:<br><br>
+
+    <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+</p>
+
+<h2 id="background_images">Background Images</h2>
+
+<p style="background-image: url('img/manule.jpg');">
+    A background image can be specified for almost any HTML element.
+    <br>To add a background image on an HTML element, use the HTML <code>style</code> attribute
+    and the CSS <code>background-image</code> property.
+</p>
+
+<p>
+    You can also specify the background image in the <code>&lt;style&gt;</code> element,
+    in the <code>&lt;head&gt;</code> section.
+</p>
+
+<p>
+    If the background image is smaller than the element, the image will repeat itself,
+    horizontally and vertically, until it reaches the end of the element.
+    To avoid the background image from repeating itself, set the <code>background-repeat</code> property
+    to <code>no-repeat</code>.
+</p>
+
+<p>
+    If you want the background image to cover the entire element, you can set the <code>background-size</code>
+    property to <code>cover</code>.
+    <br>Also, to make sure the entire element is always covered, set the <code>background-attachment</code>
+    property to <code>fixed</code>.
+    <br>If you want the background image to stretch to fit the entire element,
+    you can set the <code>background-size</code> property to <code>100% 100%</code>.
+</p>
+
+<p>
+    See also <a href="https://www.w3schools.com/css/css_background.asp">CSS Backgrounds</a> W3 School tutorial.
+</p>
+
+<h2 id="image_canvas">Canvas</h2>
+
+<p>
+    The <code>&lt;canvas&gt;</code> tag is used to draw graphics, on the fly,
+    using scripting languages, like JavaScript. For proper work, user's browser should have JavaScript enabled.
+    <br>The tag is transparent, and is only a container for graphics, you must use a script to actually draw the graphics.
+</p>
+
+<p>
+    The <code>&lt;canvas&gt;</code> tag has two attributes:
+</p>
+
+<ul>
+    <li><code>height</code> specifies the height of the canvas in pixels. Default value is 150</li>
+    <li><code>width</code> specifies the width of the canvas in pixels. Default value is 300</li>
+</ul>
+
+<canvas id="canvasExample">
+This text will appear if the browser does not support the canvas tag.
+</canvas>
+
+<script>
+    let c = document.getElementById("canvasExample");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = "red";
+    ctx.fillRect(20, 20, 75, 50);
+    //Turn transparency on
+    ctx.globalAlpha = 0.2;
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50, 50, 75, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect(80, 80, 75, 50);
+</script>
+
+<h2 id="image_figure">Figure</h2>
+
+<p>
+    The <code>&lt;figure&gt;</code> tag specifies self-contained content,
+    like illustrations, diagrams, photos, code listings, etc.
+    While the content of the <code>&lt;figure&gt;</code> element is related to the main flow,
+    its position is independent of the main flow, and if removed it should not affect the flow of the document.
+    The <code>&lt;figcaption&gt;</code> element is used to add a caption for the <code>&lt;figure&gt;</code> element.
+</p>
+
+<figure>
+    <img src="img/manule.jpg" alt="Pallas Cat">
+    <figcaption>Fig.1 - Pallas Cat</figcaption>
+</figure>
+
+<h2 id="image_picture">Picture</h2>
+
+<p>
+    The <code>&lt;picture&gt;</code> element allows you to display different pictures
+    for different devices or screen sizes. It contains one or more <code>&lt;source&gt;</code> elements,
+    each referring to different images through the srcset attribute.
+    This way the browser can choose the image that best fits the current view and/or device.
+    <br>Each <code>&lt;source&gt;</code> element has a <code>media</code> attribute
+    that defines when the image is the most suitable.
+    <br>The browser will use the first <code>&lt;source&gt;</code> element with matching attribute values,
+    and ignore any following <code>&lt;source&gt;</code> elements. This behavior is similar to
+    <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements.
+</p>
+
+<p>
+    Resize the browser to see different versions of the picture loading at different viewport sizes.
+    The browser looks for the first source element where the media query matches the user's current viewport width,
+    and fetches the image specified in the srcset attribute.
+</p>
+
+<picture>
+    <source media="(min-width: 650px)" srcset="img/img_food.jpg">
+    <source media="(min-width: 465px)" srcset="img/img_car.jpg">
+    <img src="img/img_girl.jpg" alt="Responsive design example" style="width:auto;">
+</picture>
+
+<p>
+    The <code>&lt;img&gt;</code> element is required as the last child tag of the picture declaration block.
+    The <code>&lt;img&gt;</code> element is used to provide backward compatibility
+    for browsers that do not support the picture element, or if none of the source tags matched.
+    <br>There are the following use cases for the <code>&lt;picture&gt;</code> element:
+</p>
+
+<ol>
+    <li>
+        The most common use of the <code>&lt;picture&gt;</code> element will be for art direction in responsive designs.
+        Instead of having one image that is scaled up or down based on the viewport width,
+        multiple images can be designed to more nicely fill the browser viewport.
+    </li>
+    <li>
+        Bandwidth. If you have a small screen or device, it is not necessary to load a large image file.
+    </li>
+    <li>
+        Format Support. Some browsers or devices may not support all image formats.
+        By using the <code>&lt;picture&gt;</code> element, you can add images of all formats,
+        and the browser will use the first format it recognizes, and ignore any of the following elements.
+    </li>
+</ol>
+
+<p>
+    See also <a href="https://www.w3schools.com/css/css_rwd_images.asp">Responsive Web Design</a> W3 School tutorial.
+</p>
+
+<h2 id="image_svg">SVG support</h2>
+
+<p>
+    The <code>&lt;svg&gt;</code> tag defines a container for SVG graphics.
+    SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+</p>
+
+<p>
+    Draw a rectangle:
+    <br>
+    <svg width="400" height="100">
+        <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+    </svg>
+
+</p>
+
+<p>
+    Draw a square with rounded corners:
+    <br>
+    <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+              style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+    </svg>
+
+</p>
+
+<p>
+    Draw a star:
+    <br>
+    <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    </svg>
+
+</p>
+
+<p>
+    See also <a href="https://www.w3schools.com/graphics/svg_intro.asp">SVG Tutorial</a> W3 School tutorial.
+</p>
 
 </body>
 
