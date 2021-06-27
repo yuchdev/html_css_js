@@ -1,0 +1,159 @@
+<!doctype HTML>
+
+<html lang="en" title="Types of CSS selectors">
+    
+<head>
+    <title>Simple types of CSS selectors</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="CSS introduction">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        p {
+            color: green;
+        }
+
+        .violet {
+            color: violet;
+        }
+
+        #unique_paragraph {
+            color: crimson;
+        }
+
+        div, .narrow {
+            width: 300px;
+        }
+
+        * {
+            font-family: Arial;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Element, class and ID selectors</h1>
+
+<h2>Element selector</h2>
+
+<p>
+    The browser traverse HTML document, looking for elements matching the style described in CSS stylesheet.
+    First type of selector is element selector, and it applies the style to all elements in the document.
+    It could be headers (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>),
+    paragraphs (<code>&lt;p&gt;</code>),
+    lists (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>),
+    tables (<code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>) and so on.
+</p>
+
+<p>
+    Since we defined <code>green</code> text color for all paragraphs in our stylesheet,
+    you see this text in this color:<br>
+
+</p>
+
+<code><br>
+    p {<br>
+    &nbsp;&nbsp;
+    color: green;<br>
+    }<br>
+    <br>
+</code>
+
+<h2>Class selector</h2>
+
+<p>
+    Every HTML element can be assigned with the attribute <code>class</code>. 
+    Consequently, we also have a special CSS selector, affecting only HTML elements of specific class.
+    Obviously, such selectors called <def>class selectors</def>.
+</p>
+
+<p class="violet">
+    In our stylesheet we have a class selector called <code>violet</code>, coloring every HTML element of such class
+    into this color. Like this paragraph, belonging to class <code>violet</code>.
+    If you want target elements with a specific class,
+    use a syntax with period (.) character, followed by the class name:<br>
+</p>
+
+<code><br>
+    .violet {<br>
+    &nbsp;&nbsp;
+    color: violet;<br>
+    }<br>
+    <br>
+</code>
+
+<div class="violet">
+    This &lt;div&gt; tag also belongs to the <code>violet</code> class.
+</div>
+
+<h2>ID selector</h2>
+
+<p id="unique_paragraph">
+    Every HTML element also can have a specific <code>id</code> attribute.
+    It is being used for unique identification of this specific element.
+    The <code>id</code> of the element is unique within a page,
+    so the <code>id</code> selector is used to select this unique element.
+    This paragraph has an <code>id="unique_paragraph"</code>,
+    and it is assigned a crimson text color in pur stylesheet.
+    If you want to style an element with the specific id, write a hash (#) character,
+    followed by the id of the element:<br>
+</p>
+
+<code><br>
+    #unique_paragraph {<br>
+    &nbsp;&nbsp;
+    color: crimson;<br>
+    }<br>
+    <br>
+</code>
+
+<h2>Combining selectors</h2>
+
+<p class="narrow">
+    CSS allows us to combine different selectors into one CSS rule, which could be quite handy.
+    For example, we can assign width of text equal to 300 pixel
+    inside the tag <code>&lt;div&gt;</code> and this particular paragraph,
+    which belongs to class <code>"narrow"</code>.
+</p>
+
+<code><br>
+    div, .narrow {<br>
+    &nbsp;&nbsp;
+    width: 300px;<br>
+    }<br>
+    <br>
+</code>
+
+<div>
+    This text also should be affected by the combined seelctors. Let's add some Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+
+<h2>Universal selector</h2>
+
+<p>
+    The universal selector (*) unconditionally selects all HTML elements on the page.
+    If you want to create a CSS rule which will affect every HTML element on the page,
+    use the character star (*) before the parameter list.
+    Thus, all elements of this page has Arial font family thanks to universal selector.
+</p>
+
+<code><br>
+    * {<br>
+    &nbsp;&nbsp;
+    font-family: Arial;<br>
+    }<br>
+    <br>
+</code>
+
+</body>
+
+</html>
