@@ -1,0 +1,19 @@
+p {
+  color: green;
+}
+
+.violet {
+  color: violet;
+}
+
+#unique_paragraph {
+  color: crimson;
+}
+
+div, .narrow {
+  width: 300px;
+}
+
+* {
+  font-family: Arial, monospace;
+}
