@@ -13,23 +13,46 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Yurii Cherkasov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        div {
+            color: maroon;
+            margin-left: 100px;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Title 1</h1>
+<h1>Header of <code>h1</code> level</h1>
+
+<h2>This is <code>h2</code> level header</h2>
 
 <p>
     In this example all <code>&lt;h1&gt;</code> elements will be center-aligned, with a green text color
 </p>
 
-<h1>Example explained</h1>
+<div>
+    This text should have <code>maroon</code> color, and aligned 100 pixels left
+</div>
+
+<p style="background-color: violet;">
+    And this text have <code>violet</code> background color
+</p>
+
+<h1>Examples explained</h1>
+
+<h2>Styling of <code>h1</code> element</h2>
 
 <code>
+
     h1 {
-    <br>color: green;
-    <br>text-align: center;
+    &nbsp;&nbsp;color: green;<br>
+    &nbsp;&nbsp;text-align: center;<br>
     <br>}
+    <br>
+
 </code>
 
 <ul>
@@ -39,12 +62,84 @@
     <li><code>text-align</code> is a property, and <code>center</code> is the property value</li>
 </ul>
 
-<h1>Element, class and ID selector</h1>
+<h2>Styling of <code>div</code> element</h2>
 
-<h2>This is <code>h2</code> header</h2>
+div {<br>
+&nbsp;&nbsp;color: maroon;<br>
+&nbsp;&nbsp;margin-left: 100px;<br>
+}<br>
+<br>
 
-<p class="italic_text">This paragraph belongs to the class "italic_text", it has css selector attached</p>
-<p class="italic_text">One more paragraph of class "italic_text"</p>
+<p>
+    Just like <code>&lt;h1&gt;</code> element, all <code>&lt;div&gt;</code> affected elements
+    change their text color to <code>maroon</code>, and become aligned 100 pixels left.
+</p>
+
+<h2>Styling of the single <code>p</code> element</h2>
+
+<code>&lt;p style="background-color: violet;"&gt;</code>
+
+<p>
+    Here we apply <code>violet</code> background color to a single <code>&lt;p&gt;</code> element.
+</p>
+
+<h1>How to apply CSS rules</h1>
+
+<p>
+    There are three ways to apply a stylesheet to an HTML document, and they are applied in exact that order.
+</p>
+
+<ul>
+    <li>External</li>
+    <li>Internal</li>
+    <li>Inline</li>
+</ul>
+
+<h2>External stylesheet</h2>
+
+<p>
+    With the external stylesheet, you can change the look of an entire document
+    or even website by changing just one CSS file.
+    Each HTML page must include a reference to the external style sheet file
+    inside the <code>&lt;link&gt;</code> element, inside the head section.
+    The full example may look like:
+</p>
+
+<code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+
+<p>
+    An external style sheet is rust a regular text file, saved with a <code>.css</code> extension.
+    The external <code>*.css</code> file should not contain any HTML tags.
+</p>
+
+<p>
+    We styled <code>&lt;h1&gt;</code> element, using external CSS stylesheet
+</p>
+
+<h2>Internal stylesheet</h2>
+
+<p>
+    An internal style sheet could be used to style a single HTML document.
+    The internal style is defined inside the <code>&lt;style&gt;</code> element,
+    which should be located inside the <code>&lt;head&gt;</code> section.
+    The syntax of CSS code inside of <code>&lt;style&gt;</code> tag is the same with
+    any external <code>*.css</code> file.
+</p>
+
+<p>
+    We styled <code>&lt;div&gt;</code> element, using external CSS stylesheet
+</p>
+
+<h2>Inline CSS</h2>
+
+<p>
+    An inline style may be used to apply a style to a single HTML element.
+    You should just add the <code>style</code> attribute to the relevant element.
+    The style <code>attribute</code> can contain any CSS property.
+    It may look like that:
+</p>
+
+<code>&lt;h1 style="color:blue;text-align:center;"&gt;</code>This is a heading<code>&lt;/h1&gt;</code>
 
 
 </body>

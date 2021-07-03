@@ -12,30 +12,7 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Yurii Cherkasov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        p {
-            color: green;
-        }
-
-        .violet {
-            color: violet;
-        }
-
-        #unique_paragraph {
-            color: crimson;
-        }
-
-        div, .narrow {
-            width: 300px;
-        }
-
-        * {
-            font-family: Arial;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -61,8 +38,7 @@
 
 <code><br>
     p {<br>
-    &nbsp;&nbsp;
-    color: green;<br>
+    &nbsp;&nbsp;color: green;<br>
     }<br>
     <br>
 </code>
@@ -72,7 +48,7 @@
 <p>
     Every HTML element can be assigned with the attribute <code>class</code>. 
     Consequently, we also have a special CSS selector, affecting only HTML elements of specific class.
-    Obviously, such selectors called <def>class selectors</def>.
+    Obviously, such selectors called <dfn>class selectors</dfn>.
 </p>
 
 <p class="violet">
@@ -84,8 +60,7 @@
 
 <code><br>
     .violet {<br>
-    &nbsp;&nbsp;
-    color: violet;<br>
+    &nbsp;&nbsp;color: violet;<br>
     }<br>
     <br>
 </code>
@@ -100,7 +75,7 @@
     Every HTML element also can have a specific <code>id</code> attribute.
     It is being used for unique identification of this specific element.
     The <code>id</code> of the element is unique within a page,
-    so the <code>id</code> selector is used to select this unique element.
+    so the <dfn>ID selector</dfn> is used to select this unique element.
     This paragraph has an <code>id="unique_paragraph"</code>,
     and it is assigned a crimson text color in pur stylesheet.
     If you want to style an element with the specific id, write a hash (#) character,
@@ -109,25 +84,25 @@
 
 <code><br>
     #unique_paragraph {<br>
-    &nbsp;&nbsp;
-    color: crimson;<br>
+    &nbsp;&nbsp;color: crimson;<br>
     }<br>
     <br>
 </code>
 
-<h2>Combining selectors</h2>
+<h2>Selectors grouping</h2>
 
 <p class="narrow">
-    CSS allows us to combine different selectors into one CSS rule, which could be quite handy.
+    CSS <dfn>selectors grouping</dfn> allows us to combine multiple selectors into a single CSS rule,
+    which could be quite handy.
     For example, we can assign width of text equal to 300 pixel
-    inside the tag <code>&lt;div&gt;</code> and this particular paragraph,
-    which belongs to class <code>"narrow"</code>.
+    inside the tag <code>&lt;div&gt;</code> <b>and</b> this particular paragraph,
+    which belongs to class <code>"narrow"</code>. If you want to style a group of elements in a same way,
+    just write a comma-separated list of these selectors.
 </p>
 
 <code><br>
     div, .narrow {<br>
-    &nbsp;&nbsp;
-    width: 300px;<br>
+    &nbsp;&nbsp;width: 300px;<br>
     }<br>
     <br>
 </code>
@@ -140,7 +115,7 @@
 <h2>Universal selector</h2>
 
 <p>
-    The universal selector (*) unconditionally selects all HTML elements on the page.
+    The <dfn>universal selector</dfn> (*) unconditionally selects all HTML elements on the page.
     If you want to create a CSS rule which will affect every HTML element on the page,
     use the character star (*) before the parameter list.
     Thus, all elements of this page has Arial font family thanks to universal selector.
@@ -148,8 +123,7 @@
 
 <code><br>
     * {<br>
-    &nbsp;&nbsp;
-    font-family: Arial;<br>
+    &nbsp;&nbsp;font-family: Arial;<br>
     }<br>
     <br>
 </code>

@@ -1,0 +1,55 @@
+<!doctype HTML>
+
+<html lang="en" title="Descendant selector">
+    
+<head>
+    <title>Descendant selector</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Descendant CSS selector example">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="descendant.css">
+</head>
+
+<body>
+
+<h2>Descendant selector example</h2>
+
+Here we selects all <code>&lt;p&gt;</code> elements inside <code>&lt;div&gt;</code> elements
+and apply <code>violet</code> color to them:
+
+We make elements more visual by adding different background colors to them
+and 5 pixels margin to emphasize nesting level, as an inline CSS style.
+
+<div style="background-color: lightblue; margin-left: 5px">
+
+    This text is located within <code>&lt;div&gt;</code> tag. It is not affected,
+    since it is not inside <code>&lt;p&gt;</code> element (has default color).
+
+    <p style="background-color: lightgreen; margin-left: 5px;">
+        This text is within the <code>&lt;p&gt;</code> element, which is
+        the first-level descendant of the <code>&lt;div&gt;</code> tag.
+        It is affected by the descendant selector (has violet color)
+    </p>
+
+    <article style="background-color: lightgrey; margin-left: 5px;">
+        This text is within the <code>&lt;article&gt;</code> element, which is
+        the first-level descendant of the <code>&lt;div&gt;</code> tag.
+        It is not affected affected by the descendant selector,
+        since it is not <code>&lt;p&gt;</code> element (has default color).
+
+        <p style="background-color: lightcyan; margin-left: 5px;">
+            This text is within the <code>&lt;p&gt;</code> element, which is
+            the first-level of the <code>&lt;article&gt;</code> tag
+            and second-level descendant of the <code>&lt;div&gt;</code> tag.
+            It is affected by the descendant selector (has violet color).
+        </p>
+
+    </article>
+</div>
+
+</body>
+
+</html>

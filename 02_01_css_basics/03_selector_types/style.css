@@ -1,11 +1,19 @@
-h1 {
-  color: gray;
-  text-align: center;
-  width: 200px;
+p {
+  color: green;
 }
 
-p {
+.violet {
+  color: violet;
+}
+
+#unique_paragraph {
   color: crimson;
-  font-size: 28px;
-  width: 400px;
+}
+
+div, .narrow {
+  width: 300px;
+}
+
+* {
+  font-family: Arial, monospace;
 }

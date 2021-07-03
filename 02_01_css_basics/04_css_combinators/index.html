@@ -1,0 +1,114 @@
+<!doctype HTML>
+
+<html lang="en" title="CSS Combinators">
+    
+<head>
+    <title>CSS Combinators</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CSS introduction">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h1>CSS Combinators</h1>
+
+<h2>The definition of Combinators</h2>
+
+<p>
+    The <dfn>CSS Combinator</dfn> is a way to define relationships between selectors,
+    to target them more precisely.
+</p>
+
+<h2>Descendant selector</h2>
+
+<p>
+    The <dfn>descendant selector</dfn> matches all elements that are descendants of a specified element.
+    To create descendant selector put space between such selectors,
+    so that element to the right has been considered a descendant of element to the left.
+    The following example selects all <code>&lt;p&gt;</code> elements
+    inside <code>&lt;div&gt;</code> elements and apply <code>violet</code> color to them:
+</p>
+
+<code><br>
+    div p {<br>
+    &nbsp;&nbsp;color: violet;<br>
+    }<br>
+    <br>
+</code>
+
+<a href="descendant.html">Link to the example</a>
+
+<h2>Child selector</h2>
+
+<p>
+    The <dfn>child selector</dfn> selects all elements that are the children
+    (or direct descendants) of a specified element.
+    To create descendant selector put symbol <code>></code> between such selectors,
+    so that element to the right has been considered a child of element to the left.
+    The following example selects all <code>&lt;p&gt;</code> elements
+    that are children of a <code>&lt;div&gt;</code> element
+    and apply <code>yellow</code> color to them:
+</p>
+
+<code><br>
+    div > p {<br>
+    &nbsp;&nbsp;color: yellow;<br>
+    }<br>
+    <br>
+</code>
+
+<a href="child.html">Link to the example</a>
+
+<h2>General sibling selector</h2>
+
+<p>
+    The <dfn>general sibling selector</dfn> selects all elements that are next
+    siblings of a specified element.
+    Put symbol <code>~</code> so that element to the right has been considered
+    a sibling of element to the left.
+    The following example selects all <code>&lt;p&gt;</code> elements
+    that are next siblings of <code>&lt;div&gt;</code> elements
+    and apply <code>maroon</code> color to them
+</p>
+
+<code><br>
+    div ~ p {<br>
+    &nbsp;&nbsp;color: maroon;<br>
+    }<br>
+    <br>
+</code>
+
+<a href="sibling.html">Link to the example</a>
+
+<h2>Adjacent sibling selector</h2>
+
+<p>
+    The <dfn>adjacent sibling selector</dfn> is used to select
+    an element that is directly after another specific element.
+    Sibling elements must have the same parent element,
+    and "adjacent" is additional requirement
+    to such sibling, meaning "immediately following".
+    The syntax is the same as for general sibling selector,
+    just put <code>+</code> symbol between such elements.
+    The following example selects the first <code>&lt;p&gt;</code> element
+    that are placed immediately after <code>&lt;div&gt;</code> elements
+    and apply <code>blue</code> color to it:
+</p>
+
+<code><br>
+    div + p {<br>
+    &nbsp;&nbsp;color: blue;<br>
+    }<br>
+    <br>
+</code>
+
+<a href="adjacent.html">Link to the example</a>
+git 
+</body>
+
+</html>

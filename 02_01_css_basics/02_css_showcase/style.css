@@ -1,11 +1,12 @@
 h1 {
-  color: gray;
+  color: crimson;
   text-align: center;
-  width: 200px;
+  font-size: 32px;
 }
 
-h1 {
-  color: crimson;
-  font-size: 28px;
-  width: 400px;
+p {
+  color: gray;
+  width: 600px;
+  font-family: "Courier New";
+  font-size: 14px;
 }
