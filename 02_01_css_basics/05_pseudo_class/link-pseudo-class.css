@@ -1,4 +1,26 @@
-li:nth-child(odd) {
-  background-color: lightgrey;
-  width: 700px;
+/* unvisited link */
+a.example:link {
+  color: green;
+}
+
+/* visited link */
+a.example:visited {
+  color: lightgreen;
+}
+
+/* mouse over link */
+a.example:hover {
+  color: blue;
+}
+
+/* selected link */
+a.example:active {
+  color: yellow;
+}
+
+/* target element */
+:target {
+  border: 1px solid #D3D3D3;
+  background-color: aqua;
+  width: 500px;
 }

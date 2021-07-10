@@ -22,6 +22,89 @@
     We make elements more visual by adding different background colors to them as an inline CSS style.
 </p>
 
+<h2>List of related selectors</h2>
+
+<ul>
+    <li><code>:active</code> - Selects the active link</li>
+    <li><code>:link</code> - Selects all unvisited link</li>
+    <li><code>:visited</code> - Selects the visited link</li>
+    <li><code>:hover</code> - Selects the element on mouse hover</li>
+    <li>
+        <code>:target</code> - Selects the current target element,
+        being linked to URLs followed by <code>#anchor-name</code>
+    </li>
+</ul>
+
+<p>
+    Use the <code>:link</code> selector to style links to unvisited links.
+    A link becomes <code>:active</code> when you click on it.
+    Use the <code>:visited</code> selector to style links to visited pages,
+    and the <code>:hover</code> selector to style links when you mouse over them.
+</p>
+
+<p>
+    Note 1: <code>:active</code> <b>must</b> come after <code>:hover</code> (if both present)
+    in the CSS definition in order to be effective!
+</p>
+
+<p>
+    Note 2: in general, you can apply link-related selectors on all elements, not only links,
+    for example, if you want style button to behave like a link.
+</p>
+
+<h2>Link styling example</h2>
+
+<p>
+    The following link of class <code>"example"</code> should have green text while unvisited,
+    blue then hover, yellow then active, and lightgreen then visited.
+</p>
+
+<p><a href="index.html" class="example">Back to main page</a></p>
+<p><a href="input-pseudo-class.html" class="example">To examples of input element styling</a></p>
+<p><a href="relate-pseudo-class.html" class="example">To examples of relationships between elements</a></p>
+
+<h2>Target element example</h2>
+
+<p>
+    The <code>:target</code> selector is a bit tricky.
+    While you're using links referring to element within one page,
+    after clicking on such link, the target element become affected by the <code>:target</code> selector.
+    The next two links refers to target <code>&lt;div&gt;</code>
+    with IDs <code>"div1"</code> and <code>"div2"</code> respectively
+</p>
+
+<p><a href="#div1" class="example">Style first target</a></p>
+<p><a href="#div2" class="example">Style second target</a></p>
+
+<div id="div1">First target element</div>
+<div id="div2">Second target element</div>
+
+
+<h2>Link styling and privacy concerns</h2>
+
+<p>
+    Browsers limits the styles that can be set for <code>a:visited</code> links,
+    reportedly due to security and privacy concerns.
+    The problem is that <code>:visited</code> selector allows to uncover browser history
+    through JavaScript function <code>window.getComputedStyle()</code>.
+    In order to mitigate this You can apply only following styles:
+</p>
+
+<ul>
+    <li><code>color</code></li>
+    <li><code>background-color</code></li>
+    <li><code>border-color</code> for all sides</li>
+    <li><code>outline-color</code></li>
+    <li><code>column-rule-color</code></li>
+    <li>only color of <code>fill</code> and <code>stroke</code> attributes</li>
+</ul>
+
+<p>
+    This is not everything!
+    To preserve user's privacy, Firefox browser will lie to web applications under certain circumstances,
+    always returning values indicating that a user has never visited any of the links on a page.
+</p>
+
 </body>
 
 </html>
