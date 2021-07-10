@@ -18,10 +18,6 @@
 
 <h1>Styling links through CSS pseudo-classes</h1>
 
-<p>
-    We make elements more visual by adding different background colors to them as an inline CSS style.
-</p>
-
 <h2>List of related selectors</h2>
 
 <ul>
@@ -43,8 +39,9 @@
 </p>
 
 <p>
-    Note 1: <code>:active</code> <b>must</b> come after <code>:hover</code> (if both present)
-    in the CSS definition in order to be effective!
+    Note 1: <code>:active</code> <b>must</b> come after <code>:hover</code>,
+    and <code>a:hover</code> <b>must</b> come after <code>a:link</code> and <code>a:visited</code>
+    in the CSS definition in order to have effect!
 </p>
 
 <p>
@@ -79,6 +76,17 @@
 <div id="div1">First target element</div>
 <div id="div2">Second target element</div>
 
+<h2>Most commonly used properties for link styling</h2>
+
+The <code>text-decoration</code> property is mostly used to remove underlines from links
+The <code>background-color</code> property can be used to specify a background color for links
+
+<h2>Link styling examples (TODO)</h2>
+
+Different link styles
+Combining several CSS properties to display links as boxes/buttons
+Another example of how to create link boxes/buttons
+Change cursor shape over link
 
 <h2>Link styling and privacy concerns</h2>
 

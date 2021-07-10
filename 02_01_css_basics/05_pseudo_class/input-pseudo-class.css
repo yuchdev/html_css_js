@@ -1,4 +1,46 @@
-li:nth-child(odd) {
-  background-color: lightgrey;
-  width: 700px;
+/* :checked selector: increase size */
+input:checked {
+  height: 1.2em;
+  width: 1.2em;
+}
+
+/* :focus selector */
+input[type=text] {
+  width: 100px;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 200px;
+  background-color: lightblue;
+}
+
+/* enable and disabled selectors */
+input.enabled_example:enabled {
+  background: #ffff00;
+}
+
+input.enabled_example:disabled {
+  background: #dddddd;
+}
+
+/* :in-range and :out-of-range selectors */
+
+input[type=number].range_example:in-range {
+  border: 1px solid;
+}
+
+input[type=number].range_example:out-of-range {
+  border: 2px solid red;
+}
+
+/* :valid and :invalid selectors */
+
+input.valid_example:valid {
+  border: 1px solid;
+}
+
+input.valid_example:invalid {
+  background-color: lightcoral;
+  border: 2px solid red;
 }

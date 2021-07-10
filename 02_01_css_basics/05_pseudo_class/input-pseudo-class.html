@@ -11,16 +11,125 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Yurii Cherkasov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="link-pseudo-class.css">
+    <link rel="stylesheet" href="input-pseudo-class.css">
 </head>
 
 <body>
 
 <h1>Styling input elements through CSS pseudo-classes</h1>
 
+<h2>List of related selectors</h2>
+
+<ul>
+    <li><code>:checked</code> - Select every checked input element</li>
+    <li><code>:focus</code> - Select every element that has focus</li>
+    <li><code>:enabled</code> - Select every enabled element</li>
+    <li><code>:disabled</code> - Select every disabled element</li>
+    <li><code>:in-range</code> - Select every element that has a value within specific range</li>
+    <li><code>:out-of-range</code> - Select every element that has a value outside of specific range</li>
+    <li><code>:valid</code> - Select every element that has a valid value</li>
+    <li><code>:invalid</code> - Select every element that has an invalid value</li>
+    <li><code>:required</code> - Select every element that has <code>"required"</code> attribute</li>
+    <li><code>:optional</code> - Select every element that has no <code>"required"</code> attribute</li>
+    <li><code>:read-only</code> - Select every element that has <code>"readonly"</code> attribute</li>
+    <li><code>:read-write</code> - Select every element that has no <code>"readonly"</code> attribute</li>
+    <li>
+        <code>:lang(language)</code> - Select every element with a specific lang attribute value
+    </li>
+</ul>
+
+<h2>List of examples</h2>
+
+<h3><code>:checked</code> selector</h3>
+
 <p>
-    We make elements more visual by adding different background colors to them as an inline CSS style.
+    The <code>:checked</code> selector matches every checked radio buttons and checkbox
+    which are <code>&lt;input&gt;</code> elements, and <code>&lt;option&gt;</code> element.
+    In the following example we scale radio button up to 120% of original size;
 </p>
+
+<form action="http://localhost:3000/action_page">
+    <fieldset>
+        <legend>Please select your gender</legend>
+        <label for="radio_gender_male">
+            <input id="radio_gender_male" type="radio" name="gender" value="male" checked="checked"> Male<br>
+        </label>
+        <label for="radio_gender_female">
+            <input id="radio_gender_female" type="radio" name="gender" value="female"> Female<br>
+        </label>
+        <label for="radio_gender_na">
+            <input id="radio_gender_na" type="radio" name="gender" value="other"> Not specified<br>
+        </label>
+    </fieldset>
+</form>
+
+<p>
+    Note: we apply style to button itself, not to its label!
+</p>
+
+<h3><code>:focus</code> selector</h3>
+
+<p>
+    The <code>:focus</code> selector is used to style the element that currently has focus.
+    This selector is commonly applied on elements that accept keyboard or other kinds of inputs.
+</p>
+
+<p>
+    Set the width of the input field to 100 pixels.
+    However, when the input field gets focus, it becomes 200 pixels wide with lightblue background:
+</p>
+
+<label>
+    Search: <input type="text" name="search">
+</label>
+
+<h3><code>:enabled</code> and <code>:disabled</code> selectors</h3>
+
+<p>
+    The <code>:enabled</code> and <code>:disabled</code> selectors
+    match enabled and disabled elements respectively.
+</p>
+
+<label>
+    First name: <input type="text" name="first_name" class="enabled_example"><br>
+    Last name: <input type="text" name="last_name" class="enabled_example"><br>
+    Phone: <input type="text" name="phone" class="enabled_example" disabled><br>
+</label>
+
+<h3><code>:in-range</code> and <code>:out-of-range</code> selectors</h3>
+
+<p>
+    Selectors <code>:in-range</code> and <code>:out-of-range</code>
+    work with values within or outside a specified range respectively.
+    They require input elements to have min and/or max attributes.
+</p>
+
+<p>
+    Change values within the range of 1-99 and outside it, to see how border style changes.
+</p>
+
+<label>
+    Age: <input type="number" min="1" max="99" value="42" class="range_example">
+</label>
+
+<h3><code>:valid</code> and <code>:invalid</code> selectors</h3>
+
+<p>
+    The <code>:valid</code> and <code>:invalid</code> selectors
+    style elements with a value that validates according to the element's settings.
+    It could be input elements with min and max attributes,
+    email fields with a legal email, or number fields with a numeric value validation.
+</p>
+
+<label>
+    Email: <input type="email" value="support@example.com" class="valid_example">
+</label>
+
+<h3><code>:required</code> and <code>:optional</code> selectors</h3>
+
+<h3><code>:read-only</code> and <code>:read-write</code> selectors</h3>
+
+<h3><code>:lang</code> selector</h3>
 
 </body>
 
