@@ -11,16 +11,106 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Yurii Cherkasov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-pseudo-class.css">
 </head>
 
 <body>
 
 <h1>Pseudo-class CSS selectors</h1>
 
-<h2>Pseudo-class defenition</h2>
+<h2>Pseudo-class definition</h2>
+
+<p>
+    A <dfn>pseudo-class</dfn> is a definition of a state of element. For example it could be:
+</p>
+
+<ul>
+    <li>Styling a visited and unvisited link differently</li>
+    <li>Styling of an element while mouse hovers over it</li>
+    <li>Styling of an element after it get and lost focus</li>
+</ul>
 
 <h2>Pseudo-class syntax and examples</h2>
+
+<p>
+    The syntax of pseudo-classes:
+</p>
+
+<code>
+    selector:pseudo-class {<br>
+    &nbsp;&nbsp;property: value;<br>
+    }<br>
+    <br>
+</code>
+
+<h2>All CSS Pseudo-classes</h2>
+
+<h3>Link-related Pseudo-classes</h3>
+
+<ul>
+    <li><code>:active</code> - Selects the active link</li>
+    <li><code>:link</code> - Selects all unvisited link</li>
+    <li><code>:visited</code> - Selects the visited link</li>
+    <li><code>:hover</code> - Selects the element on mouse hover</li>
+    <li>
+        <code>:target</code> - Selects the current active element
+        (e.g. clicked on a URL containing that anchor name)
+    </li>
+</ul>
+
+<p>
+    See also <a href="link-pseudo-class.html">styling links through pseudo-classes</a>.
+</p>
+
+
+<h3>Input and language-related Pseudo-classes</h3>
+
+<ul>
+    <li><code>:checked</code> - Select every checked element</li>
+    <li><code>:focus</code> - Select every element that has focus</li>
+    <li><code>:enabled</code> - Select every enabled element</li>
+    <li><code>:disabled</code> - Select every disabled element</li>
+    <li><code>:in-range</code> - Select every element that has a value within specific range</li>
+    <li><code>:out-of-range</code> - Select every element that has a value outside of specific range</li>
+    <li><code>:valid</code> - Select every element that has a valid value</li>
+    <li><code>:invalid</code> - Select every element that has an invalid value</li>
+    <li><code>:required</code> - Select every element that has <code>"required"</code> attribute</li>
+    <li><code>:optional</code> - Select every element that has no <code>"required"</code> attribute</li>
+    <li><code>:read-only</code> - Select every element that has <code>"readonly"</code> attribute</li>
+    <li><code>:read-write</code> - Select every element that has no <code>"readonly"</code> attribute</li>
+    <li>
+        <code>:lang(language)</code> - Select every element with a lang attribute value
+        <i>starting</i> with <code>"language"</code>
+    </li>
+</ul>
+
+<h3>Pseudo-classes based on relationships between elements</h3>
+
+<ul>
+    <li><code>:empty</code> - Select every element that has no children</li>
+    <li><code>:only-child</code> - Selects every element that is the only child of this type of its parent</li>
+    <li><code>:only-of-type</code> - Selects every element that is the only element of this type of its parent</li>
+    <li><code>:root</code> - Selects the document's root element</li>
+    <li><code>:not(selector)</code> - Select every element that is not of selector type</li>
+</ul>
+<ul>
+    <li><code>:first-child</code> - Select every element that is the first child of its parent</li>
+    <li><code>:last-child</code> - Select every element that is the last child of its parent</li>
+    <li><code>:nth-child(n)</code> - Select every element that is the n-th child of its parent</li>
+    <li>
+        <code>:nth-last-child(n)</code> - Select every element
+        that is the n-th from the end child of its parent
+    </li>
+</ul>
+<ul>
+    <li><code>:first-of-type</code> - Select every element that is the first of this type of its parent</li>
+    <li><code>:last-of-type</code> - Select every element that is the last of this type of its parent</li>
+    <li><code>:nth-of-type(n)</code> - Select every element that is the n-th element of this type of its parent</li>
+    <li>
+        <code>:nth-last-of-type(n)</code> - Select every element
+        that is the n-th element from the end of this type of its parent
+    </li>
+</ul>
 
 </body>
 
