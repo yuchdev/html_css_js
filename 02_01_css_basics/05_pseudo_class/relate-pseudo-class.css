@@ -1,4 +1,11 @@
-li:nth-child(odd) {
-  background-color: lightgrey;
-  width: 700px;
+/*:root of the document*/
+:root {
+  background: mediumspringgreen;
+}
+
+/* :empty paragraphs */
+p:empty {
+  background: hotpink;
+  width: 100px;
+  height: 20px;
 }

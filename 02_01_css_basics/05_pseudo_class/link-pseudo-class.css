@@ -24,3 +24,59 @@ a.example:active {
   background-color: aqua;
   width: 500px;
 }
+
+a.tooltip_example:hover {
+  color: green;
+}
+
+p.tooltip_example {
+  display: none;
+  background-color: yellow;
+  width: 80px;
+}
+
+div.tooltip_example:hover p {
+  display: block;
+}
+
+/* Enlarge link text on hover */
+
+a.enlarge_on_hover:link {
+  color:#ff0000;
+}
+
+a.enlarge_on_hover:visited {
+  color:#0000ff;
+}
+
+a.enlarge_on_hover:hover {
+  font-size:150%;
+}
+
+/* Change link font on hover */
+
+a.font_on_hover:link {
+  color:#ff0000;
+}
+
+a.font_on_hover:visited {
+  color:#0000ff;
+}
+
+a.font_on_hover:hover {
+  font-family:monospace;
+}
+
+/* Change link text decoration on hover */
+
+a.dashed_on_hover:link {
+  color:#0000ff;
+}
+
+a.dashed_on_hover:visited {
+  color:#ff0000;
+}
+
+a.dashed_on_hover:hover {
+  text-decoration: none;
+}

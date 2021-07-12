@@ -22,6 +22,53 @@
     We make elements more visual by adding different background colors to them as an inline CSS style.
 </p>
 
+<h2>List of related selectors</h2>
+
+<h3><code>:root</code> selector</h3>
+
+<a href="root-pseudo-class.html">The <code>:root</code> selector</a> matches the while document's root element.
+
+<h3><code>:empty</code> selector</h3>
+
+The <code>:empty</code> selector matches every element that has no children (including text content).
+
+<p></p>
+
+<p>Paragraph with text content</p>
+
+<h3>N-th child pseudo-classes</h3>
+<ul>
+    <li><code>:first-child</code> - Select every element that is the first child of its parent</li>
+    <li><code>:last-child</code> - Select every element that is the last child of its parent</li>
+    <li><code>:nth-child(n)</code> - Select every element that is the n-th child of its parent</li>
+    <li>
+        <code>:nth-last-child(n)</code> - Select every element
+        that is the n-th from the end child of its parent
+    </li>
+</ul>
+
+The <code>:nth-child(n)</code> selector used to style element that is the N-th child,
+regardless of type, of its parent. N can be a number, a keyword (live <code>odd</code>),
+or a formula (like <code>3n</code>). Could be handy to style every 2nd table or list row
+for better visualization.
+
+<h3><code>:only-child</code> and <code>:only-of-type</code> selector</h3>
+
+<h3>N-th of type pseudo-classes</h3>
+
+<ul>
+    <li><code>:first-of-type</code> - Select every element that is the first of this type of its parent</li>
+    <li><code>:last-of-type</code> - Select every element that is the last of this type of its parent</li>
+    <li><code>:nth-of-type(n)</code> - Select every element that is the n-th element of this type of its parent</li>
+    <li>
+        <code>:nth-last-of-type(n)</code> - Select every element
+        that is the n-th element from the end of this type of its parent
+    </li>
+</ul>
+
+The <code>:nth-of-type(n)</code> selector matches every element that is the nth child, of a particular type.
+N also can be a keyword or formula.
+
 </body>
 
 </html>
