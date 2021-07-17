@@ -1,0 +1,26 @@
+li.menu_button {
+  list-style: none;
+}
+
+/* Should be styled in normal state? */
+a.menu_button:link, a.menu_button:visited {
+  background-color: lightcoral;
+  color: black;
+  text-decoration: none;
+  border: 2px solid gray;
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin: 1px;
+}
+
+a.menu_button:hover, a.menu_button:active {
+  background-color: coral;
+  color: blue;
+  text-decoration: none;
+  border: 2px solid gray;
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin: 1px;
+}
