@@ -1,0 +1,84 @@
+<!doctype HTML>
+
+<html lang="en" title="Styling parts of elements through CSS pseudo-elements">
+    
+<head>
+    <title>parts of elements through CSS pseudo-elements</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="parts of elements through CSS pseudo-elements">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pseudo-element.css">
+</head>
+
+<body>
+
+<h1>parts of elements through CSS pseudo-elements</h1>
+
+<h2>First letter or line</h2>
+
+<p class="first_letter">
+    The <code>::first-letter</code> pseudo-element is used to add
+    a special style to the first letter of an element content.
+</p>
+
+<div class="first_line">
+    The <code>::first-line</code> pseudo-element is used to add a special style to the first line
+    of an element content. First line is not selected in any way but its display in the browser.
+
+</div>
+
+<p>
+    The <code>::first-letter</code> and <code>::first-line</code> pseudo-elements
+    can only be applied to block-level elements.
+    Only the following list of properties can be applied to a first letter or line:
+</p>
+
+<ul>
+    <li>font properties</li>
+    <li>color properties</li>
+    <li>background properties</li>
+    <li>word-spacing</li>
+    <li>letter-spacing</li>
+    <li>text-decoration</li>
+    <li>vertical-align</li>
+    <li>text-transform</li>
+    <li>line-height</li>
+    <li>clear</li>
+</ul>
+
+<h2>Before and after content</h2>
+
+<p class="before_after">
+    <br>The <code>::before</code> and <code>::after</code> pseudo-elements can be used to insert some content
+    before or after the content of an element respectively
+    (images credits <a href="https://www.vecteezy.com/free-vector/web">Web Vectors by Vecteezy</a>).
+</p>
+
+<h2>Selection and marker</h2>
+
+<p class="selection_text">
+    The <code>::selection</code> pseudo-element styles the content of an element
+    that is selected by a user. Select part of this paragraph to see how text changes color.
+</p>
+
+<p>
+    The <code>::marker</code> pseudo-element used to style the markers of a list element.
+</p>
+
+<p>
+    Only the following list of properties can be applied to a selection:
+</p>
+
+<ul>
+    <li class="list_marker">color</li>
+    <li class="list_marker">background</li>
+    <li class="list_marker">cursor</li>
+    <li class="list_marker">outline</li>
+</ul>
+
+</body>
+
+</html>

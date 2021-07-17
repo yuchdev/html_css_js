@@ -1,0 +1,25 @@
+/* Style root of the whole document*/
+p.first_letter::first-letter {
+  color: brown;
+}
+
+div.first_line::first-line {
+  color: red;
+}
+
+p.before_after::before{
+  content: url(../img/before.jpg);
+}
+
+p.before_after::after{
+  content: url(../img/after.jpg);
+}
+
+p.selection_text::selection {
+  color: red;
+  background: blue;
+}
+
+li.list_marker::marker {
+  color: red;
+}
