@@ -1,5 +1,7 @@
-h1 {
-  color: green;
-  text-align: center;
-  width: 200px;
+h1, h2 {
+  font-family: "JetBrains Mono", monospace;
+}
+
+li {
+  font-family: Arial, monospace;
 }
