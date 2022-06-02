@@ -4,194 +4,194 @@
 <!-- Skipping it page would be rendered in Quirk Mode.
 In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5.
 This is essential in order to support websites that were built before the widespread adoption of web standards.
-In full standards mode, the behavior is (hopefully) the behavior described by the HTML and CSS specifications.
-In almost standards mode, there are only a very small number of quirks implemented.-->
+In full standard's mode, the behavior is (hopefully) the behavior described by the HTML and CSS specifications.
+In almost standard's mode, there are only a very small number of quirks implemented.-->
 
 <!-- Tutorial order is defined by HTML Reference https://www.w3schools.com/tags/ref_byfunc.asp -->
 
 <!-- <html> defines an HTML document, lang attribute is required, title just recommended -->
 <html lang="en" title="Document for meta-tags example">
-    
+
 <!-- <head> defines information about the document -->
-    <head>
-        <!-- Defines a title for the document -->
-        <title>HTML basic tags by example</title>
+<head>
+    <!-- Defines a title for the document -->
+    <title>HTML basic tags by example</title>
 
-        <!-- Meta-tags define meta-information of a document -->
-        
-        <!-- Document charset -->
-        <meta charset="UTF-8">
+    <!-- Meta-tags define meta-information of a document -->
 
-        <!-- <meta http-equiv> attribute is HTTP meta-information -->
-        <!-- E.g auto-refresh every 30 seconds -->
-        <meta http-equiv="refresh" content="30">
+    <!-- Document charset -->
+    <meta charset="UTF-8">
 
-        <!-- meta content-type attribute -->
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        
-        <!-- TODO: try preferred CSS -->
-        <!-- <meta http-equiv="default-style" content="the document's preferred stylesheet"> -->
+    <!-- <meta http-equiv> attribute is HTTP meta-information -->
+    <!-- E.g auto-refresh every 30 seconds -->
+    <meta http-equiv="refresh" content="30">
 
-        <!-- Some of them in form of pairs <name:content> -->
-        <!-- Document description -->
-        <meta name="description" content="Working examples of basic HTML tags">
+    <!-- meta content-type attribute -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-        <!-- Keywords for search engine -->
-        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <!-- TODO: try preferred CSS -->
+    <!-- <meta http-equiv="default-style" content="the document's preferred stylesheet"> -->
 
-        <!-- Document author -->
-        <meta name="author" content="Yurii Cherkasov">
+    <!-- Some of them in form of pairs <name:content> -->
+    <!-- Document description -->
+    <meta name="description" content="Working examples of basic HTML tags">
 
-        <!-- The viewport is the user's visible area of a web page. 
-        It varies with the device, and will be smaller on a mobile phone than on a computer screen 
-        The initial-scale=1.0 part sets the initial zoom level -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    </head>
+    <!-- Keywords for search engine -->
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
 
-    <!-- Defines the document's body -->
-    <body>
-        
-        <!-- Headings from 1 to 6 
-            Headings tell ONLY about the document structure, not about the style
-        -->
-        <h1>This is the demonstration of headings</h1>
-        <h2>Subheading 2</h2>
-        <h3>Subheading 3</h3>
-        <h4>Subheading 4</h4>
-        <h5>Subheading 5</h5>
-        <h6>Subheading 6</h6>
+    <!-- Document author -->
+    <meta name="author" content="Yurii Cherkasov">
 
-        <h2>Document structuring</h2>
+    <!-- The viewport is the user's visible area of a web page.
+    It varies with the device, and will be smaller on a mobile phone than on a computer screen
+    The initial-scale=1.0 part sets the initial zoom level -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <p lang="en-us">Headings have levels from 1 to 6 </p> 
-        
-        <p lang="en-us">Headings tell ONLY about the document structure, not about the style. 
-            This is so-called <b>Structural markup</b> </p> 
+</head>
 
-        <p lang="en-us">
-            Browsers automatically add some space (margin) before and after each paragraph element. 
-            <br>The margins can be modified with CSS (with the margin properties)
-            <br><code>&lt;br&gt;</code> tag is a single line break
-        </p>
+<!-- Defines the document's body -->
+<body>
 
-        <!-- Horizontal line defines a thematic break -->
-        <hr>
-        <p>
-            The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page (e.g. a shift of topic).
-            Also it is used to separate content (or define a change) in an HTML page.        
-        </p>
+<!-- Headings from 1 to 6
+    Headings tell ONLY about the document structure, not about the style
+-->
+<h1>This is the demonstration of headings</h1>
+<h2>Subheading 2</h2>
+<h3>Subheading 3</h3>
+<h4>Subheading 4</h4>
+<h5>Subheading 5</h5>
+<h6>Subheading 6</h6>
 
-        <p>
-            Since HTML4, tags could be block-level or inline.
-        </p>
+<h2>Document structuring</h2>
 
-        <p>
-            A block-level element always starts on a new line.
-            A block-level element always takes up the full width available
-            (stretches out to the left and right as far as it can).
-            A block level element has a top and a bottom margin, whereas an inline element does not.
-            Ex. The <code>&lt;div&gt;</code> element is a block-level element.
-        </p>
+<p lang="en-us">Headings have levels from 1 to 6 </p>
 
-        <p>
-            An inline element does not start on a new line.
-            An inline element only takes up as much width as necessary.
-            Ex. The <code>&lt;span&gt;</code> element is an inline element.
-        </p>
+<p lang="en-us">Headings tell ONLY about the document structure, not about the style.
+    This is so-called <b>Structural markup</b></p>
 
-        <h2>Root document <code>index.html</code></h2>
+<p lang="en-us">
+    Browsers automatically add some space (margin) before and after each paragraph element.
+    <br>The margins can be modified with CSS (with the margin properties)
+    <br><code>&lt;br&gt;</code> tag is a single line break
+</p>
 
-        <p>
-            The main homepage of a site written in HTML (and the homepages of each section in a child folder)
-            is called <code>index.html</code>.
-            Web servers are usually set up to return the index.html file if no file name is specified.
-        </p>
+<!-- Horizontal line defines a thematic break -->
+<hr>
+<p>
+    The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page (e.g. a shift of topic).
+    Also, it is used to separate content (or define a change) in an HTML page.
+</p>
 
-        <h2>HTML categories</h2>
+<p>
+    Since HTML4, tags could be block-level or inline.
+</p>
 
-        <p>
-            HTML5 introduces 9 <a href="https://dev.w3.org/html5/html-author/#categories">HTML categories</a>:
-        </p>
+<p>
+    A block-level element always starts on a new line.
+    A block-level element always takes up the full width available
+    (stretches out to the left and right as far as it can).
+    A block level element has a top and a bottom margin, whereas an inline element does not.
+    Ex. The <code>&lt;div&gt;</code> element is a block-level element.
+</p>
 
-        <ul>
+<p>
+    An inline element does not start on a new line.
+    An inline element only takes up as much width as necessary.
+    Ex. The <code>&lt;span&gt;</code> element is an inline element.
+</p>
 
-            <li>
-                Metadata content includes elements for marking up document metadata;
-                marking up or linking to resources that describe the behaviour or presentation of the document;
-                or indicate relationships with other documents
-            </li>
+<h2>Root document <code>index.html</code></h2>
 
-            <li>
-                Flow content. Most of the elements used to mark up the main content in the body of a page
-                are considered to be flow content.
-                In general, this includes elements that are presented visually as either block level or inline level.
-            </li>
+<p>
+    The main homepage of a site written in HTML (and the homepages of each section in a child folder)
+    is called <code>index.html</code>.
+    Web servers are usually set up to return the index.html file if no file name is specified.
+</p>
 
-            <li>
-                Sectioning root elements can have their own outlines, but the sections and headers
-                inside these elements do not contribute to the outlines of their ancestors.
-            </li>
+<h2>HTML categories</h2>
 
-            <li>
-                Sectioning content is used for structuring a document into sections,
-                each of which generally has its own heading.
-                These elements provide a scope within which associated headers, footers and contact information apply.
+<p>
+    HTML5 introduces 9 <a href="https://dev.w3.org/html5/html-author/#categories">HTML categories</a>:
+</p>
 
-                <br/>HTML Navigational Element <code>&lt;nav&gt;</code> defines a section that contains navigation links
-                that appear often on a site.
+<ul>
 
-                <br/>HTML Article Element <code>&lt;article&gt;</code> defines a piece of self-contained content.
+    <li>
+        Metadata content includes elements for marking up document metadata;
+        marking up or linking to resources that describe the behaviour or presentation of the document;
+        or indicate relationships with other documents
+    </li>
 
-                <br/>HTML Section Element <code>&lt;section&gt;</code> defines a section of a document
-                to indicate a related grouping of semantic meaning.
+    <li>
+        Flow content. Most of the elements used to mark up the main content in the body of a page
+        are considered to be flow content.
+        In general, this includes elements that are presented visually as either block level or inline level.
+    </li>
 
-                <br/>HTML Aside Element <code>&lt;aside&gt;</code> defines a section that,
-                though related to the main element, doesn't belong to the main flow,
-                like an explanation box or an advertisement.
-            </li>
+    <li>
+        Sectioning root elements can have their own outlines, but the sections and headers
+        inside these elements do not contribute to the outlines of their ancestors.
+    </li>
 
-            <li>
-                Heading content includes the elements for marking up headers.
-                Headings, in conjunction with the sectioning elements,
-                are used to describe the the structure of the document.
-            </li>
+    <li>
+        Sectioning content is used for structuring a document into sections,
+        each of which generally has its own heading.
+        These elements provide a scope within which associated headers, footers and contact information apply.
 
-            <li>
-                Phrasing content includes text and text-level markup.
-                This is similar to the concept of inline level elements in HTML 4.01.
-                Most elements that are categorised as phrasing content can only contain other phrasing content.
-            </li>
+        <br/>HTML Navigational Element <code>&lt;nav&gt;</code> defines a section that contains navigation links
+        that appear often on a site.
 
-            <li>
-                Embedded content includes elements that load external resources into the document.
-                Such external resources include, for example, images, videos and Flash-based content.
-            </li>
+        <br/>HTML Article Element <code>&lt;article&gt;</code> defines a piece of self-contained content.
 
-            <li>
-                Interactive elements are those that allow the user to interact with or activate in some way.
-                Depending on the user’s browser and device, this could be performed using any kind of input device,
-                such as, for example, a mouse, keyboard, touch screen or voice input.
-            </li>
+        <br/>HTML Section Element <code>&lt;section&gt;</code> defines a section of a document
+        to indicate a related grouping of semantic meaning.
 
-            <li>
-                Transparent Content Models.
-                Some elements have transparent content models, meaning that their allowed content
-                depends upon the parent element.
-                They may contain any content that their parent element may contain,
-                in addition to any other allowances or exceptions described for the element.
-            </li>
+        <br/>HTML Aside Element <code>&lt;aside&gt;</code> defines a section that,
+        though related to the main element, doesn't belong to the main flow,
+        like an explanation box or an advertisement.
+    </li>
 
-        </ul>
+    <li>
+        Heading content includes the elements for marking up headers.
+        Headings, in conjunction with the sectioning elements,
+        are used to describe the the structure of the document.
+    </li>
 
-    </body>
+    <li>
+        Phrasing content includes text and text-level markup.
+        This is similar to the concept of inline level elements in HTML 4.01.
+        Most elements that are categorised as phrasing content can only contain other phrasing content.
+    </li>
 
-    <footer>
-        <!-- A <footer> element typically contains: authorship information, copyright information, contact information
-        sitemap, back to top links, related documents.
-        Contact information inside a <footer> element should go inside an <address> tag. -->
-        <p><a href="mailto:yurii.cherkasov@example.com">yurii.cherkasov@example.com</a></p>
-    </footer>
+    <li>
+        Embedded content includes elements that load external resources into the document.
+        Such external resources include, for example, images, videos and Flash-based content.
+    </li>
+
+    <li>
+        Interactive elements are those that allow the user to interact with or activate in some way.
+        Depending on the user’s browser and device, this could be performed using any kind of input device,
+        such as, for example, a mouse, keyboard, touch screen or voice input.
+    </li>
+
+    <li>
+        Transparent Content Models.
+        Some elements have transparent content models, meaning that their allowed content
+        depends upon the parent element.
+        They may contain any content that their parent element may contain,
+        in addition to any other allowances or exceptions described for the element.
+    </li>
+
+</ul>
+
+</body>
+
+<footer>
+    <!-- A <footer> element typically contains: authorship information, copyright information, contact information
+    sitemap, back to top links, related documents.
+    Contact information inside a <footer> element should go inside an <address> tag. -->
+    <p><a href="mailto:yurii.cherkasov@example.com">yurii.cherkasov@example.com</a></p>
+</footer>
 
 <footer>
     <!-- You can have several <footer> elements -->
