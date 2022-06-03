@@ -1,3 +1,5 @@
-## html_js_course
-My exercises on HTML/CSS/JavaScript, mostly based on "HTML and CSS" book of Jon Duckett, 
-W3 School courses and Coursera Fullstack course.
+## HTML, CSS and JavaScript course
+
+Course has lots of examples on HTML/CSS/JavaScript, 
+based on combination of examples and exercises from the book "HTML and CSS" by Jon Duckett, 
+however, it also includes deeper examples from W3 School courses and Coursera Fullstack course.
