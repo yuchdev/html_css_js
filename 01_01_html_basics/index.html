@@ -1,5 +1,9 @@
 <!doctype HTML>
-<!-- This tag is mostly historical, it defines that HTML fits Standard -->
+<!--
+All HTML documents must start with a document type declaration tag.
+This tag is mostly historical, it states that the HTML document fits Standard.
+The <!DOCTYPE> declaration is not case-sensitive.
+-->
 
 <!-- Skipping it page would be rendered in Quirk Mode.
 In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5.
@@ -7,7 +11,7 @@ This is essential in order to support websites that were built before the widesp
 In full standard's mode, the behavior is (hopefully) the behavior described by the HTML and CSS specifications.
 In almost standard's mode, there are only a very small number of quirks implemented.-->
 
-<!-- Tutorial order is defined by HTML Reference https://www.w3schools.com/tags/ref_byfunc.asp -->
+<!-- Further tutorial order is defined by HTML Reference https://www.w3schools.com/tags/ref_byfunc.asp -->
 
 <!-- <html> defines an HTML document, lang attribute is required, title just recommended -->
 <html lang="en" title="Document for meta-tags example">
@@ -17,7 +21,9 @@ In almost standard's mode, there are only a very small number of quirks implemen
     <!-- Defines a title for the document -->
     <title>HTML basic tags by example</title>
 
-    <!-- Meta-tags define meta-information of a document -->
+    <!-- Meta-tags define meta-information of a document
+    They don't have closing tags.
+    -->
 
     <!-- Document charset -->
     <meta charset="UTF-8">
@@ -52,21 +58,85 @@ In almost standard's mode, there are only a very small number of quirks implemen
 <!-- Defines the document's body -->
 <body>
 
-<h1>Intro to W3C</h1>
+<h1>Basics of the Web</h1>
+
+<h2>Definitions</h2>
+
+<p>
+    HTML, CSS and JS could be considered as three main pillars of the Web.
+    HTML is responsible for structure, CSS for style and layout, and JavaScript for behavior of the web page.
+</p>
+
+<h2>Web Developer Tools and Resources</h2>
+
+<ul>
+    <li><a href="https://www.google.com/chrome/dev/">Chrome Developer Tools</a></li>
+    <li><a href="https://firefox-dev.tools/">Firefox Developer Tools</a></li>
+    <li><a href="https://validator.w3.org/">Validator</a></li>
+    <li>
+        <a href="https://caniuse.com/">Support of specific Web features in specific browsers</a>
+        (Note: all modern browsers are "evergreen", i.e. update itself on startup)
+    </li>
+    <li><a href="https://www.w3schools.com/">W3 School</a></li>
+    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+    <li><a href="https://jsfiddle.net/">JS Online Compiler</a></li>
+    <li><a href="https://codepen.io/">One More Compiler</a></li>
+</ul>
+
+<p>
+    Note: We use HTML unordered list <code>&lt;ul&gt;</code> and list element <code>&lt;li&gt;</code> tags,
+    as well as hyperlink tag <code>&lt;a&gt;</code>.
+    See details about HTML lists and links in respective chapters.
+</p>
+
+<h2>Standardization and Intro to W3C</h2>
 
 <p>
     Most W3C work revolves around the standardization of Web technologies.
     If the feature is defined in standard, it does not mean it's implemented in actual browsers.
     Standardization includes multiple documents, defining subsets of the WWW.
+    Standard texts have very "academic" style, and unlikely fit for studying Web technologies.
+    W3C Standards cover such important domains, like:
 </p>
 
 <ul>
-    <li>HTML&CSS</li>
-    <li>JavaScript</li>
-    <li>Audio&Video</li>
-    <li>Mobile Web</li>
-    <li></li>
+    <li>HTML&CSS - fundamental technologies for building Web</li>
+    <li>
+        JavaScript - ECMAScript Standard (more widely known as JavaScript) is developed by
+        <a href="https://www.ecma-international.org/">ECMA</a>,
+        however, many of the client-side JavaScript APIs are being developed by W3C
+    </li>
+    <li>Graphics - the most well-known graphical formats for Web are PNG and SVG</li>
+    <li>Many more: Audio&Video, Mobile Web, Localization, etc.</li>
 </ul>
+
+<h1>HTML Elements</h1>
+
+<p>
+    HTML elements defined by constructs called tags.
+    Most tags look like <code>&lt;tag&gt;&lt;/tag&gt;</code>,
+    where <code>&lt;tag&gt;</code> is called start tag, and <code>&lt;/tag&gt;</code> is called end tag.
+    HTML element is everything from the start tag to the end tag.
+</p>
+
+<p>Tag can't contain front spaces: <code>&lt;&nbsp;tag&gt;</code> - this is wrong!</p>
+
+<p>Tag trailing spaces are ignored: <code>&lt;tag&nbsp;&gt;</code></p >
+
+<p>
+    Some elements can't have content, and their tags can be "start only",
+    e.g. line break tag <code>&lt;br&gt;</code>, horizontal line tag <code>&lt;hr&gt;</code>.
+    Such elements are called empty elements.
+</p>
+
+<p>
+    If HTML element can have content, but does not, its start and end tag can be the one,
+    and look like <code>&lt;tag&nbsp;&gt;</code>. Such tags called self-closing.
+</p>
+
+<p>
+    In HTML5 it is illegal to make self-closing tags if one can open and close them explicitly.
+</p>
 
 <!-- Headings from 1 to 6
     Headings tell ONLY about the document structure, not about the style
@@ -132,7 +202,6 @@ In almost standard's mode, there are only a very small number of quirks implemen
 </p>
 
 <ul>
-
     <li>
         Metadata content includes elements for marking up document metadata;
         marking up or linking to resources that describe the behaviour or presentation of the document;
