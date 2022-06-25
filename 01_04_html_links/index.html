@@ -52,6 +52,7 @@
 
 <p>
     If the <code>&lt;a&gt;</code> tag has no <code>href</code> attribute, it is only a placeholder for a hyperlink.
+    <!-- TODO: implement example -->
     A linked page is normally displayed in the current browser window, unless you specify another target.
 </p>
 
@@ -199,17 +200,19 @@
     <br>&nbsp;<a href="#bookmarks">Bookmarks</a>
     <br>&nbsp;<a href="#link_tag">&lt;link&gt; tag</a>
     <br>&nbsp;<a href="#nav_tag">&lt;nav&gt; tag</a>
+</p>
 
+<p>
     You can also add a link to a bookmark on another page:
     <br><code>&lt;a href="html_demo.html#C4"&gt;Jump to Chapter 4&lt;/a&gt;</code>
-
 </p>
 
 <h2 id="link_tag">&lt;link&gt; tag</h2>
 
 <p>
     The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource.
-    The <code>&lt;link&gt;</code> tag is most often used to link to external style sheets.
+    The <code>&lt;link&gt;</code> tag is most often used to link to external style or to add a favicon
+    (small image displayed next to the page title in the browser tab) to your website.
     If the <code>&lt;link&gt;</code> element is an empty element, it contains attributes only.
     Example:
     <br><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
@@ -220,12 +223,45 @@
 </p>
 
 <ul>
-    <li><code>href</code></li>
-    <li><code>hreflang</code></li>
-    <li><code>media</code></li>
-    <li><code>referrerpolicy</code></li>
-    <li><code>rel</code></li>
-    <li><code>type</code></li>
+    <li>
+        <code>href</code> specifies URL
+    </li>
+    <li>
+        <code>hreflang</code> specifies language_code
+    </li>
+    <li>
+        <code>media</code> specifies device the linked document will be displayed
+    </li>
+    <li>
+        <code>referrerpolicy</code>
+        Specifies referrer to use when fetching the resource, similar to <code>&lt;a&gt;</code>
+    </li>
+    <li>
+        <code>rel</code> is required attribute, specifies the relationship type.
+        Some values are similar to <code>&lt;a&gt;</code>:
+        <ul>
+            <li>alternate</li>
+            <li>author</li>
+            <li>dns-prefetch</li>
+            <li>help</li>
+            <li>icon</li>
+            <li>license</li>
+            <li>next</li>
+            <li>pingback</li>
+            <li>preconnect</li>
+            <li>prefetch</li>
+            <li>preload</li>
+            <li>prerender</li>
+            <li>prev</li>
+            <li>search</li>
+            <li>stylesheet</li>
+        </ul>
+
+    </li>
+    <li>
+        <code>type</code>
+        specifies media type of the linked document
+    </li>
 </ul>
 
 <p>
