@@ -141,7 +141,7 @@ The <code>&lt;form&gt;</code> element can contain one or more of the following f
 <p>
     The <code>&lt;form&gt;</code> element should always carry the
     <code>action</code> attribute, and also usually have
-    <code>method</code> and <code>id</code>attributes.<br>
+    <code>method</code> and <code>id</code> attributes.
 </p>
 
 <h4 id="form_action">action</h4>
@@ -182,7 +182,7 @@ because if the user clicks on the text within the <code>&lt;label&gt;</code> ele
 <h3 id="input_types">Input types <code>text</code> and <code>password</code></h3>
 
 Single-line text input used for a single line of text such as logins, email addresses and names.<br>
-Password input is like a single line text box but it masks the characters entered.<br>
+Password input is like a single line text box, but it masks the characters entered.<br>
 
 <h4 id="login_form_example">Login form example</h4>
 
@@ -199,7 +199,7 @@ Here's an example of login form:
             <label for="login_form_password">Password:</label>
             <input id="login_form_password" maxlength="30" name="password" type="password"/>
         </p>
-    <input type="submit" value="Submit">
+        <input type="submit" value="Submit">
         </fieldset>
 </form>
 
@@ -282,7 +282,7 @@ Here's an example of login form:
 <h3 id="multiline_text_input">Multiline text input - <code>textarea</code></h3>
 
 <p>
-    The <code>&lt;textarea&gt;</code> element is used to create a mutliline text input.
+    The <code>&lt;textarea&gt;</code> element is used to create a multiline text input.
     Unlike other input elements this is not an empty element,
     it should therefore have an opening and a closing tag.
     Any text that appears between the opening
@@ -329,6 +329,7 @@ Here's an example of login form:
     Browsers that support HTML5 basic validation will check that the provided
     information is in the correct format of email/URL. Mobile browsers also optimize their
     keyboard to display the keys you are most likely to need when entering an email address.
+    If you'd like to allow multiple email addresses, add the <code>multiple</code> attribute.
 </p>
 
 <h4 id="contact_detailed_example">Contact detailed example</h4>
@@ -336,11 +337,14 @@ Here's an example of login form:
 <form action="http://localhost:3000/contact">
     <fieldset>
         <legend>Contact details</legend>
-        <label>Email:<input type="text" name="email"/></label><br/>
+        <label>Email:<input type="email" name="email"/></label>
         <br/>
-        <label>Mobile:<input type="text" name="mobile"/></label><br/>
         <br/>
-        <label>Homepage: <input type="text" name="homepage"/></label><br/>
+        <label>Mobile:<input type="text" name="mobile"/></label>
+        <br/>
+        <br/>
+        <label>Homepage: <input type="url" name="homepage"/></label>
+        <br/>
         <br/>
         <label>Birth date: <input type="date" name="birthdate"/></label><br/>
         <br/>
@@ -352,7 +356,7 @@ Here's an example of login form:
 
 <p>
     Traditionally input validation is performed by JavaScript, however, HTML5 also has
-    basic validation facilities. Simpliest one is just check if the input field is not empty using attribute
+    basic validation facilities. Simplest one is just check if the input field is not empty using attribute
     <code>required="required"</code>. The <code>pattern</code> attribute specifies
     a regular expression that the <code>&lt;input&gt;</code> value is checked against on form submission.<br/>
     The <code>pattern</code> attribute does not supported in older browsers.
@@ -372,7 +376,8 @@ Here's an example of login form:
 </p>
 
 <form oninput="x.value=parseInt(a.value) + parseInt(b.value)">
-    <label for="a">Range form:<input type="range" id="a" value="50"></label><br/>
+    <label for="a">Range form:<input type="range" id="a" value="50"></label>
+    <br/>
     <br/>
     <label for="b">Number form:
         100 + <input type="number" id="b" value="50">
@@ -595,7 +600,7 @@ The <code>&lt;select&gt;</code> element is used to create a drop down list box.
 It contains two or more <code>&lt;option&gt;</code> elements.
 
 <form action="http://localhost:3000/action_page">
-    <label for="dropdown_car_model">Pick up your model:
+    <label for="dropdown_car_model">Pick up your car model:
         <select id="dropdown_car_model">
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
@@ -619,7 +624,7 @@ It contains two or more <code>&lt;option&gt;</code> elements.
 Drop down is turning into select box by adding the <code>size</code> attribute.
 Users are allowed to select multiple options from this list by adding the
 <code>multiple</code> attribute with a value of multiple.<br>
-In general, it's a good idea to tell users if he can select more than one options.<br>
+In general, it's a good idea to tell users explicitly if they can select more than one options.<br>
 Multilist works not equally good in all browsers.
 
 <form action="http://localhost:3000/action_page">
@@ -637,7 +642,6 @@ Multilist works not equally good in all browsers.
         </select>
     </label>
 </form>
-
 
 </body>
 
