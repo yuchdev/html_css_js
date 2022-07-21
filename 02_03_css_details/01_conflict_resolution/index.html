@@ -1,0 +1,82 @@
+<!doctype HTML>
+
+<html lang="en" title="CSS Properties Overview">
+    
+<head>
+    <title>CSS Conflict Resolution</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="CSS Conflict Resolution">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>CSS Conflict Resolution</h1>
+
+<h2>Why CSS is <i>Cascading</i> Stylesheet</h2>
+
+<p>
+    CSS is called <dfn>cascading</dfn>, because this is exactly how its rules are applied.
+    The simple rule of CSS conflict resolution could be said like:
+    "The last declaration wins".
+    Also, it could be said, that HTML is processed from top to bottom,
+    and CSS is processed from bottom to top.
+</p>
+
+<p class="merged" style="font-family: Arial, monospace">
+    When CSS rules do not conflict, they are being merged. E.g. this paragraph is styled from
+    the external CSS file to have light-gray background and blueviolet text color.
+    At the same time, it is directly styled to have Arial Mono font.
+    These rules are being merged, because they are not conflicting.
+</p>
+
+<p>
+    External CSS is applied after the place where is inserted the HTML code.
+    Usually it is placed in the <code>&lt;head&gt;</code> section.
+</p>
+
+<h2>Inheritance in HTML document</h2>
+
+<!-- TODO: sort out the inheritance -->
+<div>
+    Technically HTML document is a tree of elements.
+    Each element has its own style, however, its child elements inherit the style of their parent.
+
+    <p style="background: orange">
+        This <code>&lt;p&gt;</code> element is inherited from the <code>&lt;div&gt;</code> element,
+        and it inherits the font, but has its own background color.
+    </p>
+
+</div>
+
+<h2>Specificity of CSS rules</h2>
+
+<p>
+    CSS rules have a specificity, which is a number of the rules that are applied to the element.
+    The more specifically rules are applied, the higher is the specificity.
+    The most specific rule is applied first.
+</p>
+
+<p>
+    Different ways of applying the rule have different degree of specificity.
+    Let's explain this. Imagine that higher element in the following list offers higher specificity:
+</p>
+
+<ul>
+    <li>CSS rule with the <code>!important</code> keyword overrides any rules.</li>
+    <li><code>style</code> attribute of the element</li>
+    <li>Styling according to <code>id</code> attribute of the element</li>
+    <li>Styling according to class, pseudo-class, or pseudo-element</li>
+    <li>Styling according to the element relationship (child, descendant, sibling, etc)</li>
+    <li>Styling according to the direct element type</li>
+</ul>
+
+</body>
+
+</html>
