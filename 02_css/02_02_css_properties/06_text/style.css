@@ -1,0 +1,19 @@
+p.text_family {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.text_color {
+    color: #00cccc;
+}
+
+p.text_size {
+    size: 12px;
+}
+
+p.text_transform {
+    text-transform: uppercase;
+}
+
+p.text_align {
+    text-align: center;
+}

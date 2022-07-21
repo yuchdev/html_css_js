@@ -1,0 +1,75 @@
+<!doctype HTML>
+
+<html lang="en" title="CSS Colors">
+    
+<head>
+    <title>CSS styling of text in HTML document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="CSS styling of text in HTML document">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>CSS styling of text in HTML document</h1>
+
+<h2>Font family</h2>
+
+<p class="text_family">
+    You can style font family of text in HTML document by using <span class="code">font-family</span> CSS property.
+    Usually several font families are mentioned, separated by commas.
+    It happens because different browsers may have different sets of fonts,
+    and the user may simply not be having the particular font.
+</p>
+
+<h2>Color</h2>
+
+<p class="text_color">
+    Text color could be specified with the name of the color, or with the hexadecimal code.
+    Example:
+</p>
+
+<code>
+    color: red;<br>
+    color: #ff0000;
+</code>
+
+
+<h2>Size</h2>
+
+<p class="text_size">
+    Text size could be specified with the <span class="code">font-size</span> CSS property.
+    It could be measured absolutely or relatively.
+    Absolute size is measured in pixels or points.
+</p>
+
+<p>
+    Relative text size is measured in percentage or measure units called <dfn>ems</dfn>.
+    Important: When you mention the same element in several rules,
+    relative size is not being overwritten, but rather it is accumulated
+    (e.g. 120% * 2em = 240%).
+    It is not recommended to mix different measure units in one document.
+</p>
+
+<p style="font-size: 120%">This is 120% sized text</p>
+<p style="font-size: 2em">This is 2em sized text</p>
+
+<h2>Other properties</h2>
+
+<p class="text_transform">
+    CSS property <code>text-transform</code> could be used to change the case of the text (uppercase, lowercase, capitalize).
+</p>
+
+<p class="text_align">
+    CSS property <code>text-align</code> could be used to align the text (left, right, center, justify).
+</p>
+
+</body>
+
+</html>
