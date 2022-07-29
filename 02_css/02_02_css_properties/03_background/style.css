@@ -1,3 +1,7 @@
-p, li {
-  font-family: Arial, monospace;
+.bg {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to right, red, yellow, green);
+  /*background-image: url("img/manule.jpg");*/
+  /*background: url("img/manule.jpg") no-repeat;*/
 }

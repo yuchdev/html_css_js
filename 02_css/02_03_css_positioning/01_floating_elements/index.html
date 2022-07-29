@@ -1,0 +1,77 @@
+<!doctype HTML>
+
+<html lang="en" title="CSS Properties Overview">
+    
+<head>
+    <title>CSS Positioning by Floating</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="CSS Positioning by Floating">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>CSS Positioning by Floating</h1>
+
+<h2>Definition</h2>
+
+<div>
+    Most of web UIs are implemented by floating elements. Floating elements are positioned relative to the viewport.
+</div>
+
+<h2>Normal document flow</h2>
+
+<div class="background">
+    <p class="p1">Paragraph One</p>
+    <p class="p2">Paragraph Two</p>
+    <p class="p3">Paragraph Three</p>
+    <p class="p4">Paragraph Four</p>
+    This is background div. <br>
+    All 4 sub-paragraphs are parts of the normal document flow.
+</div>
+
+<h2>Floating one element to the right</h2>
+
+<div class="background">
+    <p class="p1-floating">Paragraph One</p>
+    <p class="p2">Paragraph Two</p>
+    <p class="p3">Paragraph Three</p>
+    <p class="p4">Paragraph Four</p>
+    Only first paragraph is floating to the right. As we see, it is taken out of the normal document flow.
+    Also, we can notice that margins of the normal document flow are collapsing,
+    and the margin of the floating element is not affected.
+    That's why we can see margins of the floating element to the top.
+</div>
+
+<h2>Floating all elements to the right</h2>
+
+<div class="background">
+    <p class="p1-floating">Paragraph One</p>
+    <p class="p2-floating">Paragraph Two</p>
+    <p class="p3-floating">Paragraph Three</p>
+    <p class="p4-floating">Paragraph Four</p>
+    Now all elements are floating to the right. However, we also see background element height collapsed,
+    because all its children taken out of the normal document flow.
+</div>
+
+<h2>Resuming the document flow</h2>
+
+<div class="background-resume">
+    <p class="p1-floating">Paragraph One</p>
+    <p class="p2-floating">Paragraph Two</p>
+    <p class="p3-floating">Paragraph Three</p>
+    <p class="p4-resume">Paragraph Four</p>
+    Now we will ask to resume normal document flow to the right of the paragraph with class "p4-resume",
+    and at jumps to the next line.
+    You can resume the document flow from left, right, or both of sides of the element.
+</div>
+
+</body>
+
+</html>
