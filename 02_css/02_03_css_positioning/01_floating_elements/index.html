@@ -43,10 +43,12 @@
     <p class="p2">Paragraph Two</p>
     <p class="p3">Paragraph Three</p>
     <p class="p4">Paragraph Four</p>
-    Only first paragraph is floating to the right. As we see, it is taken out of the normal document flow.
-    Also, we can notice that margins of the normal document flow are collapsing,
-    and the margin of the floating element is not affected.
-    That's why we can see margins of the floating element to the top.
+    <div>
+        Only first paragraph is floating to the right. As we see, it is taken out of the normal document flow.
+        Also, we can notice that margins of the normal document flow are collapsing,
+        and the margin of the floating element is not affected.
+        That's why we can see margins of the floating element to the top.
+    </div>
 </div>
 
 <h2>Floating all elements to the right</h2>
@@ -56,8 +58,10 @@
     <p class="p2-floating">Paragraph Two</p>
     <p class="p3-floating">Paragraph Three</p>
     <p class="p4-floating">Paragraph Four</p>
-    Now all elements are floating to the right. However, we also see background element height collapsed,
-    because all its children taken out of the normal document flow.
+    <div>
+        Now all elements are floating to the right. However, we also see background element height collapsed,
+        because all its children taken out of the normal document flow.
+    </div>
 </div>
 
 <h2>Resuming the document flow</h2>
@@ -67,9 +71,11 @@
     <p class="p2-floating">Paragraph Two</p>
     <p class="p3-floating">Paragraph Three</p>
     <p class="p4-resume">Paragraph Four</p>
-    Now we will ask to resume normal document flow to the right of the paragraph with class "p4-resume",
-    and at jumps to the next line.
-    You can resume the document flow from left, right, or both of sides of the element.
+    <div>
+        Now we will ask to resume normal document flow to the right of the paragraph with class "p4-resume",
+        and at jumps to the next line.
+        You can resume the document flow from left, right, or both of sides of the element.
+    </div>
 </div>
 
 </body>
