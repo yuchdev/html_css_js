@@ -1,7 +1,32 @@
-.bg {
+.bg-gradient {
+  color: blue;
   width: 400px;
   height: 400px;
   background: linear-gradient(to right, red, yellow, green);
-  /*background-image: url("img/manule.jpg");*/
-  /*background: url("img/manule.jpg") no-repeat;*/
 }
+
+.bg-image {
+  color: tomato;
+  width: 100%;
+  height: 400px;
+  background-image: url("img/manule.jpg");
+}
+
+.bg-image-no-repeat {
+  color: gold;
+  width: 100%;
+  height: 400px;
+  background: url("img/manule.jpg") no-repeat;
+}
+
+.bg-image-scrolled {
+    color: tomato;
+    width: 100%;
+    height: 200px;
+    background-image: url("img/manule.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+

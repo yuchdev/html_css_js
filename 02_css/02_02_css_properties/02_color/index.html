@@ -19,9 +19,102 @@
 
 <h1>CSS Colors</h1>
 
+<h2>Color specifications</h2>
+
+<p>Color in HTML5 can be specified one of the following ways</p>
+
+<ul>
+    <li>by using the <code>#</code> symbol and a hexadecimal number</li>
+    <li>by using the <code>rgb()</code> function</li>
+    <li>by using the <code>rgba()</code> function</li>
+    <li>by using the <code>hsl()</code> function</li>
+    <li>by using the <code>hsla()</code> function</li>
+    <li>by using the <code>currentColor</code> keyword</li>
+    <li>by using the <code>transparent</code> keyword</li>
+    <li>by using the <code>inherit</code> keyword</li>
+</ul>
+
+<p>
+    RGB defines intensity of red, green and blue components of a color.
+    The values of the components are in the range from 0 to 255.<br>
+    Example: <code>rgb(255, 0, 0)</code>
+</p>
+
+<p>
+    RGBA defines intensity of red, green, blue and alpha components of a color.
+    The values of the components are in the range from 0 to 255.<br>
+    Example: <code>rgba(255, 0, 0, 0.5)</code>
+</p>
+
+<p>
+    You can define transparency separately using the <code>opacity</code> CSS property.<br>
+    Example: <code>background-color: green; opacity: 0.5</code>
+</p>
+
+<p>
+    HSL defines hue, saturation and lightness of a color.
+    The values of the components are in the range from 0 to 360, 0 to 1 and 0 to 1.<br>
+    Example: <code>hsl(120, 1, 0.5)</code>
+</p>
+
+<p>
+    HSLA defines hue, saturation, lightness and alpha components of a color.
+    The values of the components are in the range from 0 to 360, 0 to 1 and 0 to 1.<br>
+    Example: <code>hsla(120, 1, 0.5, 0.5)</code>
+</p>
+
+<p>
+    The <code>currentColor</code> keyword is used to specify the color of the
+    element that the color property is applied to.<br>
+    Example: <code>color: currentColor;</code>
+</p>
+
+<p>
+    The <code>transparent</code> keyword is used to specify a transparent color.<br>
+    Example: <code>color: transparent;</code>
+</p>
+
+<p>
+    The <code>inherit</code> keyword is used to specify the color of the parent element.<br>
+    Example: <code>color: inherit;</code>
+</p>
+
+<p>
+<!--    TODO: implement slider for changing color-->
+    TODO: implement slider for changing color
+</p>
+
+<h2>Color names</h2>
+
+<p>
+    HTML5 defines the 140 different color names, supported by any browser. <b>TODO: implement JS iteration.</b>
+</p>
+
 <h2>Elements to color</h2>
 
-<ul></ul>
+<p>
+    You can color text, background, border, and outline of any element.
+</p>
+
+<p style="background: blue; color: orange; border: 3px solid tomato; outline: dotted magenta" >
+    Background: blue, text: orange, border: tomato, outline: magenta
+</p>
+
+<p style="background: #7fecff; color: #5f3aff; border: 4px dotted #ff2631; outline: thick #16ff36" >
+     background: #7fecff, text: #5f3aff, border: #ff2631, outline: #16ff36
+</p>
+
+<p>
+    You can add transparency to any color by using the <code>rgba()</code> function.
+</p>
+
+<p style="background: rgba(255, 0, 0, 0.3); color: rgba(0, 255, 0, 0.7); border: rgba(0, 0, 255, 0.0) solid; outline: rgba(255, 255, 0, 0.5) dotted" >
+    background: rgba(255, 0, 0, 0.3),
+    text: rgba(0, 255, 0, 0.7),
+    border: rgba(0, 0, 255, 0.0),
+    outline: rgba(255, 255, 0, 0.5)
+</p>
+
 
 </body>
 

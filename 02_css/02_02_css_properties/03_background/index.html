@@ -1,6 +1,6 @@
 <!doctype HTML>
 
-<html lang="en" title="CSS Colors">
+<html lang="en" title="Elements background styling">
     
 <head>
     <title>Elements background styling</title>
@@ -19,12 +19,46 @@
 
 <h1>Elements background styling</h1>
 
-<p class="bg">
-    This is a paragraph with a background color.
+<p>
+    Background could be specified as a color, a gradient, a pattern, an image or a combination of these.
+    Complete list of background properties:
+</p>
+
+<ul>
+    <li><code>background</code></li>
+    <li><code>background-attachment</code></li>
+    <li><code>background-color</code></li>
+    <li><code>background-image</code></li>
+    <li><code>background-position</code></li>
+    <li><code>background-repeat</code></li>
+    <li><code>background-size</code></li>
+</ul>
+
+<p>
+    Any <code>background-*</code> CSS property is being overwritten by <code>background</code> property (without dash).
 </p>
 
 <p>
-    Any <code>background-*</code> CSS property is being overwritten by <code>background</code> property (without dash)
+    Note 1: When using the <code>opacity</code> property, all children inherit the opacity.<br>
+    Note 2: Try to pick combination of text and background colors that will be readable.
+</p>
+
+<h2>Types of background</h2>
+
+<p class="bg-gradient">
+    This is a paragraph with a gradient color.
+</p>
+
+<p class="bg-image">
+    Paragraph with an image background. You can position it using <code>background-position</code> property.
+</p>
+
+<p class="bg-image-no-repeat">
+    Paragraph with an image background, but without repeating.
+</p>
+
+<p class="bg-image-scrolled">
+    Paragraph with an image background, scrolled.
 </p>
 
 </body>

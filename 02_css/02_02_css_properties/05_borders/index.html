@@ -49,7 +49,42 @@
 
 <h2>Border</h2>
 
-<ul></ul>
+<div class="box">
+    <p class="content">
+        Here's the content of the box. It has 10px padding (space inside the border),
+        5px border, and 20px margin (space outside the border).
+    </p>
+</div>
+
+<div class="box-own-margin">
+    <p class="content">
+        Here's more content. It has the same content, but now the containing box add its own
+        padding 10px, border 5px, and margin 5px.
+    </p>
+</div>
+
+<div class="box-limited-width">
+    <p class="content">
+        It is the same as the first box, but we restrict its width to 300px.
+        Height of the content is still adjusted to fit it!
+        Let's see the real content width:<br>
+        <code>300-(20+10+5)*2 = 230px</code>
+    </p>
+</div>
+
+<div class="box-content-box">
+    <p class="content">
+        This is combination of the size <code>250px</code> and CSS property<br>
+        <code>box-sizing: content-box</code>
+    </p>
+</div>
+
+<div class="box-border-box">
+    <p class="content">
+        This is combination of the size <code>250px</code> and CSS property<br>
+        <code>box-sizing: border-box</code>
+    </p>
+</div>
 
 </body>
 
