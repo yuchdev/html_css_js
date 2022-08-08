@@ -1,23 +1,43 @@
-div.div-background {
-    background-color: #cc1100;
-    clear: both;
+p.media {
+    color: red;
+    width: 100%;
 }
 
-div.div-borderbox {
-    background-color: greenyellow;
-    box-sizing: border-box;
+/*>1200px*/
+@media screen and (min-width: 1200px) {
+    p.media {
+        background-color: #0f0;
+        width: 90%;
+    }
 }
 
-p {
-    width: 50%;
-    border: 3px solid blue;
-    float: left;
+/*922-1199*/
+@media screen and (min-width: 922px) and (max-width: 1199px) {
+    p.media {
+        background-color: #00f;
+        width: 80%;
+    }
+}
+/*>768-922px*/
+@media screen and (min-width: 768px) and (max-width: 922px) {
+    p.media {
+        background-color: #ff0;
+        width: 70%;
+    }
+}
+/*>600-768px*/
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    p.media {
+        background-color: #0ff;
+    }
+}
+/*>480-600px*/
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    p.media {
+        background-color: #f0f;
+    }
 }
 
-p.column-1 {
-    background-color: dodgerblue;
-}
-
-p.column-2 {
-    background-color: teal;
+table, th, td {
+    border: 1px solid black;
 }

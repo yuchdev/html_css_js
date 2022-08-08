@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+p.column {
+    width: 90%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+}
+
+p.row{
+    width: 100%;
+}
+
+/*Large screens >1200px, 8 columns */
+@media screen and (min-width: 1200px) {
+    .column-large-01{
+        width: 12.5%;
+    }
+    .column-large-02{
+        width: 25%;
+    }
+    .column-large-03{
+        width: 37.5%;
+    }
+    .column-large-04{
+        width: 50%;
+    }
+    .column-large-05{
+        width: 62.5%;
+    }
+    .column-large-06{
+        width: 75%;
+    }
+    .column-large-07{
+        width: 87.5%;
+    }
+    .column-large-08{
+        width: 100%;
+    }
+    .column-large-01, .column-large-02, .column-large-03, .column-large-04, .column-large-05, .column-large-06, .column-large-07, .column-large-08{
+        float: left;
+        border: lime;
+        background-color: #f0f0f0;
+        color: magenta;
+    }
+}
+
+/* Medium-screen size 950-1199px, 4 columns */
+@media screen and (min-width: 950px) and (max-width: 1199px) {
+    .column-medium-01{
+        width: 25%;
+    }
+    .column-medium-02{
+        width: 50%;
+    }
+    .column-medium-03{
+        width: 75%;
+    }
+    .column-medium-04{
+        width: 100%;
+    }
+
+    .column-medium-01, .column-medium-02, .column-medium-03, .column-medium-04{
+        float: left;
+        border: cyan;
+        background-color: forestgreen;
+        color: blue;
+    }
+}
+
+/* Small screens  */
+@media screen and (min-width: 550px) and (max-width: 949px) {
+    .column-small-01{
+        width: 50%;
+    }
+    .column-small-02{
+        width: 100%;
+    }
+    .column-small-01, .column-small-02{
+        float: left;
+        border: #cc1100;
+        background-color: slategrey;
+        color: darkblue;
+    }
+}
+
+/* Extra-small screens >550px, 1 column */
+@media screen and (max-width: 550px) {
+    .column-extra-small-01{
+        width: 100%;
+    }
+    .column-extra-small-01{
+        float: left;
+        border: #cc1100;
+        background-color: khaki;
+        color: crimson;
+    }
+}
+

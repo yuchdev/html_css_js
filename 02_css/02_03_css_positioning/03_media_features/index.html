@@ -3,7 +3,7 @@
 <html lang="en" title="CSS Media Features">
     
 <head>
-    <title>Two columns layout</title>
+    <title>CSS Media Features</title>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="30">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -18,6 +18,78 @@
 <body>
 
 <h1>CSS Media Features</h1>
+
+<h2>Definition</h2>
+
+<p>
+    CSS Media Queries are used to specify the behavior of a conditional style sheet,
+    depending on screen size, orientation, device.
+    E.g. <code>screen</code>, <code>print</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>,
+    <code>braille</code>, <code>aural</code>, <code>all</code>.
+    Media Queries is a basis of a <dfn>Responsive Web Design</dfn> (RWD) approach.
+</p>
+
+<p>
+    Media Queries support logical operations, <code>and</code> and <code>or</code>,
+    also, <code>,</code> plays role of <code>or</code>.
+</p>
+
+<h2>Demonstration</h2>
+
+
+<p class="media">
+    This is demonstration of media queries. Te are trying to target different devices and screen sizes.
+    Be careful not to overlap boundaries!
+</p>
+
+<p>There are standard ranges of screen sizes. Table of Bootstrap screen sizes:</p>
+
+<table>
+    <caption>Standard screen sizes</caption>
+    <tr>
+        <th>Condition</th>
+        <th>Range</th>
+    </tr>
+    <tr>
+        <td>0px - 767px</td>
+        <td>Extra small</td>
+    </tr>
+    <tr>
+        <td>768px - 991px</td>
+        <td>Small</td>
+    </tr>
+    <tr>
+        <td>992px - 1199px</td>
+        <td>Medium</td>
+    </tr>
+    <tr>
+        <td>1200px - 1599px</td>
+        <td>Large</td>
+    </tr>
+    <tr>
+        <td>1600px - 1999px</td>
+        <td>Extra large</td>
+    </tr>
+    <tr>
+        <td>2000px - 2599px</td>
+        <td>Extra extra large</td>
+    </tr>
+    <tr>
+        <td>2600px - 3199px</td>
+        <td>Extra extra extra large</td>
+    </tr>
+    <tr>
+</table>
+
+<h2>Responsive Design</h2>
+
+<p>
+    Responsive Design is a technique that allows web pages to be designed to respond to the properties of the screen.
+    It's a way to provide better user experience for different screen sizes, portable and handheld devices.
+    In the beginning of mobile development, mobile version of a website were served as a different URL,
+    that led to errors and running different versions of the website on different devices.
+    Meanwhile, responsive design allows you to create a single code base that fits all devices.
+</p>
 
 </body>
 
