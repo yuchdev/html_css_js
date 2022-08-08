@@ -1,0 +1,23 @@
+div.div-background {
+    background-color: #cc1100;
+    clear: both;
+}
+
+div.div-borderbox {
+    background-color: greenyellow;
+    box-sizing: border-box;
+}
+
+p {
+    width: 50%;
+    border: 3px solid blue;
+    float: left;
+}
+
+p.column-1 {
+    background-color: dodgerblue;
+}
+
+p.column-2 {
+    background-color: teal;
+}
