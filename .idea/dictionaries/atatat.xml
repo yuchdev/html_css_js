@@ -23,6 +23,7 @@
       <w>archivers</w>
       <w>asctime</w>
       <w>atatat</w>
+      <w>audiowide</w>
       <w>autocomplete</w>
       <w>autofocus</w>
       <w>binarycreator</w>
@@ -91,9 +92,11 @@
       <w>mutexes</w>
       <w>netcoreapp</w>
       <w>norris</w>
+      <w>overlined</w>
       <w>overlive</w>
       <w>overliving</w>
       <w>pagefile</w>
+      <w>palatino</w>
       <w>pypi</w>
       <w>qarku</w>
       <w>qstandarditem</w>

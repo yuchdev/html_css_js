@@ -13,6 +13,7 @@
     <meta name="author" content="Yurii Cherkasov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 
 <body>
@@ -21,12 +22,88 @@
 
 <h2>Font family</h2>
 
+<p>
+CSS has lots of properties for formatting text.
+Choosing the right font has a critical importance for readability and user experience,
+the fond adds value to the document.
+</p>
+
 <p class="text_family">
     You can style font family of text in HTML document by using <span class="code">font-family</span> CSS property.
     Usually several font families are mentioned, separated by commas.
     It happens because different browsers may have different sets of fonts,
     and the user may simply not be having the particular font.
+    Therefore, it is very important to always use fallback fonts
 </p>
+
+<p>
+    However, some fonts are "safer" than others, and most likely present in every browser:
+</p>
+
+<ul>
+    <li style="font-family: 'Arial', sans-serif">Arial</li>
+    <li style="font-family: 'Times New Roman', serif">Times New Roman</li>
+    <li style="font-family: 'Courier New', monospace">Courier New</li>
+    <li style="font-family: 'Helvetica', sans-serif">Helvetica</li>
+    <li style="font-family: 'Verdana', sans-serif">Verdana</li>
+    <li style="font-family: 'Georgia', serif">Georgia</li>
+</ul>
+
+<p>
+    There are 5 general families of fonts:
+</p>
+
+<ul>
+    <li>Serif has small strokes at the edges. This is strong and formal font</li>
+    <li>Sans-serif has straight lines and has no strokes. This is a good choice for casual writing, creating modern look</li>
+    <li>Monospace is a font with fixed width, this looks kind of "mechanic" and could be a good choice for code</li>
+    <li>Cursive is a font with curved strokes, this is a good choice for old-fashioned writing, imitating human handwriting</li>
+    <li>Fantasy is a font with a lot of decorative strokes</li>
+</ul>
+
+<h3>Some examples</h3>
+
+<h4>Serif fonts</h4>
+
+<p style="font-family: 'Times New Roman', serif">This is Times New Roman font</p>
+<p style="font-family: 'Georgia', serif">This is Georgia font</p>
+<p style="font-family: 'Palatino Linotype', serif">This is a Palatino Linotype font</p>
+
+<h4>Sans-serif fonts</h4>
+
+<p style="font-family: 'Arial', sans-serif">This is Arial font</p>
+<p style="font-family: 'Verdana', sans-serif">This is Verdana font</p>
+<p style="font-family: 'Trebuchet MS', sans-serif">This is a Trebuchet MS font</p>
+
+<h4>Monospace fonts</h4>
+
+<p style="font-family: 'Courier New', monospace">This is a Courier New font</p>
+<p style="font-family: 'Lucida Console', monospace">This is a Lucida Console font</p>
+<p style="font-family: 'Consolas', monospace">This is a Consolas font</p>
+
+<h4>Cursive fonts</h4>
+
+<p style="font-family: 'Comic Sans MS', cursive">This is a Comic Sans MS font</p>
+<p style="font-family: 'Impact', cursive">This is a Impact font</p>
+<p style="font-family: 'Lucida Handwriting', cursive">This is a Lucida Handwriting font</p>
+
+<h4>Fantasy fonts</h4>
+
+<p style="font-family: 'Papyrus', fantasy">This is a Papyrus font</p>
+<p style="font-family: 'Brush Script MT', fantasy">This is a Brush Script MT font</p>
+<p style="font-family: 'Kristen ITC', fantasy">This is a Kristen ITC font</p>
+
+<h3>Web fonts</h3>
+
+<p>
+    If you use a special stylesheet link for your document, you can use external, or web fonts.
+    You can use thousands of web fonts from the Google library. For example:
+</p>
+
+<p style="font-family: 'Sofia', sans-serif">This is a Sofia font</p>
+<p style="font-family: 'Roboto', sans-serif">This is a Roboto font</p>
+<p style="font-family: 'Audiowide', sans-serif">This is an Audiowide font</p>
+
 
 <h2>Color</h2>
 
@@ -60,7 +137,24 @@
 <p style="font-size: 120%">This is 120% sized text</p>
 <p style="font-size: 2em">This is 2em sized text</p>
 
-<h2>Other properties</h2>
+
+<p style="font-size:2vw">
+    The text size can be set with a vw unit, which means the <dfn>viewport width</dfn>.
+    Such text will follow the size of the browser window upon resizing.<br>
+    Note: Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+</p>
+
+<h2>Text decoration and shadow</h2>
+
+<p style="text-decoration-line: overline;">This is overlined text</p>
+<p style="text-decoration-line: underline;">This is underlined text</p>
+<p style="text-decoration-line: line-through;">This is crossed out text</p>
+<p style="text-decoration-line: underline overline line-through;">Now apply all these decorations</p>
+<p style="text-shadow: 2px 2px 2px #000;">This text has a shadow</p>
+
+<p class="text-shadow">More interesting shadow could be reached with the color combination</p>
+
+<h2>Transformation and alignment</h2>
 
 <p class="text_transform">
     CSS property <code>text-transform</code> could be used to change the case of the text (uppercase, lowercase, capitalize).
