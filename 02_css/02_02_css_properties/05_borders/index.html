@@ -47,7 +47,7 @@
     often frustrates the user.
 </p>
 
-<h2>Border</h2>
+<h2>Border, margin and outline</h2>
 
 <div class="box">
     <p class="content">
@@ -85,6 +85,67 @@
         <code>box-sizing: border-box</code>
     </p>
 </div>
+
+<h2>Border styling</h2>
+
+<h3>Border width</h3>
+
+<p>
+    There's a number of properties to style borders. You can set the border width
+    using <code>border-width</code> property.
+    Border width can be measured in px, pt, cm, em, or using pre-defined values:
+    <code>thin</code>, <code>medium</code>, <code>thick</code>.
+</p>
+
+<h3>Border color</h3>
+
+<p>
+    Just like any other element, border color can be set with a number of ways:
+    hex e.g. <code>#ffaacc</code>, <code>rgb</code>, <code>hsl</code>, named color, or <code>currentColor</code>.
+</p>
+
+<h3>Border styling</h3>
+
+<p>
+    Different border styles could be set using <code>border-style</code> property:
+</p>
+
+<ul>
+    <li>solid</li>
+    <li>dashed</li>
+    <li>dotted</li>
+    <li>double</li>
+    <li>groove</li>
+    <li>ridge</li>
+    <li>inset</li>
+    <li>outset</li>
+</ul>
+
+<p class="solid-border">Solid border, 5px</p>
+<p class="medium-border">Medium border, thin</p>
+<p class="double">Double border, medium</p>
+<p class="groove">Groove border, 5pt</p>
+
+<p class="multiple-size">
+    Borders even can have different size for each side.
+</p>
+
+<p class="multiple-style">
+    ...and different style for each side.
+</p>
+
+<p class="rounded-border">
+    The border-radius property is used to add rounded borders to an element.
+    It can be set in px, pt, cm, em, or using pre-defined values:
+</p>
+
+
+<p class="left-only">
+    Border properties can be set with individual properties:
+    <code>border-width</code>, <code>border-style</code>, <code>border-color</code>,
+    or use shortener <code>border</code> property, e.g. <code>border: 5px solid #ffaacc</code>,
+    or <code>border-left: 6px solid red</code>
+</p>
 
 </body>
 

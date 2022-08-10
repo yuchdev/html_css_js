@@ -46,6 +46,44 @@ div.box-border-box{
 p.content {
   padding: 10px;
   border: solid 5px black;
-  margin: 20px;
   background-color: magenta;
+}
+
+p.solid-border {
+    border: solid 5px black;
+}
+
+p.medium-border {
+    border: thin dotted black;
+}
+
+p.double {
+  border: double medium blue;
+}
+
+p.groove {
+  border: groove 5pt green;
+}
+
+p.multiple-size {
+  border-style: dashed;
+  border-width: thin medium thick 5px;
+}
+
+p.multiple-style {
+  border-size: 3px;
+  border-color: red;
+  border-top-style: solid;
+  border-right-style: dashed;
+  border-bottom-style: dotted;
+  border-left-style: double;
+}
+
+p.rounded-border {
+    border-radius: 10px;
+    border: solid 5px cyan;
+}
+
+p.left-only {
+  border-top: 6px solid red
 }
