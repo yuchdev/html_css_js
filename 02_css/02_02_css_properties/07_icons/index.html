@@ -14,11 +14,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://kit.fontawesome.com/bf1ecf6a20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 </head>
 
 <body>
 
 <h1>CSS Styling of Icons</h1>
+
+<p>
+    Icons could be easily added to the page by using any inline tag, e.g. &lt;i&gt; or &lt;span&gt;
+    Name of the icon is placed in the <code>class</code> attribute of the HTML element.<br>
+    E.g. <code>&lt;i class="fas fa-home"&gt;&lt;/i&gt;</code>
+    Icons are being downloaded by using icon libraries, such as
+    <a href="https://fontawesome.com/">Font Awesome</a> and <a href="https://kit.fontawesome.com/">Font Awesome Kit</a>,
+    <a href="https://fonts.googleapis.com/icon?family=Material+Icons">Google Material Icons</a>
+    or <a href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">Material Icons Outlined</a>,
+    and Bootstrap icons, connected by including stylesheet in your head section:
+    <code>&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous"&gt;</code>
+
+    Icons are usually being downloaded from
+    <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome</a> library,
+    and usage is pretty straightforward.
+</p>
+
+
+<code>&lt;i class="fas fa-clock"&gt;</code> <i class="fas fa-clock"></i> <br>
+<code>&lt;i class="far fa-home"&gt;</code> <i class="fas fa-home"></i>
+
+<h2>Styling icon</h2>
+
+<p>
+    Note, in class <code>fas fa-clock</code> letter code <code>s</code> stands for <dfn>solid</dfn>,
+    and <code>far fa-home</code> letter code <code>r</code> stands for <dfn>regular</dfn>.
+</p>
+
+<p>
+    However, icons have wide variety of styles, and it is possible to change style of the icon
+    by changing the style of the HTML icon container. E.g.
+</p>
+
+<code>&lt;i class="fas fa-clock" style="color: red;"&gt;</code><br>
+<i class="fas fa-clock" style="color: red;"></i><br>
+
+
+<code>&lt;i class="fas fa-check-square" style="font-size:60px;color:#2196F3"&gt;</code><br>
+<i class="fas fa-check-square" style="font-size:60px;color:#2196F3"></i><br>
+
+<code>&lt;i class="fas fa-check-square" style="font-size:60px;color:#2196F3;text-shadow: 0 0 10px rgba(0,0,0,0.5); border: solid magenta 2px"&gt;</code><br>
+<i class="fas fa-check-square" style="font-size:60px;color:#cc1100;text-shadow: 0 0 10px rgba(0,0,0,0.5); border: solid magenta 2px"></i><br>
+
+<code>&lt;i class="fas fa-check-square" style="font-size:60px;color:#2196F3;text-shadow: 0 0 10px rgba(0,0,0,0.5);"&gt;</code><br>
+<i class="fas fa-check-square" style="font-size:60px;color:#0000ff;text-shadow: 0 0 10px rgba(0,0,0,0.05);"></i><br>
+
+<h2>Classes for icon sizing</h2>
+
+<p>
+    There are special classes for adjusting size of the icon for different screen types:
+    <code>fa-xs</code>,
+    <code>fa-sm</code>,
+    <code>fa-lg</code>,
+    <code>fa-1x</code>,
+    <code>fa-2x</code>,
+    <code>fa-3x</code>,
+    <code>fa-4x</code>,
+    <code>fa-5x</code>,
+    <code>fa-6x</code>,
+    <code>fa-7x</code>,
+    <code>fa-8x</code>,
+    <code>fa-9x</code>,
+    <code>fa-10x</code>
+    <br>
+    E.g.
+</p>
+
+<code>&lt;i class="fas fa-check-square fa-lg"&gt;</code><br>
+<i class="fas fa-check-square fa-lg"></i><br>
+
+<code>&lt;i class="fas fa-check-square fa-2x"&gt;</code><br>
+<i class="fas fa-check-square fa-2x"></i><br>
+
+<code>&lt;i class="fas fa-check-square fa-3x"&gt;</code><br>
+<i class="fas fa-check-square fa-3x"></i><br>
 
 </body>
 
