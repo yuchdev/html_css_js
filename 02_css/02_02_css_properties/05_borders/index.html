@@ -17,97 +17,17 @@
 
 <body>
 
-<h1>Styling border, margin, padding and outline</h1>
+<h1>Styling border and outline</h1>
 
-<h2>CSS Box Model</h2>
-
-<p>
-    In HTML every element is considered a box.
-    In the center of the box it has a content.
-    Outside the content comes padding, then border, and finally margin.
-    When you set the size of the box, its actually size of the content,
-    but the actual size of the box is the sum of the content size and the padding, border and margin.
-</p>
-
-<p>
-    It could be overwritten by a CSS rule <code>box-sizing</code>,
-    which could be set to <code>border-box</code> or <code>content-box</code>,
-    with the default value of <code>content-box</code>.
-    However, <code>border-box</code> could be more comfortable to work with as more explicit.
-</p>
-
-<p>
-    By default, the HTML element tries to fit its size according to the content size.
-    If you restrain the size of the element, oversize content will be spilled out.
-    This behavior could be changed with the <code>overflow</code> property,
-    which could be set to <code>auto</code>, which is default, <code>hidden</code>
-    and even <code>scroll</code> to scroll over the content.
-    While vertical scrolling could be useful, horizontal scrolling is considered bad practice.
-    Also, having more than one scrolling element inherited from one another
-    often frustrates the user.
-</p>
-
-<h2>Border, margin and outline</h2>
-
-<div class="box">
-    <p class="content">
-        Here's the content of the box. It has 10px padding (space inside the border),
-        5px border, and 20px margin (space outside the border).
-    </p>
-</div>
-
-<div class="box-own-margin">
-    <p class="content">
-        Here's more content. It has the same content, but now the containing box add its own
-        padding 10px, border 5px, and margin 5px.
-    </p>
-</div>
-
-<div class="box-limited-width">
-    <p class="content">
-        It is the same as the first box, but we restrict its width to 300px.
-        Height of the content is still adjusted to fit it!
-        Let's see the real content width:<br>
-        <code>300-(20+10+5)*2 = 230px</code>
-    </p>
-</div>
-
-<div class="box-content-box">
-    <p class="content">
-        This is combination of the size <code>250px</code> and CSS property<br>
-        <code>box-sizing: content-box</code>
-    </p>
-</div>
-
-<div class="box-border-box">
-    <p class="content">
-        This is combination of the size <code>250px</code> and CSS property<br>
-        <code>box-sizing: border-box</code>
-    </p>
-</div>
-
-<h2>Border styling</h2>
-
-<h3>Border width</h3>
-
-<p>
-    There's a number of properties to style borders. You can set the border width
-    using <code>border-width</code> property.
-    Border width can be measured in px, pt, cm, em, or using pre-defined values:
-    <code>thin</code>, <code>medium</code>, <code>thick</code>.
-</p>
-
-<h3>Border color</h3>
-
-<p>
-    Just like any other element, border color can be set with a number of ways:
-    hex e.g. <code>#ffaacc</code>, <code>rgb</code>, <code>hsl</code>, named color, or <code>currentColor</code>.
-</p>
+<h2>Borders CSS properties</h2>
 
 <h3>Border styling</h3>
 
 <p>
-    Different border styles could be set using <code>border-style</code> property:
+    There's a number of properties to style borders.
+    However, in order to style the border with any of properties, e.g. color, size, rounding -
+    you should define <code>border-style</code> first!
+    List of common border styles:
 </p>
 
 <ul>
@@ -121,24 +41,50 @@
     <li>outset</li>
 </ul>
 
-<p class="solid-border">Solid border, 5px</p>
-<p class="medium-border">Medium border, thin</p>
-<p class="double">Double border, medium</p>
-<p class="groove">Groove border, 5pt</p>
+<p class="solid-border">Solid border, 5px: <code>border: solid 5px black;</code></p>
+<p class="thin-border">Thin border: <code>border: medium black;</code></p>
+<p class="double">Double border, medium: <code>border: double medium blue;</code></p>
+<p class="groove">Groove border: <code>border: groove 5pt green;</code> </p>
+<p class="ringe">Ridge border: <code>border: ringe 5pt red;</code> </p>
+
+<h3>Border width</h3>
+
+<p>
+    You can set the border width
+    using <code>border-width</code> property.
+    Border width can be measured in px, pt, cm, em, or using pre-defined values:
+    <code>thin</code>, <code>medium</code>, <code>thick</code>.
+</p>
+
+<h3>Border color</h3>
+
+<p>
+    Just like any other element, border color can be set with a number of ways:
+    hex e.g. <code>#ffaacc</code>, <code>rgb</code>, <code>hsl</code>, named color, or <code>currentColor</code>.
+</p>
+
+<h3>Combining properties</h3>
 
 <p class="multiple-size">
-    Borders even can have different size for each side.
+    Borders even can have different size for each side: <code>border-style: dashed; border-width: thin medium thick 5px;</code>
 </p>
 
 <p class="multiple-style">
-    ...and different style for each side.
+    ...and different style for each side:<br>
+    <code>
+        border-size: 3px;<br>
+        border-color: red;<br>
+        border-top-style: solid;<br>
+        border-right-style: dashed;<br>
+        border-bottom-style: dotted;<br>
+        border-left-style: double;<br>
+    </code>
 </p>
 
 <p class="rounded-border">
     The border-radius property is used to add rounded borders to an element.
-    It can be set in px, pt, cm, em, or using pre-defined values:
+    It can be set in px, pt, cm, em, or using pre-defined values, e.g. <code>border-radius: 10px;</code>
 </p>
-
 
 <p class="left-only">
     Border properties can be set with individual properties:

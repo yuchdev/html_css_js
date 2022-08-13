@@ -1,3 +1,8 @@
 p, li {
   font-family: Arial, monospace;
 }
+
+
+code.hsl-example {
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
