@@ -23,13 +23,16 @@
 <h2>Font family</h2>
 
 <p>
-CSS has lots of properties for formatting text.
+CSS has huge variety of properties for formatting text.
 Choosing the right font has a critical importance for readability and user experience,
 the fond adds value to the document.
 </p>
 
-<p class="text_family">
-    You can style font family of text in HTML document by using <span class="code">font-family</span> CSS property.
+<p style="font-family: Arial, Helvetica, sans-serif">
+    You can style font family of text in HTML document by using <span class="code">font-family</span> CSS property:
+    <br>
+    <code>font-family: Arial, Helvetica, sans-serif</code>
+    <br>
     Usually several font families are mentioned, separated by commas.
     It happens because different browsers may have different sets of fonts,
     and the user may simply not be having the particular font.
@@ -55,7 +58,7 @@ the fond adds value to the document.
 
 <ul>
     <li>Serif has small strokes at the edges. This is strong and formal font</li>
-    <li>Sans-serif has straight lines and has no strokes. This is a good choice for casual writing, creating modern look</li>
+    <li>Sans-serif has straight lines and has no strokes. This is a good choice for casual writing, creating modern look for your document</li>
     <li>Monospace is a font with fixed width, this looks kind of "mechanic" and could be a good choice for code</li>
     <li>Cursive is a font with curved strokes, this is a good choice for old-fashioned writing, imitating human handwriting</li>
     <li>Fantasy is a font with a lot of decorative strokes</li>
@@ -154,7 +157,7 @@ the fond adds value to the document.
 
 <p class="text-shadow">More interesting shadow could be reached with the color combination</p>
 
-<h2>Transformation and alignment</h2>
+<h2>Transformation</h2>
 
 <p class="text_transform">
     CSS property <code>text-transform</code> could be used to change the case of the text (uppercase, lowercase, capitalize).
@@ -163,6 +166,27 @@ the fond adds value to the document.
 <p class="text_align">
     CSS property <code>text-align</code> could be used to align the text (left, right, center, justify).
 </p>
+
+<h2>Indentation and alignment</h2>
+
+<p style="text-align: center">This is centered text</p>
+<p style="text-align: right">This is right aligned text</p>
+<p style="text-align: justify; width: 250px">
+    Alignment "justify" means that each line is stretched so that every line has equal width,
+    and the left and right margins are straight.
+    It is a good choice for magazines and newspapers.
+</p>
+
+<p style="text-indent: 30px">This is text indented by 30px (<code>text-indent: 30px</code>),
+    used to separate the paragraphs in books.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p>TODO: vertical alignment</p>
 
 </body>
 

@@ -24,41 +24,192 @@
 
 <h1>CSS Styling of Icons</h1>
 
+<h2>Icon Libraries</h2>
+
 <p>
     Icons could be easily added to the page by using any inline tag, e.g. &lt;i&gt; or &lt;span&gt;
     Name of the icon is placed in the <code>class</code> attribute of the HTML element.<br>
     E.g. <code>&lt;i class="fas fa-home"&gt;&lt;/i&gt;</code>
-    Icons are being downloaded by using icon libraries, such as
-    <a href="https://fontawesome.com/">Font Awesome</a> and <a href="https://kit.fontawesome.com/">Font Awesome Kit</a>,
-    <a href="https://fonts.googleapis.com/icon?family=Material+Icons">Google Material Icons</a>
-    or <a href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">Material Icons Outlined</a>,
-    and Bootstrap icons, connected by including stylesheet in your head section:
-    <code>&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous"&gt;</code>
+</p>
 
-    Icons are usually being downloaded from
-    <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome</a> library,
-    and usage is pretty straightforward.
+<p>
+    Icons are being downloaded by using icon libraries, such as
+</p>
+
+<ul>
+    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+    <li><a href="https://developers.google.com/fonts/docs/material_icons">Google Material Icons</a></li>
+    <li><a href="https://icons.getbootstrap.com/">Bootstrap Icons</a></li>
+</ul>
+
+<p>
+    Icons are usually connected in the <code>&lt;head&gt;</code> section of the page,
+    and could be used anywhere further. However, there are slightly different methods
+</p>
+
+<h3>Connecting Font Awesome</h3>
+
+<p>
+    Font Awesome has Free and Pro versions, that vary in the number and quality of icons.
+    In any case, you should create an account to start using icons.
+    You can create an account on
+    <a href="https://fontawesome.com/?utm_source=v4_homepage&utm_medium=display&utm_campaign=fa5_released&utm_content=banner">
+        Font Awesome
+    </a> and start using icons.
+    Usage is pretty straightforward, in the header of the page you create a script element<br>
+    <code>&lt;script src="https://kit.fontawesome.com/bf1ecf6a20.js" crossorigin="anonymous"&gt;&lt;/script&gt;</code>,
+    where <code>bf1ecf6a20.js</code> is your unique hash, created for your account.
+</p>
+
+<p>
+    Examples of Font Awesome icons:
+    <i class="fas fa-clock"></i>
+    <i class="fas fa-home"></i>
+    <i class="fas fa-user"></i>
+    <i class="fas fa-user-circle"></i>
+    <i class="fas fa-user-friends"></i>
+    <i class="fas fa-user-plus"></i>
+    <i class="fas far fa-angry"></i>
+    <i class="fas far fa-grin-beam"></i>
+    <i class="fas far fa-grin-hearts"></i>
+    <i class="fas far fa-grin-squint"></i>
+    <i class="fas far fa-grin-squint-tears"></i>
+    <i class="fas far fa-laugh"></i>
+    <i class="fas far fa-laugh-beam"></i>
+    <i class="fas far fa-laugh-squint"></i>
+    <i class="fas far fa-laugh-wink"></i>
+    <i class="fas far fa-meh"></i>
+    <i class="fas far fa-meh-blank"></i>
+    <i class="fas far fa-meh-rolling-eyes"></i>
+    <i class="fas far fa-sad-cry"></i>
+    <i class="fas far fa-sad-tear"></i>
+    <i class="fas far fa-smile"></i>
+    <i class="fas far fab fa-apple"></i>
+    <i class="fas far fa-apple-alt"></i>
+    <i class="fas far fa-atom"></i>
+    <i class="fas far fa-atom-alt"></i>
+    <i class="fas far fa-ban"></i>
+    <i class="fas far fa-bell"></i>
+    <i class="fas far fa-bell-slash"></i>
+    <i class="fas far fa-bookmark"></i>
+    <i class="fas far fa-bookmark-alt"></i>
+</p>
+
+<h3>Connecting Google Material Icons</h3>
+
+<p>
+    Google Material Icons is a set of free libraries of icons, that is used in the majority of the web.
+    Unlike Font Awesome, it is connected with a link:<br>
+    <code>
+        &lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;
+    </code>,
+    where <code>family</code> is the name of the icon library.<br>
+    There are several libraries, such as <code>Material Icons</code>,
+    <code>Material Icons Outlined</code>,
+    <code>Material Icons Round</code>,
+    <code>Material Icons Sharp</code>,
+    <code>Material Icons Two Tone</code>,
+    and <code>Material Icons Wide</code>.
+</p>
+
+<p>
+    If you'd like to combine them in your document, you should add the new family using the <code>"|"</code> symbol, e.g.<br>
+    <code>
+        &lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"&gt;
+    </code>
+</p>
+
+<p>
+    Examples of Google Material Icons:
+    <i class="material-icons">home</i>
+    <i class="material-icons">person</i>
+    <i class="material-icons">person_outline</i>
+    <i class="material-icons">person_add</i>
+    <i class="material-icons">person_pin</i>
+    <i class="material-icons">person_pin_circle</i>
+    <i class="material-icons">person_outline</i>
+    <i class="material-icons">person_add_disabled</i>
+    <i class="material-icons">person_remove</i>
+    <i class="material-icons">pets</i>
+    <i class="material-icons">refresh</i>
+    <i class="material-icons">restaurant</i>
+    <i class="material-icons">restaurant_menu</i>
+    <i class="material-icons">download</i>
+    <i class="material-icons">settings</i>
+    <i class="material-icons">settings_applications</i>
+    <i class="material-icons">settings_backup_restore</i>
+    <i class="material-icons">settings_bluetooth</i>
+</p>
+
+<h3>Connecting Bootstrap Icons</h3>
+
+<p>
+    Connecting Bootstrap glyphicons is being done the same way as with Google Material Icons, only you include
+    a link to the Bootstrap stylesheet:
+    <code>
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous"&gt;
+    </code>
 </p>
 
 
-<code>&lt;i class="fas fa-clock"&gt;</code> <i class="fas fa-clock"></i> <br>
-<code>&lt;i class="far fa-home"&gt;</code> <i class="fas fa-home"></i>
+<p>
+    Bootstrap icon examples:
+    <i class="glyphicon glyphicon-home"></i>
+    <i class="glyphicon glyphicon-user"></i>
+    <i class="glyphicon glyphicon-user-plus"></i>
+    <i class="glyphicon glyphicon-angry"></i>
+    <i class="glyphicon glyphicon-cloud"></i>
+    <i class="glyphicon glyphicon-remove"></i>
+    <i class="glyphicon glyphicon-user"></i>
+    <i class="glyphicon glyphicon-envelope"></i>
+    <i class="glyphicon glyphicon-thumbs-up"></i>
+    <i class="glyphicon glyphicon-thumbs-down"></i>
+    <i class="glyphicon glyphicon-heart"></i>
+    <i class="glyphicon glyphicon-heart-empty"></i>
+    <i class="glyphicon glyphicon-star"></i>
+    <i class="glyphicon glyphicon-star-empty"></i>
+</p>
 
-<h2>Styling icon</h2>
+<h3>Icon References</h3>
 
 <p>
-    Note, in class <code>fas fa-clock</code> letter code <code>s</code> stands for <dfn>solid</dfn>,
+    You can find all the icon references on their respective websites
+    <ul>
+        <li><a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome</a></li>
+        <li><a href="https://material.io/resources/icons/?style=baseline">Material Icons</a></li>
+        <li><a href="https://getbootstrap.com/docs/3.3/components/">Bootstrap glyphicons</a></li>
+    </ul>
+
+    Also, there's a good cross-library reference on the website of
+    <a href="https://www.w3schools.com/icons/icons_reference.asp">W3Schools</a>
+</p>
+
+
+<h2>Styling icons</h2>
+
+<h3>Styling Font Awesome</h3>
+
+<p>
+    As previously mentioned, icons are being used by using the <code>class</code> attribute of the HTML element.
+    First, icons have simple naming rules, making it easier to choose the right icon.
+    Let's say, in class <code>fas fa-clock</code> letter code <code>s</code> stands for <dfn>solid</dfn>,
     and <code>far fa-home</code> letter code <code>r</code> stands for <dfn>regular</dfn>.
 </p>
 
 <p>
-    However, icons have wide variety of styles, and it is possible to change style of the icon
-    by changing the style of the HTML icon container. E.g.
+    <code>&lt;i class="fas fa-clock"&gt;</code><br>
+    <i class="fas fa-clock"></i><br>
+    <code>&lt;i class="far fa-home"&gt;</code><br>
+    <i class="fas fa-home"></i>
+</p>
+
+<p>
+    However, the most important here is the fact the icon inherits the style of the parent element,
+    and it is possible to change style of the icon by changing the style of the HTML icon container. E.g.
 </p>
 
 <code>&lt;i class="fas fa-clock" style="color: red;"&gt;</code><br>
 <i class="fas fa-clock" style="color: red;"></i><br>
-
 
 <code>&lt;i class="fas fa-check-square" style="font-size:60px;color:#2196F3"&gt;</code><br>
 <i class="fas fa-check-square" style="font-size:60px;color:#2196F3"></i><br>
@@ -69,7 +220,7 @@
 <code>&lt;i class="fas fa-check-square" style="font-size:60px;color:#2196F3;text-shadow: 0 0 10px rgba(0,0,0,0.5);"&gt;</code><br>
 <i class="fas fa-check-square" style="font-size:60px;color:#0000ff;text-shadow: 0 0 10px rgba(0,0,0,0.05);"></i><br>
 
-<h2>Classes for icon sizing</h2>
+<h3>Classes for icon sizing</h3>
 
 <p>
     There are special classes for adjusting size of the icon for different screen types:
@@ -98,6 +249,72 @@
 
 <code>&lt;i class="fas fa-check-square fa-3x"&gt;</code><br>
 <i class="fas fa-check-square fa-3x"></i><br>
+
+<h3>Stacking icons</h3>
+
+<p>
+    You can get completely new icon by stacking them one of another, if they fit together.
+    For that, you should apply class <code>fa-stack</code> to the parent element,
+    and then add class <code>fa-stack-1x</code> or <code>fa-stack-2x</code> to the icon.
+</p>
+
+<p>
+    Example: Do not make photos!
+    <span class="fa-stack fa-lg">
+        <i class="fas fa-camera fa-stack-1x"></i>
+        <i class="fas fa-ban fa-stack-2x text-danger" style="color:red;"></i>
+    </span>
+    <br>
+    <code>
+        &lt;span class="fa-stack fa-lg"&gt;<br>
+        &nbsp;&nbsp;&lt;i class="fas fa-camera fa-stack-1x"&gt;&lt;/i&gt;<br>
+        &nbsp;&nbsp;&lt;i class="fas fa-ban fa-stack-2x text-danger" style="color:red;"&gt;&lt;/i&gt;<br>
+        &lt;/span&gt;<br>
+    </code>
+</p>
+
+<h3>Rotating icons</h3>
+
+<p>
+    You can rotate the icon by adding class <code>fa-rotate-90</code>, <code>fa-rotate-180</code>, <code>fa-rotate-270</code>,
+    of flip them by adding class <code>fa-flip-horizontal</code> or <code>fa-flip-vertical</code>.
+</p>
+
+<p>
+    Example:
+    <i class="fas fa-check-square"></i>
+    <i class="fas fa-check-square fa-rotate-90"></i>
+    <i class="fas fa-check-square fa-rotate-180"></i>
+    <i class="fas fa-check-square fa-rotate-270"></i>
+    <i class="fas fa-ambulance"></i>
+    <i class="fas fa-ambulance fa-flip-horizontal"></i>
+    <i class="fas fa-ambulance fa-flip-vertical"></i>
+</p>
+
+
+<h3>Animating icons</h3>
+
+<p>
+    Icons support simple animation by adding class <code>fa-spin</code> or <code>fa-pulse</code>.
+</p>
+
+
+<p>
+    Example:<br>
+
+    <code>
+        &lt;i class="fas fa-sync-alt fa-spin"&gt;&lt;/i&gt;<br>
+        &lt;i class="fas fa-sync-alt fa-pulse"&gt;&lt;/i&gt;<br>
+        &lt;i class="fas fa-cog fa-spin"&gt;&lt;/i&gt;<br>
+        &lt;i class="fas fa-cog fa-pulse"&gt;&lt;/i&gt;<br>
+    </code>
+
+    <i class="fas fa-sync-alt fa-spin"></i>
+    <i class="fas fa-sync-alt fa-pulse"></i>
+    <i class="fas fa-cog fa-spin"></i>
+    <i class="fas fa-cog fa-pulse"></i>
+</p>
+
 
 </body>
 

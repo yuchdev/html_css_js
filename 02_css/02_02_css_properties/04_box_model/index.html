@@ -36,7 +36,7 @@
         Margin is used to create space around an element, outside any defined borders. Margin can be negative.
         When two margins meet each other, they collapse into a single margin with the size of the largest margin.
     </li>
-    <li>Outline is used to create a visible border around an element's content</li>
+    <li>Outline is used to create a visible border outside an element's content</li>
 </ul>
 
 <p>
@@ -57,7 +57,7 @@
     often frustrates the user.
 </p>
 
-<h2>Border, margin and outline</h2>
+<h2>Padding, border, margin and outline</h2>
 
 <div class="box">
     <p class="content">
@@ -95,6 +95,31 @@
         <code>box-sizing: border-box</code>
     </p>
 </div>
+
+<div class="box">
+    <p class="content-outline">
+        Let's try to add red 5px outline to the box.
+        Outline differs from borders!
+        Unlike border, outline is drawn only on the outside of an element, it may overlap other elements
+        Outline is not a part of the element's sizing, and element sizing is not affected by outline.
+    </p>
+</div>
+
+<h3>Styling each side of element</h3>
+
+<p class="individual-styling">
+    You can style each side of an element separately with the
+    <code>*-top</code>,
+    <code>*-right</code>,
+    <code>*-bottom</code>,
+    <code>*-left</code> properties.
+    <br>
+    It comes to all elements of box model: padding, border, margin, outline.
+    <br>
+    You also can use properties shortener with four values, instead of explicitly pointing to the side, e.g.
+    <br>
+    <code>padding: 10px 20px 5px 15px;</code>
+</p>
 
 </body>
 

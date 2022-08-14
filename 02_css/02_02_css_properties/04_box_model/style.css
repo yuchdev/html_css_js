@@ -42,9 +42,29 @@ div.box-border-box{
   box-sizing: border-box;
 }
 
-
 p.content {
   padding: 10px;
   border: solid 5px black;
   background-color: magenta;
+}
+
+p.content-outline {
+  padding: 10px;
+  border: solid 5px black;
+  background-color: magenta;
+  outline: solid 5px red;
+}
+
+p.individual-styling {
+    padding: 10px 20px 5px 15px;
+
+    border-left: 5px solid red;
+    border-right: 10px solid green;
+    border-top: 15px solid blue;
+    border-bottom: 5px solid yellow;
+
+    outline: solid 5px red;
+    color: green;
+    font-size: 1.5em;
+    text-align: center;
 }
