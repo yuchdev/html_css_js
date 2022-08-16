@@ -80,3 +80,22 @@ a.dashed_on_hover:visited {
 a.dashed_on_hover:hover {
   text-decoration: none;
 }
+
+a.button:link, a.button:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover, a.button:active {
+  background-color: green;
+  color: white;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif
+}
