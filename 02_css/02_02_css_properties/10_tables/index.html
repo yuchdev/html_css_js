@@ -19,6 +19,272 @@
 
 <h1>CSS Styling Tables</h1>
 
+<h2>What you can style</h2>
+
+<p>
+    You can change border, color scheme, font, alignment, and responsiveness of tables.
+    In the end you can receive very fancy-looking tables, combining all these properties.
+</p>
+
+<h2>Table borders</h2>
+
+<table class="usual-border">
+    <caption>Default table border</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<table class="border-collapse">
+    <caption>Collapse the border</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<table class="color-border">
+    <caption>Border style and color</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<h2>Table size</h2>
+
+<p>
+    As usual, table size like any other size in CSS can be set in different units, like px, pt, %, etc.
+</p>
+
+<table class="size">
+    <caption>Make the table take all page width and header height 70pt</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<h2>Table style</h2>
+
+<p>
+    You can set padding, outline, and all properties of a border.
+    Besides, you can set all properties of the text, like font (<code>font-family</code> property).
+    Or alignment of the text in the table (<code>text-align</code> property).
+    Also, you can change the location of caption, above or below the table,
+    using <code>caption-side</code> property.
+    That's a very stylish table:
+</p>
+
+<table class="stylish-border">
+    <caption>Table with custom padding, background, border and border radius</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<p>
+    Of course, you can set different properties for each size of a border
+</p>
+
+<table class="different-sides">
+    <caption>Table with custom styling of each side</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<h2>Using pseudo-class or pseudo-element for advanced table styling</h2>
+
+<p>
+    You can use pseudo-class or pseudo-element for advanced table styling.
+    For example, you can use <code>:hover</code> pseudo-class for styling the table when the mouse is over it,
+    use <code>:active</code> pseudo-class for styling the table when the mouse is pressed down on it.
+    And you can use <code>:nth-child</code> for zebra-styled tables, use CSS property <code>background-color</code>
+    with <code>:nth-child(even)</code> or <code>:nth-child(odd)</code>.
+</p>
+
+<table class="responsive-table">
+    <caption>Change background on hover and click, and for every even element</caption>
+    <tr>
+        <th>Car Model</th>
+        <th>Market Share</th>
+    </tr>
+    <tr>
+        <td>Toyota</td>
+        <td>15,5%</td>
+    </tr>
+    <tr>
+        <td>Ford</td>
+        <td>12.6%</td>
+    </tr>
+    <tr>
+        <td>Tesla</td>
+        <td>1.5%</td>
+    </tr>
+</table>
+
+<p>
+    Notice how precisely we can style the table with <code>:hover</code>
+    and <code>:not(:first-child)</code> pseudo-classes, excluding the first row.
+</p>
+
+<h2>Scrolling tables</h2>
+
+<p>
+    A responsive table will display a horizontal scroll bar if the screen is too small to display the full content.
+    For that you can use <code>overflow-x: auto</code> CSS property, not to table itself, but to its parent element,
+    like <code>div</code> or <code>section</code>.
+</p>
+
+<div style="overflow-x: auto;">
+    <table class="scroll-table">
+        <caption>Horizontal scrolling (resize the browser window to see the effect)</caption>
+        <tr>
+            <th>Car Model</th>
+            <th>Market Share</th>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+            <th>April</th>
+            <th>May</th>
+            <th>June</th>
+            <th>July</th>
+            <th>August</th>
+            <th>September</th>
+            <th>October</th>
+            <th>November</th>
+            <th>December</th>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>15,5%</td>
+            <td>15,5%</td>
+            <td>15,5%</td>
+            <td>15,5%</td>
+            <td>15,5%</td>
+            <td>15,5%</td>
+            <td>15,5%</td>
+            <td>15,4%</td>
+            <td>15,4%</td>
+            <td>15,4%</td>
+            <td>15,4%</td>
+            <td>15,4%</td>
+            <td>15,4%</td>
+        </tr>
+        <tr>
+            <td>Ford</td>
+            <td>12.6%</td>
+            <td>12.6%</td>
+            <td>12.6%</td>
+            <td>12.6%</td>
+            <td>12.4%</td>
+            <td>12.4%</td>
+            <td>12.4%</td>
+            <td>12.7%</td>
+            <td>12.4%</td>
+            <td>12.4%</td>
+            <td>12.8%</td>
+            <td>12.8%</td>
+            <td>12.8%</td>
+        </tr>
+        <tr>
+            <td>Tesla</td>
+            <td>1.5%</td>
+            <td>1.5%</td>
+            <td>1.5%</td>
+            <td>1.5%</td>
+            <td>1.6%</td>
+            <td>1.6%</td>
+            <td>1.6%</td>
+            <td>1.7%</td>
+            <td>1.7%</td>
+            <td>1.7%</td>
+            <td>1.8%</td>
+            <td>1.8%</td>
+            <td>1.8%</td>
+        </tr>
+    </table>
+</div>
+
+
+
+
 </body>
 
 </html>

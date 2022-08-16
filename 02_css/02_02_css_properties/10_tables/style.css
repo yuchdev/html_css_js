@@ -1,3 +1,83 @@
-p.text_family {
+table.usual-border, table.usual-border th, table.usual-border td {
+    border: 1px solid #000;
+}
+
+table.border-collapse, table.border-collapse th, table.border-collapse td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+table.color-border, table.color-border th, table.color-border td {
+    border: groove blue;
+}
+
+table.size {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+table.size th, table.size td {
+    border: 1px solid #000;
+}
+
+table.size th {
+    height: 70pt;
+}
+
+table.stylish-border {
+    width: 100%;
+    background: lightskyblue;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    caption-side: bottom;
+}
+
+table.stylish-border, table.stylish-border th, table.stylish-border td {
+    border: 1px groove #5f3aff;
+    border-radius: 3px;
+    padding: 0.5em;
+}
+
+table.different-sides {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+table.different-sides th, table.different-sides td {
+    border-bottom: 3px blue groove;
+    border-top: 3px darkred groove;
+    border-right: 1px solid magenta;
+    border-left: 1px solid magenta;
+}
+
+table.responsive-table {
+    width: 100%;
+}
+
+table.responsive-table tr:nth-child(even) {
+    background: #f0f0f0;
+}
+
+/* All lines except the header */
+table.responsive-table tr:not(:first-child):hover {
+    background: lime;
+}
+
+/* All lines except the header */
+table.responsive-table tr:not(:first-child):active {
+    background: magenta;
+}
+
+table.scroll-table{
+    width: 100%;
+    border: 1px solid #000;
+}
+
+table.scroll-table tr:nth-child(even) {
+    background: #f0f0f0;
+}
+
+table.scroll-table th, table.scroll-table td {
+    border: 1px solid #000;
+    padding: 8px;
 }
