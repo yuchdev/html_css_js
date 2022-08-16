@@ -1,3 +1,57 @@
-p.text_family {
-    font-family: Arial, Helvetica, sans-serif;
+ul.circle {
+    list-style-type: circle;
+}
+
+ul.square {
+    list-style-type: square;
+}
+
+ul.disc {
+    list-style-type: disc;
+}
+
+ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+
+ol.roman {
+    list-style-type: lower-roman;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+}
+
+ul.image-list {
+    list-style-image: url("img/list-item.jpg");
+}
+
+ul.outside-item-list {
+    list-style-position: outside;
+    width: 20%;
+}
+
+ul.outside-item-list li {
+    border: solid 1px black;
+}
+
+ul.inside-item-list {
+    list-style-position: inside;
+    width: 20%;
+}
+
+ul.inside-item-list li {
+    border: solid 1px black;
+}
+
+ul.color-list {
+    background: #00cccc;
+    padding: 20px;
+    width: 20%;
+}
+
+ul.color-list li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
 }
