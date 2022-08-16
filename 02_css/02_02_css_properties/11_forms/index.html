@@ -19,6 +19,79 @@
 
 <h1>CSS Styling Forms</h1>
 
+<h2>What exactly you can style</h2>
+
+<p>
+    Like pretty much any other element, you can greatly customize the appearance of forms. Size, color, font,
+    padding, margin, border, and so on.<br>
+    Important to note that you can style the form only of specific type,
+    e.g. <code>input[type=text]</code>, <code>input[type=password]</code>, <code>input[type=submit]</code>, etc.
+</p>
+
+<h2>Forms sizing</h2>
+
+<p>
+    Let's start with the sizing. You can set the size of the form elements using
+    <code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code>,
+    <code>border</code>, <code>border-radius</code>, styling each side individually, etc.
+</p>
+
+<p>
+    Good practice would be to include all these borders and margins into the size of the form,
+    for what you can set the property <code>box-sizing: border-box</code>.
+</p>
+
+<form action="http://localhost:3000/login">
+    <fieldset>
+        <legend>Login form</legend>
+        <p>
+            <label for="login_form_username">Username:</label>
+            <input id="login_form_username" class="login-form" maxlength="30" name="username" type="text"/>
+        </p>
+        <p>
+            <label for="login_form_password">Password:</label>
+            <input id="login_form_password" class="login-form" maxlength="30" name="password" type="password"/>
+        </p>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+<h2>Color and size styling with pseudo-classes</h2>
+
+<p>
+    Form elements style really shines when you start using pseudo-classes,
+    e.g. <code>:focus</code>, <code>:hover</code>, <code>:active</code>, etc.
+    Here we change the <code>background-color</code> and <code>width</code> properties of the form elements,
+    when the form is focused: <code>input[type=text].search-form:focus</code>,
+    and slightly highlight <code>border-color</code> when the mouse is over it: <code>form.login-form:hover</code>.
+</p>
+
+<form>
+    <input type="text" class="search-form" name="search" placeholder="Search...">
+</form>
+
+<p>
+    Note, here we used the icon inside the input: <code>background-image: url('img/searchicon.png')</code>,
+    and added simple smooth animation using the <code>transition: width 0.4s ease-in-out</code> property.
+</p>
+
+<p>
+    One more usage of pseudo-classes is validation in response to the user's actions.
+</p>
+
+<form >
+    <label for="email-validate-id">Email:</label>
+    <input type="text"
+           id="email-validate-id"
+           class="email-validation"
+           placeholder="atatat@email.me"
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required />
+</form>
+
+<h2>Styling textarea</h2>
+
+<h2>Responsive design and forms</h2>
+
 </body>
 
 </html>

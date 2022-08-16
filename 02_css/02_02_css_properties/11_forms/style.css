@@ -1,3 +1,38 @@
-p.text_family {
-    font-family: Arial, Helvetica, sans-serif;
+input[type=text].login-form, input[type=password].login-form {
+    width: 60%;
+    height: 30px;
+    padding: 6px 6px;
+    margin: 12px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=text].search-form {
+    width: 30%;
+    height: 30px;
+    border-radius: 4px;
+    background-color: white;
+    background-image: url('img/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text].search-form:focus {
+    width: 50%;
+    background-color: lightskyblue;
+}
+
+input[type=text].search-form:hover {
+    border-color: #cccccc;
+}
+
+input[type=text].email-validation:invalid {
+    border: 3px solid red;
+}
+
+input[type=text].email-validation:valid {
+    border: 1px solid green;
 }
