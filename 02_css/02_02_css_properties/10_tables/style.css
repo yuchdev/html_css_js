@@ -50,21 +50,21 @@ table.different-sides th, table.different-sides td {
     border-left: 1px solid magenta;
 }
 
-table.responsive-table {
+table.interactive-table {
     width: 100%;
 }
 
-table.responsive-table tr:nth-child(even) {
+table.interactive-table tr:nth-child(even) {
     background: #f0f0f0;
 }
 
 /* All lines except the header */
-table.responsive-table tr:not(:first-child):hover {
+table.interactive-table tr:not(:first-child):hover {
     background: lime;
 }
 
 /* All lines except the header */
-table.responsive-table tr:not(:first-child):active {
+table.interactive-table tr:not(:first-child):active {
     background: magenta;
 }
 

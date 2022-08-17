@@ -67,7 +67,8 @@
 </p>
 
 <form>
-    <input type="text" class="search-form" name="search" placeholder="Search...">
+    <label for="search-form-id">Search:</label>
+    <input type="text" id="search-form-id" class="search-form" name="search" placeholder="Search...">
 </form>
 
 <p>
@@ -90,7 +91,48 @@
 
 <h2>Styling textarea</h2>
 
+<p>
+    There are some specific properties of textarea,
+    e.g. <code>resize</code> can turn on and off the ability to resize the textarea horizontally, vertically or both,
+    <code>overflow</code> responsible for the behavior of the textarea when it is too small to fit the content
+    (the text <code>scroll</code>, becomes <code>hidden</code> or remains <code>visible</code>, spilling out of the box).
+</p>
+
+<form>
+    <label for="scroll-textarea-id">This is a scrollable textarea:</label>
+    <textarea id="scroll-textarea-id" class="scroll-textarea">Some text...</textarea>
+</form>
+
 <h2>Responsive design and forms</h2>
+
+<p>
+    Responsive design is a standard practice in a modern web development,
+    and utilized in the form of media queries (see the
+    <a href="../../02_03_css_positioning/03_media_queries/index.html">
+        chapter
+    </a> on media queries), and forms is not an exception.
+</p>
+
+<div class="container">
+    <form action="http://localhost:3000/login">
+        <div class="row">
+            <div class="col-25">
+                <label for="first-name">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="first-name" name="firstname" placeholder="Enter your name...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="last-name">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="last-name" name="lastname" placeholder="Enter your last name...">
+            </div>
+        </div>
+    </form>
+</div>
 
 </body>
 
