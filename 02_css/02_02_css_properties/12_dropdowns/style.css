@@ -1,3 +1,6 @@
+/***********************************************************************************************/
+/*Dropdown tooltip example*/
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -14,5 +17,79 @@
 }
 
 .tooltip:hover .tooltip-content {
+    display: block;
+}
+
+/***********************************************************************************************/
+/*Dropdown menu example*/
+
+/*Dropdown menu container*/
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/*Dropdown menu button*/
+.dropdown-menu-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Dropdown menu content*/
+.dropdown-menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-menu:hover .dropdown-menu-content {
+    display: block;
+}
+
+/* Style menu items */
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-menu-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Change the style of menu button when the dropdown content is shown */
+.dropdown-menu:hover .dropdown-menu-button {
+    background-color: #3e8e41;
+}
+
+/***********************************************************************************************/
+/*Dropdown image example*/
+.dropdown-image {
+    position: relative;
+    display: inline-block;
+}
+
+/*Dropdown image with higher resolution*/
+.dropdown-image-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown image on hover */
+.dropdown-image:hover .dropdown-image-content {
     display: block;
 }

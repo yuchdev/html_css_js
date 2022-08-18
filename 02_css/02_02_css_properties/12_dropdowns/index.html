@@ -31,13 +31,90 @@
 
 <p>
     The simplest use of dropdowns is a tooltip. You hover over an element and some explanation text appears.
-    NOTE: for this exact joke ADOBE employee was fired:
+    Explaining an example:
 </p>
+
+<ul>
+    <li>
+        You can use any element as a container for a tooltip, in our case we use <code>div</code>,
+        and give it a class <code>tooltip</code>
+    </li>
+    <li>Put inside the container the content you want to have a tooltip, and the tooltip content as well</li>
+    <li>Add a class <code>tooltip-content</code> to the content</li>
+    <li>On the CSS side create classes <code>tooltip</code> and <code>tooltip-content</code></li>
+    <li>
+        We want the tooltip to be placed right below the element,
+        so we give <code>position: relative</code> to a <code>tooltip</code>,
+        and <code>position: absolute</code> to a <code>tooltip-content</code>
+    </li>
+    <li>
+        The tooltip content is hidden by default (property <code>display: none</code>), we make it visible
+        (property <code>display: block</code>) by hovering over the tooltip,
+        using pseudo-class <code>.tooltip:hover</code>
+    </li>
+    <li>
+        Other properties of the tooltip content depend on the tooltip element, and general style of a page.
+        For example, property <code>box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)</code> instead of solid border,
+        gives the content a temporary-box look
+    </li>
+</ul>
 
 <div class="tooltip">
     <button type="button" onclick="alert('Say Okay!')">OK</button>
     <div class="tooltip-content">
         <p>This is OK button, dummy!</p>
+    </div>
+</div>
+
+<p>
+    NOTE: for this exact joke one <i>Adobe</i> employee was fired.
+</p>
+
+<h2>Dropdown Menu</h2>
+
+<p>
+    This one is probably the most common use of dropdowns, not as simple as tooltip,
+    however, being created on the same principles.
+</p>
+
+<ul>
+    <li>The class <code>class="dropdown-menu"</code> is the same as for the tooltip</li>
+    <li>We style the button with <code>class="dropdown-menu-button"</code> to give it a dropdown-menu look</li>
+    <li>
+        Dropdown menu content is hidden by default (property <code>display: none</code>),
+        and displayed when the button is hovered: <code>.dropdown-menu:hover .dropdown-menu-content</code>.
+        We also slightly change the button itself
+    </li>
+    <li>
+        We give links in our menu a view of "menu items" (content of <code>.dropdown-menu a</code> section),
+        and we change their style while hovering over them (using pseudo-class <code>.dropdown-menu-content a:hover</code>)
+    </li>
+</ul>
+
+<div class="dropdown-menu">
+    <button class="dropdown-menu-button">Dropdown</button>
+    <div class="dropdown-menu-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div>
+
+<p>
+    This way you can create the whole menu hierarchies with submenus in the navigation bar.
+</p>
+
+<h2>Dropdown with images of higher resolution</h2>
+
+<p>
+    The same way you can implement the preview of images in the low resolution,
+    showing the high resolution image when the user hovers over the element.
+</p>
+
+<div class="dropdown-image">
+    <img src="img/manule-small.jpg" alt="Cute cat" width="107" height="107">
+    <div class="dropdown-image-content">
+        <img src="img/manule.jpg" alt="Cute cat" width="427" height="427">
     </div>
 </div>
 
