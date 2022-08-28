@@ -80,8 +80,19 @@
 <h2>Formula Calculating Specificity</h2>
 
 <p>
-TODO: calculate by formula 1111
+    Imagine every CSS property declaration has "weight".
+    Inline style has weight of 1000, and always given a highest priority.
+    Style by every ID value adds weight 100.
+    Styling by every class adds weight 10.
+    Every element selector and every pseudo-element adds weight 1.
+    Universal selector is ignored and have weight 0.
 </p>
+
+<p>
+    The selector with the highest specificity value will win and take effect
+</p>
+
+<h3>Examples of CSS Specificity Formula</h3>
 
 </body>
 
