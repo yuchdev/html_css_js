@@ -61,9 +61,6 @@ p.p4-floating {
 p.p4-resume {
     background-color: lime;
     color: indigo;
-    clear: right;
-}
-
-div.resume {
+    float: right;
     clear: right;
 }

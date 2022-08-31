@@ -285,9 +285,32 @@ In almost standard's mode, there are only a very small number of quirks implemen
     about the meaning of each element in a document through proper choice of markup elements.
 </p>
 
+<h2>HTML attributes</h2>
+
+<p>
+    HTML elements may have attributes that are used to modify the behaviour of the element.
+    For example, the <code>&lt;a&gt;</code> element has an <code>href</code> attribute
+    that specifies the URL of the page the link goes to.
+</p>
+
+<p>
+    Some attributes are applied to all elements, e.g. <code>class</code> or <code>id</code> attribute.
+    They are called <dfn>global attributes</dfn>:<br>
+    <code>&lt;a href="http://localhost:3000" class="link"&gt;</code>
+</p>
+
+<p>
+    Some attributes are applied to specific elements only,
+    e.g. <code>href</code> attribute is applied to <code>&lt;a&gt;</code> element only,
+    and <code>type</code> attribute could be applied to a variety of elements, like <code>&lt;input&gt;</code>
+    or <code>&lt;button&gt;</code>:<br>
+    <code>&lt;input type="text"&gt;</code>
+</p>
+
 </body>
 
 <footer>
+    <h2>Footer</h2>
     <!-- A <footer> element typically contains: authorship information, copyright information, contact information
     sitemap, back to top links, related documents.
     Contact information inside a <footer> element should go inside an <address> tag. -->

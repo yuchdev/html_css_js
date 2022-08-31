@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <title>HTML Events</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="HTML Events">
+    <meta name="author" content="Yurii Cherkasov">
+</head>
+
+<h1>HTML Events</h1>
+
+<h2>Concept</h2>
+
+<p>
+    HTML lets you trigger action in browser, e.g. when you click on a button,
+    when you press a key, when you scroll the page, etc.
+    The action could be anything that HTML/CSS/JS allows,
+    e.g. a page reload, a form submission, window resize, style change, running script, etc.
+</p>
+
+<p>
+    Some events may occur in any HTML element starting from the document root,
+    e.g. when you reload page, when you resize window, etc.
+    Some events are specific to elements, good example are forms:
+    when you submit a form, when you change a form field value, obtain or lose focus, etc.
+</p>
+
+<h2>Global event examples</h2>
+
+<ul>
+    <li>Page reload: <code>&lt;body onload="alert('Hello World')"&gt;</code></li>
+    <li>Window resize: <code>&lt;body onresize="alert('Window resized')"&gt;</code></li>
+    <li>Windows closed: <code>&lt;body onunload="alert('Window closed')"&gt;</code></li>
+</ul>
+
+<h2>Form-specific event examples</h2>
+
+<ul>
+    <li>Form submitted: <code>&lt;form onsubmit="alert('Form submitted')"&gt;</code></li>
+    <li>Form field value changed: <code>&lt;input onchange="alert('Field value changed')"&gt;</code></li>
+    <li>Form field gained focus: <code>&lt;input onfocus="alert('Field gained focus')"&gt;</code></li>
+    <li>Form field lost focus: <code>&lt;input onblur="alert('Field lost focus')"&gt;</code></li>
+</ul>
+
+<h2>Keyboard and mouse event examples</h2>
+
+<ul>
+    <li>Key pressed: <code>&lt;body onkeydown="alert('Key pressed')"&gt;</code></li>
+    <li>Key released: <code>&lt;body onkeyup="alert('Key released')"&gt;</code></li>
+    <li>Mouse clicked: <code>&lt;body onclick="alert('Mouse clicked')"&gt;</code></li>
+    <li>Mouse double-clicked: <code>&lt;body ondblclick="alert('Mouse double-clicked')"&gt;</code></li>
+    <li>Mouse pressed: <code>&lt;body onmousedown="alert('Mouse button pressed')"&gt;</code></li>
+    <li>Mouse released: <code>&lt;body onmouseup="alert('Mouse button released')"&gt;</code></li>
+    <li>Mouse moved: <code>&lt;body onmousemove="alert('Mouse moved')"&gt;</code></li>
+    <li>Mouse left: <code>&lt;body onmouseleave="alert('Mouse left button')"&gt;</code></li>
+    <li>Mouse wheel: <code>&lt;body onwheel="alert('Mouse wheel')"&gt;</code></li>
+</ul>
+
+<h2>Other event examples: clipboard, drag-n-drop, media</h2>
+
+<ul>
+    <li>Clipboard: <code>&lt;body oncopy="alert('Copy to clipboard')"&gt;</code></li>
+    <li>Drag-n-drop: <code>&lt;body ondrag="alert('Drag started')"&gt;</code></li>
+    <li>Media: <code>&lt;body oncanplay="alert('File start playing')"&gt;</code></li>
+</ul>
+
+
+</html>
