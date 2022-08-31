@@ -1,0 +1,99 @@
+<!doctype HTML>
+
+<html lang="en" title="Sizing elements with CSS">
+
+<head>
+    <title>Elements background styling</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="Sizing elements with CSS">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Sizing elements with CSS</h1>
+
+<h2>Setting elements size with CSS</h2>
+
+<p>
+    Basics of setting elements size with CSS are very intuitive:
+</p>
+
+<ul>
+    <li>
+        <b>width</b> property sets width of an element;
+    </li>
+    <li>
+        <b>height</b> property sets height of an element;
+    </li>
+    <li>
+        <b>max-width</b> property sets maximum width of an element;
+    </li>
+    <li>
+        <b>max-height</b> property sets maximum height of an element;
+    </li>
+    <li>
+        <b>min-width</b> property sets minimum width of an element;
+    </li>
+    <li>
+        <b>min-height</b> property sets minimum height of an element;
+    </li>
+</ul>
+
+<p class="set-size">
+    Element size could be measured in any unit, as we saw from
+    <a href="../../02_01_css_basics/09_css_units/index.html">CSS units</a> chapter.
+    For example, this paragraph has height 100px and width 70%.
+</p>
+
+<p>
+    By default, element size does not include padding, border and margin.
+    As we see in the next chapter, this property could be changed with <code>box-sizing</code> CSS property.
+</p>
+
+<h2>Special values of size properties</h2>
+
+<p>
+    Size-related CSS properties may have special values:
+</p>
+
+<ul>
+    <li>
+        <b>auto</b> value sets size to its default value;
+    </li>
+    <li>
+        <b>initial</b> value sets size to its default value;
+    </li>
+    <li>
+        <b>inherit</b> value sets size to the size of the parent element;
+    </li>
+</ul>
+
+<h2>Use of max and min sizing properties</h2>
+
+<p>
+    For example, <b>max-width</b> and <b>max-height</b> properties set maximum size of an element.
+    Maximum width helps in handling devices with small window width.
+    If we firmly set maximum width of an element to 500px, it will remain like that even if
+    display size of a browser is smaller.
+    On the contrary, if we set maximum width of an element to 100%, it will be resized with the browser.
+    To see the difference, try to resize your browser window width below 500px.
+</p>
+
+<p class="firmly-set">
+    This paragraph width is 500px.
+</p>
+
+<p class="max-width">
+    This paragraph max-width is 500px.
+</p>
+
+</body>
+
+</html>

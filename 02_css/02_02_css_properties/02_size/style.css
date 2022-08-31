@@ -1,0 +1,18 @@
+p.set-size {
+  height: 100px;
+  width: 70%;
+  border: 1px solid black;
+  background: #ccc;
+}
+
+p.firmly-set {
+  width: 500px;
+  border: 1px solid black;
+  background: gold;
+}
+
+p.max-width {
+  max-width: 500px;
+  border: 1px solid black;
+  background: orange;
+}

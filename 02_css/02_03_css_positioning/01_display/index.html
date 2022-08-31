@@ -21,10 +21,63 @@
 
 <h2>Definition</h2>
 
-<div>
+<p>
     The <code>display</code> property specifies if and how HTML element is displayed,
     and it is one of the most important CSS properties.
-</div>
+</p>
+
+<p>
+    In the beginning of HTML chapter we were talking of <dfn>block</dfn> and <dfn>inline</dfn> elements.
+    These properties are given by some meaningful default to certain elements, for example,
+    <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>
+    are block elements,
+    and <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code> are inline elements.
+</p>
+
+<p class="background">
+    As you see, this paragraph is block element, i.e. it takes all the available width.
+    This <span class="background">span</span> is inline element, i.e. it is displayed within the line.
+</p>
+
+<h2>Changing display property</h2>
+
+<p>
+    However, these fundamental properties could be changed by <code>display</code> property.
+    Let's say, list elements <code>&lt;li&gt;</code> are displayed as block elements,
+    but we can change this property to inline elements.
+</p>
+
+<p>Normal list with block-level elements:</p>
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<p>List with inline elements <code>display: inline</code> makes it horizontal:</p>
+
+<ul>
+    <li class="inline">Item 1</li>
+    <li class="inline">Item 2</li>
+    <li class="inline">Item 3</li>
+</ul>
+
+<h2>Using display property to make elements hide and appear</h2>
+
+<p>
+    Sometimes we need to hide elements, and sometimes we need to show them.
+    For this purpose we can use <code>display: none</code> property.
+</p>
+
+<p>
+    It should not be confused with <code>visibility: hidden</code> property;
+    while <code>display: none</code> property removes element from the document flow,
+    <code>visibility: hidden</code> property just hides the element
+</p>
+
+<h2>Example of hiding the element with display property</h2>
+
 
 
 </body>

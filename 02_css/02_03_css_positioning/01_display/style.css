@@ -1,66 +1,11 @@
-div.background {
+p.background {
     background: beige;
 }
 
-div.background-resume {
-    background: beige;
-    clear: right;
+span.background {
+    background: forestgreen;
 }
 
-p {
-    width: 200px;
-    height: 100px;
-    border: 3px solid black;
-    margin: 10px;
-}
-
-p.p1 {
-    background-color: lightgray;
-    color: blueviolet;
-}
-
-p.p2 {
-    background-color: khaki;
-    color: darkcyan;
-}
-
-p.p3 {
-    background-color: tomato;
-    color: cornflowerblue;
-}
-
-p.p4 {
-    background-color: lime;
-    color: indigo;
-}
-
-p.p1-floating {
-    background-color: lightgray;
-    color: blueviolet;
-    float: right;
-}
-
-p.p2-floating {
-    background-color: khaki;
-    color: darkcyan;
-    float: right;
-}
-
-p.p3-floating {
-    background-color: tomato;
-    color: cornflowerblue;
-    float: right;
-}
-
-p.p4-floating {
-    background-color: lime;
-    color: indigo;
-    float: right;
-}
-
-p.p4-resume {
-    background-color: lime;
-    color: indigo;
-    float: right;
-    clear: right;
+li.inline {
+    display: inline;
 }
