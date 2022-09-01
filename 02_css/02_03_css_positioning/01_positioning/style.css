@@ -1,0 +1,62 @@
+p.static-example {
+    position: static;
+    border: 1px solid black;
+    background: violet;
+}
+
+p.relative-example {
+    position: relative;
+    border: 1px solid black;
+    background: palegreen;
+    left: 30px;
+    top: 10px;
+}
+
+div.relative-parent{
+    position: relative;
+    border: 1px solid red;
+    background: lightcyan;
+    width: 80%;
+    height: 400px;
+}
+
+p.absolute-example {
+    position: absolute;
+    border: 1px solid black;
+    background: lightblue;
+    top: 60px;
+    right: 10px;
+    width: 50%;
+    height: 50px;
+}
+
+p.fixed-example {
+    position: fixed;
+    border: 1px solid black;
+    background: lightpink;
+    bottom: 10px;
+    right: 10px;
+    width: 50%;
+    height: 100px;
+}
+
+div.sticky-example {
+    position: sticky;
+    position: -webkit-sticky;
+    padding: 5px;
+    border: 1px solid darkblue;
+    background: lightyellow;
+    bottom: 10px;
+}
+
+div.image-container {
+    position: relative;
+}
+
+p.text-over-image {
+    position: absolute;
+    color: lightskyblue;
+    top: 10px;
+    left: 20px;
+}
+

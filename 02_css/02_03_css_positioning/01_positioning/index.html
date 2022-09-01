@@ -1,0 +1,92 @@
+<!doctype HTML>
+
+<html lang="en" title="CSS Positioning">
+    
+<head>
+    <title>CSS Positioning by Floating Properties</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="CSS Positioning Properties">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>CSS Positioning Properties</h1>
+
+
+<h2>Types of CSS position property</h2>
+
+<p>
+    The position property is used to set the positioning method of an element.
+    It is easily to understand by looking at the examples below, rather than explanation.
+    CSS offers the following types of positioning:
+</p>
+
+<ul>
+    <li><code>static</code> - default value, or normal document flow</li>
+    <li><code>relative</code> - element is positioned relative to its normal position</li>
+    <li><code>fixed</code> - element is positioned relative to the document itself</li>
+    <li><code>absolute</code> - element is positioned relative to the nearest positioned ancestor</li>
+    <li><code>sticky</code> - element is positioned based on user's scroll position</li>
+</ul>
+
+<h2>Static and relative</h2>
+
+<p class="static-example">
+    This is static positioning, or normal document flow. It is not affected by
+    <code>left</code>, <code>right</code>, <code>top</code>, or <code>bottom</code> CSS properties.
+</p>
+
+<p class="relative-example">
+    This is relative positioning, or positioned relative to its normal (static) position.
+    Other HTML content is not adjusted in any way.
+</p>
+
+<h2>Absolute and fixed</h2>
+
+<div class="relative-parent">
+    This is a parent element for the absolutely positioned element.
+    <p class="absolute-example">
+        This is absolute positioning related to the parent element.
+        Absolutely positioned element is removed from the normal flow of the document.
+    </p>
+</div>
+
+<p class="fixed-example">
+    This is fixed positioning, or positioned relative to the document (viewport) itself.
+    The element is not affected by the scroll position of the document, and always remains in the same position.
+    Fixed positioned element is removed from the normal flow of the document.
+</p>
+
+<h2>Sticky</h2>
+
+<div class="sticky-example">
+    This is sticky positioning, or positioned based on user's scroll position.
+    The element is not affected by the scroll position of the document, and always remains in the same position.
+    Sticky positioned element is removed from the normal flow of the document.
+</div>
+
+<p>
+    Note: Safari requires the <code>-webkit-sticky</code> property for the element to be sticky.
+    Also, in order to make the element sticky, at least one of the following properties must be set:
+    <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code>.
+</p>
+
+<h2>Example: position text over the image</h2>
+
+<div class="image-container">
+    <img src="img/manule.jpg" alt="Text Positioning" width="427" height="427">
+    <p class="text-over-image">
+        This is text positioned over the image
+    </p>
+</div>
+
+</body>
+
+</html>
