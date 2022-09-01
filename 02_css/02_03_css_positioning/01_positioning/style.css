@@ -34,7 +34,7 @@ p.fixed-example {
     position: fixed;
     border: 1px solid black;
     background: lightpink;
-    bottom: 10px;
+    bottom: 120px;
     right: 10px;
     width: 50%;
     height: 100px;

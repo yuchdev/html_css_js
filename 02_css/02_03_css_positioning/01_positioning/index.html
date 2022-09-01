@@ -52,16 +52,20 @@
 
 <div class="relative-parent">
     This is a parent element for the absolutely positioned element.
+    We'll make it big in order to properly demonstrate the next example.
+
     <p class="absolute-example">
         This is absolute positioning related to the parent element.
         Absolutely positioned element is removed from the normal flow of the document.
     </p>
+
 </div>
 
 <p class="fixed-example">
     This is fixed positioning, or positioned relative to the document (viewport) itself.
     The element is not affected by the scroll position of the document, and always remains in the same position.
-    Fixed positioned element is removed from the normal flow of the document.
+    Fixed positioned element is removed from the normal flow of the document,
+    and is able to overlap other elements.
 </p>
 
 <h2>Sticky</h2>
@@ -69,14 +73,13 @@
 <div class="sticky-example">
     This is sticky positioning, or positioned based on user's scroll position.
     The element is not affected by the scroll position of the document, and always remains in the same position.
-    Sticky positioned element is removed from the normal flow of the document.
-</div>
-
-<p>
+    Sticky positioned element is removed from the normal flow of the document.<br>
     Note: Safari requires the <code>-webkit-sticky</code> property for the element to be sticky.
-    Also, in order to make the element sticky, at least one of the following properties must be set:
-    <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code>.
-</p>
+    Obviously, in order to make the element sticky, at least one of the following properties must be set:
+    <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code>
+    (we must set where elements should be stuck to).
+
+</div>
 
 <h2>Example: position text over the image</h2>
 
