@@ -1,6 +1,6 @@
 <!doctype HTML>
 
-<html lang="en" title="Responsive Web Design">
+<html lang="en" title="CSS Grid Layout">
     
 <head>
     <title>Responsive Web Design</title>
@@ -8,7 +8,7 @@
     <meta http-equiv="refresh" content="30">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="default-style" content="style.css">
-    <meta name="description" content="Responsive Web Design">
+    <meta name="description" content="CSS Grid Layout">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Yurii Cherkasov">
     <!-- This meta-tag let the browser know we utilize Responsive Design -->
@@ -18,46 +18,27 @@
 
 <body>
 
-<h1>Responsive Web Design</h1>
+<h1>CSS Grid Layout</h1>
 
-<h2>Multi-column layout</h2>
-
-<p>
-    Here we try to provide different number of columns for different screen sizes.
-</p>
-
-<p class="row">
-
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 1</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 2</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 3</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 4</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 5</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 6</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 7</p>
-    </div>
-    <div class="column-large-01 column-medium-01 column-small-01 column-extra-small-01">
-        <p class="column">This is column 8</p>
-    </div>
-</p>
+<h2>An alternative to float and positioning</h2>
 
 <p>
-    Every browser has Developer Tools, which allow to see the layout of the page on the most common screen sizes,
-    popular devices and different screen orientations.
+    Grid-based layout allows to reach same results as float and positioning, but with less code.
 </p>
+
+<h2>Grid example</h2>
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+</div>
 
 </body>
 

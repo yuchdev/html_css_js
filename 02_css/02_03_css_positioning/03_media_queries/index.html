@@ -42,6 +42,11 @@
     Be careful not to overlap boundaries!
 </p>
 
+<p>
+    Boundaries of media queries are called <dfn>breakpoints</dfn>.
+    You can add as many breakpoint as you like.
+</p>
+
 <p>There are standard ranges of screen sizes. Table of Bootstrap screen sizes:</p>
 
 <table>
@@ -81,6 +86,13 @@
     <tr>
 </table>
 
+<h2>Screen layout</h2>
+
+<p>
+    The webpage may have different layout depending on the orientation of mobile device screen, e.g.
+    <code>@media screen and (min-width: 922px) and orientation: landscape</code>
+</p>
+
 <h2>Responsive Design</h2>
 
 <p>
@@ -89,6 +101,7 @@
     In the beginning of mobile development, mobile version of a website were served as a different URL,
     that led to errors and running different versions of the website on different devices.
     Meanwhile, responsive design allows you to create a single code base that fits all devices.
+    Responsive Design utilizes only HTML and CSS and does not require any programming language like JS.
 </p>
 
 </body>
