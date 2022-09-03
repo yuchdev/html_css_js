@@ -66,7 +66,19 @@
     </div>
 </div>
 
-<h2>Resuming the document flow 1</h2>
+<h2 id="floating-left">Floating all elements to the left</h2>
+
+<div class="background">
+    <p class="p1-floating" style="float: left">Paragraph One</p>
+    <p class="p2-floating" style="float: left">Paragraph Two</p>
+    <p class="p3-floating" style="float: left">Paragraph Three</p>
+    <p class="p4-floating" style="float: left">Paragraph Four</p>
+    <div>
+        Now all elements are floating to the left (note, how we have overwritten the style in the element).
+    </div>
+</div>
+
+<h2>Resuming the document flow</h2>
 
 <div class="background-resume">
     <p class="p1-floating">Paragraph One</p>
@@ -76,22 +88,45 @@
     <div>
         Now we will ask to resume normal document flow to the right of the paragraph with class "p4-resume",
         and at jumps to the next line.
-        You can resume the document flow from left, right, or both of sides of the element.
+        You can resume the document flow from left, right, or both of sides of the element.<br>
+        One more interesting side effect: here we see how margins of the previous paragraph from
+        <a href="#floating-left">Floating all elements to the left</a> impact positioning of our paragraph.
+        When clearing floats, you should match their positioning: whet the element floats to the left,
+        you should clear floats from the left side.<br>
     </div>
 
 </div>
 
-<h2>Resuming the document flow 2</h2>
+<h2>Clearing both sides</h2>
 
 <div class="background-resume">
+    <p class="p1" style="float: left; height: 200px">Paragraph One</p>
+    <p class="p2" style="float: right; height: 300px">Paragraph Two</p>
+    <p class="p3" style="clear: both">Paragraph Three</p>
+    <p class="p4">Paragraph Four</p>
+    <div>
+        In the situation, when we have elements floating to the left and to the right,
+        like in this example, we can clear floats from both sides using <code>clear: both</code>.
+        In this case, the cleared elements jumps to the line next to
+        the tallest element.
+    </div>
+
+</div>
+
+<h2>Clearfix method</h2>
+
+<div class="clearfix">
     <p class="p1-floating">Paragraph One</p>
     <p class="p2-floating">Paragraph Two</p>
     <p class="p3-floating">Paragraph Three</p>
     <p class="p4-floating">Paragraph Four</p>
-    <div class="resume">
-        And here we keep all paragraphs floating, but we resume the document flow to the right of this section.
+    <div>
+        There's one more method to fit all floating elements in the parent element.
+        We add to the parent element property <code>overflow: auto</code>.
+        Control of padding and margins are still on you though.
     </div>
 </div>
+
 
 </body>
 

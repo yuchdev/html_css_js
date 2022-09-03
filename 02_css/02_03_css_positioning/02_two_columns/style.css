@@ -1,23 +1,55 @@
-div.div-background {
-    background-color: #cc1100;
-    clear: both;
-}
-
-div.div-borderbox {
-    background-color: greenyellow;
+* {
     box-sizing: border-box;
 }
 
+div.div-background {
+    background-color: plum;
+    overflow: auto;
+}
+
 p {
+    padding: 10px;
+}
+
+p.two-column {
+    float: left;
     width: 50%;
     border: 3px solid blue;
-    float: left;
-}
-
-p.column-1 {
-    background-color: dodgerblue;
-}
-
-p.column-2 {
     background-color: teal;
+}
+
+p.column-left {
+    float: left;
+    width: 25%;
+    border: 3px solid black;
+    background-color: lightblue;
+}
+
+p.column-right {
+    float: left;
+    width: 25%;
+    border: 3px solid blue;
+    background-color: lightcyan;
+}
+
+p.column-center {
+    float: left;
+    width: 50%;
+    border: 3px solid green;
+    background-color: cornsilk;
+}
+
+div.flex-container {
+    background-color: thistle;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+p.flex-column {
+    display: flex;
+    flex-wrap: nowrap;
+    float: left;
+    width: 50%;
+    border: 3px solid green;
+    background-color: cornsilk;
 }

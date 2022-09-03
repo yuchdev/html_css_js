@@ -67,3 +67,8 @@ p.p4-resume {
 div.resume {
     clear: right;
 }
+
+div.clearfix{
+    background: beige;
+    overflow: auto;
+}
