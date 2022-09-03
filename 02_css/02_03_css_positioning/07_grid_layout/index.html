@@ -1,34 +1,29 @@
-<!doctype HTML>
+<!DOCTYPE html>
+<html lang="en" title="CSS Grid Layout">
 
-<html lang="en" title="Element Stacking and Z-index">
-    
 <head>
-    <title>Element Stacking and Z-index</title>
+    <title>CSS Grid Layout</title>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="30">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="default-style" content="style.css">
-    <meta name="description" content="Two columns layout">
-    <meta name="keywords" content="Element Stacking and Z-index">
-    <meta name="author" content="Yurii Cherkasov">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS Grid Layout">
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<h1>Element Stacking and Z-index</h1>
+<h1>CSS Grid Layout</h1>
 
-<h2>Definition</h2>
-
-<p>
-    When HTML elements are positioned, they could be stacked one on another,
-    overlap or completely covering each other.
-    CSS property defining order of stacked HTML elements called <dfn>z-index</dfn>.
-    Stack order can be positive and negative
-    (e.g. if only positive z-indexes are being used, and you need to put something behind then, you use -1).
-</p>
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+</div>
 
 </body>
-
 </html>
