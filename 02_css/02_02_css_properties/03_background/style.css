@@ -29,3 +29,42 @@
     background-position: center;
     background-size: cover;
 }
+
+div.contain-image{
+    background-image: url("img/manule.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 120px;
+    width: 150px;
+}
+
+div.cover-image{
+    background-image: url("img/manule.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+    width: 150px;
+}
+
+div.shadow-simple {
+    box-shadow: 10px 10px;
+    background-color: #7fecff;
+    height: 120px;
+    width: 150px;
+}
+
+div.shadow-color {
+    box-shadow: 10px 10px #888888;
+    background-color: #7fecff;
+    height: 120px;
+    width: 150px;
+}
+
+div.blurred-shadow {
+    box-shadow: 10px 10px 5px #888888;
+    background-color: #7fecff;
+    height: 120px;
+    width: 150px;
+}

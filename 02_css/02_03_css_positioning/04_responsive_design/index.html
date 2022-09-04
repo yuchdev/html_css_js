@@ -20,10 +20,63 @@
 
 <h1>Responsive Web Design</h1>
 
-<h2>Multi-column layout</h2>
+<h2>How RWD works</h2>
+
+<p>
+    In the early days of the internet, websites were mostly viewed on desktop computers,
+    thus, only one version of a website was needed, with static size and design.<br>
+    However, with the rise of mobile devices, the need for a single version of a website
+    that works well on all devices became apparent.
+</p>
+
+<h2>Viewport</h2>
+
+<p>
+    The viewport is the user's visible area of a web page.
+    It varies with the device - it will be smaller on a mobile phone than on a computer screen.<br>
+    In order to let the browser know we utilize Responsive Design,
+    we need to add the following meta-tag to the head section of our HTML document:<br>
+    <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+</p>
+
+<ul>
+    <li><code>width=device-width</code> sets the width of the page to follow the screen-width of the device</li>
+    <li><code>initial-scale=1.0</code> sets the initial zoom level when the page is loaded</li>
+</ul>
+
+<h3>Fitting the content to the screen</h3>
+
+<p>
+    There are simple rules to follow in order to make your website responsive:
+</p>
+
+<ul>
+    <li>The users got used to vertical, but not horizontal scrolling. Horizontal scrolling considered a bad user experience</li>
+    <li>Use relative units of measurement, such as percentages, ems, rems, etc.</li>
+    <li>Do not design particularly large (wide) elements, as they will not fit on smaller screens</li>
+    <li>Always start your design with the smallest screen size for mobile devices</li>
+</ul>
+
+<h2>Grid View</h2>
+
+<p>
+    Grid view is a layout that consists of a number of columns and rows, which are used to fit the content,
+    that may take one or more columns and/or rows.
+</p>
+
+<h3>Grid View multi-column layout example</h3>
 
 <p>
     Here we try to provide different number of columns for different screen sizes.
+    In our particular example, we use 8 columns maximum, so we calculate the width of each column as follows:
+    <code>100% / 8 = 12.5%</code><br>
+    On practice, modern CSS frameworks, like Twitter Bootstrap, support up to 12 columns.
+</p>
+
+<p>
+    Using Media Queries, we can provide different number of columns for different screen sizes, e.g. for<br>
+    <code>@media screen and (min-width: 950px) and (max-width: 1199px)</code><br>
+    we provide 4 columns, so the width of each column is 25%.
 </p>
 
 <p class="row">
@@ -55,8 +108,15 @@
 </p>
 
 <p>
-    Every browser has Developer Tools, which allow to see the layout of the page on the most common screen sizes,
+    Note: Every browser has Developer Tools, which allow to see the layout of the page on the most common screen sizes,
     popular devices and different screen orientations.
+</p>
+
+
+<h2>CSS Flexbox</h2>
+
+<p>
+    CSS Flexbox is the more modern way to create a responsive layout.
 </p>
 
 </body>

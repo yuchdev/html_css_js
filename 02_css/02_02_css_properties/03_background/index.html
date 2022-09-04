@@ -64,6 +64,82 @@
     or scrolls with the rest of the page.
 </p>
 
+<p>
+    You can use multiple background images, stacking them on top of each other,
+    with the use of <code>background-image</code> property.
+</p>
+
+<h2>Special values for background size</h2>
+
+<p>
+    The <code>background-size</code> property specifies the size of the background images.
+    It may have two special values: <code>cover</code> and <code>contain</code>.
+</p>
+
+<ul>
+    <li><code>cover</code> - The background image is resized to cover the entire element, even if it has to stretch or crop the image</li>
+    <li><code>contain</code> - The background image is resized to make sure the image is fully visible</li>
+</ul>
+
+<h3>Contain image</h3>
+
+<div class="contain-image">
+    <code>background-size: contain</code>
+</div>
+
+<h3>Cover image</h3>
+
+<div class="cover-image">
+    <code>background-size: cover</code>
+</div>
+
+<h2>Full-size website background</h2>
+
+<p>
+    If you choose to design your website with a full-size background image,
+    there are simple rules applied:
+</p>
+
+<ul>
+    <li>Use <code>background-size: cover</code> to make sure the image is fully visible</li>
+    <li>Use <code>background-attachment: fixed</code> to make sure the image is fixed and does not have a scrolling effect</li>
+    <li>Center the image using <code>background-position</code> property</li>
+</ul>
+
+
+<h2>Background shadow</h2>
+
+<p>
+    You can apply one or more shadows to an element with the <code>box-shadow</code> property.
+</p>
+
+<h3>Simple shadow</h3>
+
+<p>
+    In the simplest case, you just use horizontal and vertical shadows, e.g.
+</p>
+
+<div class="shadow-simple">
+    <code>box-shadow: 10px 10px;</code>
+</div>
+
+
+<h3>Shadow with specific color</h3>
+
+<div class="shadow-color">
+    <code>box-shadow: 10px 10px 5px #888888;</code>
+</div>
+
+<h3>Blurred shadow</h3>
+
+<p>
+    Add the third numeric parameter, blur radius, to create a blurred shadow.
+</p>
+
+<div class="blurred-shadow">
+    <code>box-shadow: 10px 10px 5px #888888;</code>
+</div>
+
 </body>
 
 </html>
