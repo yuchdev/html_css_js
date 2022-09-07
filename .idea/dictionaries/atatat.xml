@@ -10,6 +10,7 @@
       <w>Significand</w>
       <w>Statham</w>
       <w>Valueformat</w>
+      <w>accesskey</w>
       <w>addin</w>
       <w>addr</w>
       <w>albanie</w>
@@ -26,6 +27,7 @@
       <w>audiowide</w>
       <w>autocomplete</w>
       <w>autofocus</w>
+      <w>bgcolor</w>
       <w>binarycreator</w>
       <w>borderbox</w>
       <w>btelecom</w>
@@ -38,6 +40,7 @@
       <w>const</w>
       <w>const's</w>
       <w>constexpr's</w>
+      <w>contenteditable</w>
       <w>contravariance</w>
       <w>cortana</w>
       <w>crosshair</w>
@@ -62,6 +65,11 @@
       <w>filesize</w>
       <w>filesystems</w>
       <w>filetable</w>
+      <w>formaction</w>
+      <w>formenctype</w>
+      <w>formmethod</w>
+      <w>formnovalidate</w>
+      <w>formtarget</w>
       <w>freevars</w>
       <w>geodata</w>
       <w>geoname</w>

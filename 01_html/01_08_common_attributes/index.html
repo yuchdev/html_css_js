@@ -13,6 +13,136 @@
 
 <h1>HTML Attributes</h1>
 
+<h2>Definition</h2>
+
+<p>
+    HTML elements may have <dfn>attributes</dfn> that are used to modify the behaviour of the element.
+    For example, the <code>&lt;a&gt;</code> element has an <code>href</code> attribute
+    that specifies the URL of the page the link goes to.
+</p>
+
+<p>
+    Some attributes are applied to all elements, e.g. <code>class</code> or <code>id</code> attribute.
+    They are called <dfn>global attributes</dfn>:<br>
+    <code>&lt;a href="http://localhost:3000" class="link"&gt;</code>
+</p>
+
+<p>
+    Some attributes are applied to specific elements only,
+    e.g. <code>href</code> attribute is applied to <code>&lt;a&gt;</code> element only,
+    and <code>type</code> attribute could be applied to a variety of elements, like <code>&lt;input&gt;</code>
+    or <code>&lt;button&gt;</code>:<br>
+    <code>&lt;input type="text"&gt;</code>
+</p>
+
+<h2>Common attributes</h2>
+
+<p>
+    There's a number of HTML attributes that can be applied to any element
+    (from <a href="https://www.w3schools.com/tags/ref_attributes.asp">W3School HTML Attributes Reference</a>):
+</p>
+
+<ul>
+    <li><code>accesskey</code> - specifies a shortcut key to activate/focus an element</li>
+    <li><code>class</code> - specifies one or more classnames for an element (refers to a class in a style sheet)</li>
+    <li><code>contenteditable</code> - specifies whether the content of an element is editable or not</li>
+    <li><code>contextmenu</code> - specifies a context menu for an element. The context menu appears when a user right-clicks on the element</li>
+    <li><code>data-* </code> - used to store custom data private to the page or application</li>
+    <li><code>dir</code> - specifies the text direction for the content in an element</li>
+    <li><code>draggable</code> - specifies whether an element is draggable or not</li>
+    <li><code>dropzone</code> - specifies whether the dragged data is copied, moved, or linked, when dropped</li>
+    <li><code>hidden</code> - specifies that an element is not yet, or is no longer, relevant</li>
+    <li><code>id</code> - specifies a unique id for an element</li>
+    <li><code>lang</code> - specifies the language of the element's content</li>
+    <li><code>spellcheck</code> - specifies whether the element is to have its spelling and grammar checked or not</li>
+    <li><code>style</code> - specifies an inline CSS style for an element</li>
+    <li><code>tabindex</code> - specifies the tabbing order of an element</li>
+    <li><code>title</code> - specifies extra information about an element</li>
+    <li><code>translate</code> - specifies whether the content of an element should be translated or not</li>
+</ul>
+
+<h2>Important specific attributes</h2>
+
+<h3>Input elements</h3>
+
+<p>
+    <code>&lt;input&gt;</code> element has a number of attributes that are used to specify the type of input field,
+    the initial value, and other attributes that are specific to the type of input field
+    (from <a href="https://www.w3schools.com/tags/ref_attributes.asp">W3School HTML Attributes Reference</a>):
+</p>
+
+<ul>
+    <li><code>accept</code> - specifies the types of files that the server accepts (only for <code>type="file"</code>)</li>
+    <li><code>alt</code> - specifies an alternate text for the image, if the image cannot be displayed (only for <code>type="image"</code>)</li>
+    <li><code>autocomplete</code> - specifies whether a form should have autocomplete on or off</li>
+    <li><code>autofocus</code> - specifies that an input field should automatically get focus when the page loads</li>
+    <li><code>checked</code> - specifies that an input field should be pre-selected when the page loads (for <code>type="checkbox"</code> or <code>type="radio"</code>)</li>
+    <li><code>dirname</code> - specifies that the text direction will be submitted</li>
+    <li><code>disabled</code> - specifies that an input field should be disabled</li>
+    <li><code>form</code> - specifies the name of the form the element belongs to</li>
+    <li><code>formaction</code> - specifies where to send the form-data when a form is submitted (only for <code>type="submit"</code> or <code>type="image"</code>)</li>
+    <li><code>formenctype</code> - specifies how form-data should be encoded before sending it to a server (only for <code>type="submit"</code> or <code>type="image"</code>)</li>
+    <li><code>formmethod</code> - specifies how to send the form-data (only for <code>type="submit"</code> or <code>type="image"</code>)</li>
+    <li><code>formnovalidate</code> - specifies that the form-data should not be validated on submission (only for <code>type="submit"</code> or <code>type="image"</code>)</li>
+    <li><code>formtarget</code> - specifies where to display the response after submitting the form (only for <code>type="submit"</code> or <code>type="image"</code>)</li>
+    <li><code>height</code> - specifies the height of an <code>input</code> element (only for <code>type="image"</code>)</li>
+    <li><code>list</code> - specifies a list of pre-defined options for input controls</li>
+    <li><code>max</code> - specifies the maximum value for an input field (only for <code>type="number"</code> or <code>type="range"</code>)</li>
+    <li><code>maxlength</code> - specifies the maximum number of characters allowed in an input field</li>
+    <li><code>min</code> - specifies the minimum value for an input field (only for <code>type="number"</code> or <code>type="range"</code>)</li>
+    <li><code>minlength</code> - specifies the minimum number of characters allowed in an input field</li>
+    <li><code>multiple</code> - specifies that a user can enter more than one value in an input field (only for <code>type="email"</code> or <code>type="file"</code>)</li>
+    <li><code>name</code> - specifies the name of an <code>input</code> element</li>
+    <li><code>pattern</code> - specifies a regular expression that an <code>input</code> element's value is checked against</li>
+    <li><code>placeholder</code> - specifies a short hint that describes the expected value of an <code>input</code> element</li>
+    <li><code>readonly</code> - specifies that an input field is read-only (the user cannot modify the field)</li>
+    <li><code>required</code> - specifies that an input field must be filled out before submitting the form</li>
+    <li><code>size</code> - specifies the width, in characters, of an <code>input</code> element</li>
+    <li><code>src</code> - specifies the URL of the image to use as a submit button (only for <code>type="image"</code>)</li>
+    <li><code>step</code> - specifies the legal number intervals for an input field (only for <code>type="number"</code> or <code>type="range"</code>)</li>
+    <li><code>type</code> - specifies the type of <code>input</code> element to display</li>
+    <li><code>value</code> - specifies the value of an <code>input</code> element</li>
+    <li><code>width</code> - specifies the width of an <code>input</code> element (only for <code>type="image"</code>)</li>
+</ul>
+
+
+<h3>Links</h3>
+
+<p>
+    These are attributes specific for <code>&lt;a&gt;</code> element
+    (from <a href="https://www.w3schools.com/tags/ref_attributes.asp">W3School HTML Attributes Reference</a>):
+</p>
+
+<ul>
+    <li><code>download</code> - specifies that the target will be downloaded when a user clicks on the hyperlink</li>
+    <li><code>href</code> - specifies the URL of the page the link goes to</li>
+    <li><code>hreflang</code> - specifies the language of the linked document</li>
+    <li><code>media</code> - specifies what media/device the linked document is optimized for</li>
+    <li><code>ping</code> - specifies a space-separated list of URLs to ping when the link is activated</li>
+    <li><code>rel</code> - specifies the relationship between the current document and the linked document</li>
+    <li><code>target</code> - specifies where to open the linked document</li>
+    <li><code>type</code> - specifies the media type of the linked document</li>
+</ul>
+
+<h3>Tables</h3>
+
+<p>
+    HTML <code>&lt;table&gt;</code> also have some unique attributes
+    (from <a href="https://www.w3schools.com/tags/ref_attributes.asp">W3School HTML Attributes Reference</a>):
+</p>
+
+<ul>
+    <li><code>align</code> - specifies the alignment of a table</li>
+    <li><code>bgcolor</code> - specifies the background color of a table</li>
+    <li><code>border</code> - specifies the width of the border around a table</li>
+    <li><code>cellpadding</code> - specifies the space between the cell content and its borders</li>
+    <li><code>cellspacing</code> - specifies the space between cells in a table</li>
+    <li><code>frame</code> - specifies which parts of the outside border should be visible</li>
+    <li><code>rules</code> - specifies which rules to draw between cells</li>
+    <li><code>summary</code> - provides a summary of the content of a table</li>
+    <li><code>width</code> - specifies the width of a table</li>
+</ul>
+
 </body>
 
 </html>
