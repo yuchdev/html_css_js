@@ -3,9 +3,18 @@
     background-color: DodgerBlue;
 }
 
-.flex-container > div {
+.flex-container > p {
     background-color: #f1f1f1;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
+}
+
+.perfect-center {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: deepskyblue;
 }

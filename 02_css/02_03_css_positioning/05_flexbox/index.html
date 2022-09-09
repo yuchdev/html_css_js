@@ -11,7 +11,6 @@
     <meta name="description" content="CSS Flexbox">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Yurii Cherkasov">
-    <!-- This meta-tag let the browser know we utilize Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,8 +19,150 @@
 
 <h1>CSS Flexbox</h1>
 
+<h2>Flex container</h2>
+
 <p>
     CSS Flexbox is the more modern way to create a responsive layout.
+    You should create a flexible container, and then you can add flex items to it (CSS property <code>display: flex</code>).
+    The flex items will be automatically float as if you use float property.
+    The direct children of the flex container will be flex items.
+</p>
+
+<div class="flex-container">
+    <p>First flexible paragraph</p>
+    <p>Second flexible paragraph</p>
+    <p>Third flexible paragraph</p>
+</div>
+
+<h2>Flex container properties</h2>
+
+<h3>Flex direction</h3>
+
+<p>
+    You can change the direction of the flex items using <code>flex-direction</code> property.
+    The default value is <code>row</code>. In the next example, we change the direction to <code>column</code>.
+</p>
+
+<div class="flex-container" style="flex-direction: column">
+    <p>First flexible paragraph</p>
+    <p>Second flexible paragraph</p>
+    <p>Third flexible paragraph</p>
+</div>
+
+<p>
+    Also, you can change the direction of stacked elements to <code>column-reverse</code> or <code>row-reverse</code>.
+</p>
+
+<div class="flex-container" style="flex-direction: column-reverse">
+    <p>First flexible paragraph</p>
+    <p>Second flexible paragraph</p>
+    <p>Third flexible paragraph</p>
+</div>
+
+
+<h3>Flex wrap</h3>
+
+<p>
+    You can change the wrapping of the flex items using <code>flex-wrap</code> property.
+    The default value is <code>nowrap</code>. In the next example, we change the behavior to <code>wrap</code>.
+    Let's add more paragraphs to the container.
+</p>
+
+<div class="flex-container" style="flex-wrap: wrap">
+    <p>First flexible paragraph</p>
+    <p>Second flexible paragraph</p>
+    <p>Third flexible paragraph</p>
+    <p>Fourth flexible paragraph</p>
+    <p>Fifth flexible paragraph</p>
+    <p>Sixth flexible paragraph</p>
+</div>
+
+<p>
+    Just to compare, the <code>nowrap</code> looks like that:
+</p>
+
+<div class="flex-container">
+    <p>First flexible paragraph</p>
+    <p>Second flexible paragraph</p>
+    <p>Third flexible paragraph</p>
+    <p>Fourth flexible paragraph</p>
+    <p>Fifth flexible paragraph</p>
+    <p>Sixth flexible paragraph</p>
+</div>
+
+<p>
+    Note: CSS properties <code>flex-wrap</code> and <code>flex-direction</code> can be combined,
+    using the shorthand <code>flex-flow</code> property, e.g.
+    <code>flex-flow: column wrap</code>.
+</p>
+
+<h3>Flex justify</h3>
+
+<p>
+    You can change the alignment of the flex items using <code>justify-content</code> property.
+    It aligns items across the main axis. The default value is <code>flex-start</code>,
+    which is floating the items to the left.
+</p>
+
+<p>
+    Possible values of <code>justify-content</code> property:
+</p>
+
+<ul>
+    <li><code>flex-start</code> - aligns items to the left side of the container</li>
+    <li><code>flex-end</code> - aligns items to the right side of the container</li>
+    <li><code>center</code> - aligns items at the center of the container</li>
+    <li><code>space-between</code> - displays items with equal spacing between them</li>
+    <li><code>space-around</code> - displays items with equal spacing around them</li>
+    <li><code>start</code> - aligns items to the left side of the container (same as <code>flex-start</code>)</li>
+    <li><code>end</code> - aligns items to the right side of the container (same as <code>flex-end</code>)</li>
+    <li><code>normal</code> - sets this property to its default value</li>
+    <li><code>stretch</code> - stretches items to fit the container</li>
+    <li><code>space-between</code> - displays items with equal spacing between them</li>
+    <li><code>space-around</code> - displays items with half-size spacing around them</li>
+    <li><code>space-evenly</code> - displays items with equal spacing around them</li>
+</ul>
+
+<p>
+    In the next example, we change the alignment to <code>center</code>.
+</p>
+
+<div class="flex-container" style="justify-content: center">
+    <p>First flexible paragraph</p>
+    <p>Second flexible paragraph</p>
+    <p>Third flexible paragraph</p>
+</div>
+
+
+<p>
+    Another aligning property is <code>align-items</code>.
+    Unlike <code>justify-content</code>, it aligns items across the cross axis.
+    Possible values are:
+</p>
+
+<ul>
+    <li><code>flex-start</code> - aligns items to the top of the container</li>
+    <li><code>flex-end</code> - aligns items to the bottom of the container</li>
+    <li><code>center</code> - aligns items at the vertical center of the container</li>
+    <li><code>baseline</code> - aligns items at their baselines</li>
+    <li><code>stretch</code> - stretches items to fit the container</li>
+</ul>
+
+<p>
+    Let's make paragraph elements different height, and then change the alignment to <code>baseline</code>.
+</p>
+
+<div class="flex-container" style="align-items: baseline">
+    <p style="height: 100px">First flexible paragraph</p>
+    <p style="height: 50px">Second flexible paragraph</p>
+    <p style="height: 150px">Third flexible paragraph</p>
+</div>
+
+<h3>Perfect centering</h3>
+
+<p>
+    Flex containers are perfect for placing elements in the center of the page.
+    We just use <code>align-items: center</code> and <code>justify-content: center</code>.
 </p>
 
 </body>
