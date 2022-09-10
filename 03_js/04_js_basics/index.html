@@ -1,0 +1,207 @@
+<!doctype HTML>
+
+<html lang="en" title="JavaScript Basic Use">
+    
+<head>
+    <title>JavaScript Basic Use</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="JavaScript Basic Use">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="external.js"></script>
+</head>
+
+<body>
+
+<h1>JavaScript Basic Use</h1>
+
+<h2>JS Variables and Values</h2>
+
+<p>
+    There are two types of variables in JavaScript:
+</p>
+
+<ul>
+    <li>Const (fixed) variables, declared with <code>const</code></li>
+    <li>Variable values, declared with <code>var</code> (old method) or <code>let</code> (new method)</li>
+</ul>
+
+<code>
+    &nbsp;&nbsp;const pi = 3.14;<br>
+    &nbsp;&nbsp;var x = 10;<br>
+    &nbsp;&nbsp;let y = 20;<br>
+</code>
+
+<p>
+    Note: <code>var</code> should be used only for old browsers support.
+    New scripts should use <code>let</code> (its support was implemented in all major browsers in 2015-2017)
+    There are important differences between them:
+</p>
+
+<ul>
+    <li><code>var</code> is function-scoped, <code>let</code> is block-scoped</li>
+    <li><code>var</code> can be re-declared, <code>let</code> can't</li>
+    <li><code>var</code> can be re-assigned, <code>let</code> can't</li>
+</ul>
+
+<p>
+    Note 2: always prefer <code>const</code> over <code>let</code>, when possible.
+    It must be initialized, it can't be re-assigned, can't be re-declared, and it's block-scoped.
+</p>
+
+<h2>JS Operators</h2>
+
+<p>
+    There are several types of operators in JavaScript:
+</p>
+
+<ul>
+    <li>Arithmetic operators</li>
+    <li>Assignment operators</li>
+    <li>Comparison operators</li>
+    <li>Logical operators</li>
+    <li>Bitwise operators</li>
+    <li>String operators</li>
+    <li>Conditional (ternary) operator</li>
+    <li>Comma operator</li>
+    <li>Unary operators</li>
+    <li>Relational operators</li>
+</ul>
+
+<h2>JS Functions</h2>
+
+<p>
+    Declaring a function in JS is intuitive:
+</p>
+
+<code>
+    &nbsp;&nbsp;function myFunction(p1, p2) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return p1 * p2;<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>
+    Functions in JS are objects, so they can be assigned to variables.
+    They can also be passed as arguments to other functions, and can be returned by other functions.
+    Operator <code>())</code> used to call a function, from the code, or from an event handler.
+    Also, there are self-invoking functions, which are invoked (started) automatically, without being called.
+</p>
+
+<h2>Naming Conventions</h2>
+
+<p>
+    There are simple rules of naming variables and functions:
+</p>
+
+<ul>
+    <li>Variable names can contain letters, digits, underscores, and dollar signs.</li>
+    <li>Variable names must begin with a letter</li>
+    <li>Variable names are case sensitive (y and Y are different variables)</li>
+    <li>Reserved words (like JavaScript keywords) cannot be used as variable names</li>
+</ul>
+
+<h3>JS Objects</h3>
+
+<p>
+    Object in JavaScript is a collection of named values (JSON dictionary), e.g.
+</p>
+
+<code>person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}</code>
+
+<h4>Facts about JS objects</h4>
+
+<ul>
+    <li>Declare objects <code>const</code> when possible, <code>let</code> when required</li>
+    <li>Assigning the object to variable, you actually assign the reference to the object</li>
+    <li>
+        This means, the object itself is mutable, even if the variable is declared <code>const</code>,
+        objects are not actually copied in memory, only the reference is copied
+    </li>
+</ul>
+
+<h4>There are two ways to access the properties of an object</h4>
+
+<ul>
+    <li>objectName.propertyName</li>
+    <li>objectName["propertyName"]</li>
+</ul>
+
+<h4>Methods and keyword <code>this</code></h4>
+
+<p>
+    Objects may contain methods, which are just functions, stored as object properties.
+    Inside the method, you can access the object properties with <code>this</code> keyword,
+    like in many OOP languages.
+    In a global function, <code>this</code> refers to the global object.
+</p>
+
+<h4>Keyword <code>new</code></h4>
+
+<p>
+    The <code>new</code> keyword is used to create an instance of a user-defined object type
+    or of one of the built-in object types that has a constructor function.
+    The <code>new</code> keyword even define basic types like <code>String</code> or <code>Number</code> as objects.
+</p>
+
+<h2>JS Arrays</h2>
+
+<h3>Creating an array</h3>
+
+<p>
+    There are several ways to create an array:
+</p>
+
+<code>
+    &nbsp;&nbsp;var cars = ["Saab", "Volvo", "BMW"];<br>
+    &nbsp;&nbsp;var cars = new Array("Saab", "Volvo", "BMW");<br>
+    &nbsp;&nbsp;var cars = new Array(3);<br>
+    &nbsp;&nbsp;cars[0] = "Saab";<br>
+    &nbsp;&nbsp;cars[1] = "Volvo";<br>
+    &nbsp;&nbsp;cars[2] = "BMW";<br>
+</code>
+
+<p>
+    Note: For simplicity and readability, the first method is preferred.
+</p>
+
+<h3>Facts about JS arrays</h3>
+
+<ul>
+    <li>Arrays are objects</li>
+    <li>Arrays are mutable</li>
+    <li>Arrays are zero-based</li>
+    <li>Arrays are dynamic</li>
+    <li>Arrays are not type-safe</li>
+    <li>Array indexes are always converted numbers. When you try to use string indexes, JS will redeclare array into an object</li>
+</ul>
+
+<h3>Adding and removing elements from front and back</h3>
+
+<p>
+    Adding and removing elements from the back is called <code>push</code> and <code>pop</code>:
+</p>
+
+<code>
+    &nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;fruits.push("Kiwi");<br>
+    &nbsp;&nbsp;fruits.pop();<br>
+</code>
+
+<p>
+    Adding and removing elements from the front is called <code>unshift</code> and <code>shift</code>:
+</p>
+
+<code>
+    &nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;fruits.unshift("Lemon");<br>
+    &nbsp;&nbsp;fruits.shift();<br>
+</code>
+
+
+</body>
+
+</html>

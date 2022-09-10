@@ -1,0 +1,85 @@
+<!doctype HTML>
+
+<html lang="en" title="Facts About the JavaScript Language">
+    
+<head>
+    <title>Facts About the JavaScript Language</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="Facts About the JavaScript Language">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Facts About the JavaScript Language</h1>
+
+<ul>
+    <li>JavaScript is the most popular programming language in the world</li>
+    <li>JavaScript is designed for creating frontend web applications</li>
+    <li>JavaScript is supported by every browser</li>
+    <li>JavaScript is a one of the Big 3 of Web Development (HTML, CSS, JavaScript)</li>
+</ul>
+
+<h2>Demo of JavaScript</h2>
+
+<p>
+    The next button will process event onclick and will change the text of the paragraph.
+    To pick the element of HTML document we use the method <code>document.getElementById()</code>
+</p>
+
+<button type="button" onclick="document.getElementById('date_time').innerHTML = Date()">
+    Display Date and Time
+</button>
+
+<p id="date_time">This paragraph is changed to datetime with the help of JS function <code>Date()</code></p>
+
+<h2>JavaScript in HTML</h2>
+
+<p>
+    JavaScript can be used to change element attributes, styles, content, and more.
+</p>
+
+<h3>Change the attribute of the image</h3>
+
+<img src="img/pet-the-cat-01.jpg" alt="Pet the cat" id="pet_the_cat" width="300" height="200"><br>
+
+<button type="button" onclick="document.getElementById('pet_the_cat').src = 'img/pet-the-cat-02.jpg'">
+    Pet the cat
+</button>
+
+<h3>Change the style of the paragraph</h3>
+
+<p id="change_style" style="color:blue;font-size:14px;">
+    This paragraph is changed to red color with the help of JS function <code>style.color</code>
+</p>
+
+<button type="button" onclick="document.getElementById('change_style').style.color = 'red'">
+    Change the color of the paragraph
+</button>
+
+<h3>Show and hide the paragraph</h3>
+
+<button type="button" onclick="document.getElementById('show_hide').style.display = 'none'">
+    Hide the paragraph
+</button>
+
+<button type="button" onclick="document.getElementById('show_hide').style.display = 'block'">
+    Show the paragraph
+</button>
+
+<p id="show_hide" style="color:blue;font-size:14px;">
+    These two buttons will process event onclick and show or hide the paragraph.
+    To pick the element of HTML document we again use the method <code>document.getElementById()</code>,
+    and for changing the style of the paragraph we use the property <code>style.display</code>
+</p>
+
+
+</body>
+
+</html>

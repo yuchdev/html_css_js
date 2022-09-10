@@ -1,0 +1,133 @@
+<!doctype HTML>
+
+<html lang="en" title="JavaScript Script Location">
+
+<head>
+    <title>JavaScript Script Location</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="JavaScript Script Location">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="external.js"></script>
+    <script>
+        function showDocumentName() {
+            let docName = document.URL;
+            docName = docName.substring(docName.lastIndexOf('/') + 1);
+            docName = docName.substring(0, docName.lastIndexOf('?'));
+            document.getElementById("doc_name").innerHTML = "The script is name is " + docName;
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>JavaScript Script Location</h1>
+
+<h2>Locations of JavaScript Scripts</h2>
+
+<p>JavaScript can be placed in the HTML document in three different places:</p>
+
+<ul>
+    <li>In the <code>&lt;head&gt;</code> section</li>
+    <li>Inside the HTML document (inside the <code>&lt;body&gt;</code> section)</li>
+    <li>In an external file, and referenced in the HTML document</li>
+</ul>
+
+<h3>JavaScript in the <code>&lt;head&gt;</code> section</h3>
+
+<p>
+    We located inside the <code>&lt;head&gt;</code> the following script, detecting the name of the HTML document,
+    and displaying it in the next paragraph:
+</p>
+
+<code>
+    &lt;script&gt;
+    function showDocumentName() {<br>
+    &nbsp;&nbsp;let docName = document.URL;<br>
+    &nbsp;&nbsp;docName = docName.substring(docName.lastIndexOf('/') + 1);<br>
+    &nbsp;&nbsp;docName = docName.substring(0, docName.lastIndexOf('?'));<br>
+    &nbsp;&nbsp;document.getElementById("doc_name").innerHTML = "The script is name is " + docName;<br>
+    }
+    &lt;/script&gt;
+</code>
+
+<p id="doc_name">The script is name is ...</p>
+
+<button onclick="showDocumentName()">Show Name</button>
+
+<h3>JavaScript inside the HTML document</h3>
+
+<p id="style-change">
+    We can place this script changing the paragraph style in the <code>&lt;body&gt;</code> section:
+</p>
+
+<script>
+    function changeStyle() {
+        let styleChange = document.getElementById("style-change");
+        styleChange.style.color = "red";
+        styleChange.style.backgroundColor = "yellow";
+    }
+</script>
+
+<code>
+    &nbsp;&nbsp;&lt;script&gt;<br>
+    &nbsp;&nbsp;document.getElementById("style_change").style.color = "red";<br>
+    &nbsp;&nbsp;styleChange.style.backgroundColor = "yellow";<br>
+    &nbsp;&nbsp;&lt;/script&gt;<br>
+</code>
+
+<button onclick="changeStyle()">Change Style</button>
+
+<h3>JavaScript in an external file</h3>
+
+<p id="style-change-2">
+    We can place the script changing this paragraph style in an external file, and reference it in the HTML document header:
+</p>
+
+<code>&lt;script src="external.js"&gt;&lt;/script&gt;</code><br>
+
+<p>
+    The script called <code>external.js</code>, and contains the following code:
+</p>
+
+<code>
+    &nbsp;&nbsp;function changeStyleExternal() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;let styleChange = document.getElementById("style-change-2");<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;p.style.color = "red";<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;p.style.fontFamily = "Arial";<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;p.style.fontSize = "16px";<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<button onclick="changeStyleExternal()">Change Style</button>
+
+<p>
+    Locating JS external file is the best practice, as it gives developer several advantages:
+</p>
+
+<ul>
+    <li>It separates HTML and code</li>
+    <li>It makes HTML and JavaScript easier to read and maintain</li>
+    <li>Cached JavaScript files can speed up page loads</li>
+</ul>
+
+<h3>Locating JS script in the Web</h3>
+
+<p>
+    The <code>src</code> attribute could be used to locate the script in the Web.
+    The <code>src</code> attribute can contain the full URL of the script, or a relative URL:
+</p>
+
+<code>
+    &lt;script src="https://www.w3schools.com/js/myScript1.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="https://www.w3schools.com/js/myScript2.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="/js/myScript3.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="myScript4.js"&gt;&lt;/script&gt;<br>
+</code>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!doctype HTML>
+
+<html lang="en" title="Ways to display text in JavaScript">
+
+<head>
+    <title>Ways to display text in JavaScript</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Ways to display text in JavaScript">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="external.js"></script>
+</head>
+
+<body>
+
+<h1>Ways to display text in JavaScript</h1>
+
+<p>
+    JavaScript does not have access to any system output functions and devices.
+    The only way to show debugging information is accessing document itself, or browser debugging tools.<br>
+    JavaScript can "display" data in 4 ways:
+</p>
+
+<ul>
+    <li>Writing into an HTML element, using <code>document.getElementById(element).innerHTML</code></li>
+    <li>Writing into the HTML output using <code>document.write()</code></li>
+    <li>Showing to the user an alert box, using <code>window.alert()</code></li>
+    <li>Writing into the browser console, using <code>console.log()</code></li>
+</ul>
+
+<h3>Writing into an HTML element</h3>
+
+<p>
+    Commonly, HTML elements are used to display useful information to the user,
+    but they can be used for debug purposes as well.
+    The next example writes "Debug message" into an HTML element with id="debug-paragraph":
+</p>
+
+<button onclick="printInElement('debug-paragraph', 'Debug message')">Try it</button>
+
+<p id="debug-paragraph" style="color: red"></p>
+
+<h3>Writing into the HTML output using document.write()</h3>
+
+<p>
+    The <code>document.write()</code> method writes into the HTML output stream.
+    It overwrites the whole HTML document, use it only for testing (reload the page to restore the original document).
+</p>
+
+<button onclick="printUsingDocumentWrite('Debug Message 2')">Try it</button>
+
+<h3>Showing to the user an alert box</h3>
+
+<p>
+    The <code>window.alert()</code> method displays an alert box with a message and an OK button.
+    It can be used to display an important message, usually warnings or errors.
+</p>
+
+<button onclick="printUsingAlert('Debug Message 3')">Try it</button>
+
+<h3>Writing into the browser console</h3>
+
+<p>
+    And at last, the <code>console.log()</code> method writes into the browser console.
+    Open the console first to see the output, usually it is located in developer tools (displayed by pressing F12).<br>
+    This is by far the most useful method for debugging:
+</p>
+
+<button onclick="printUsingConsoleLog('Debug Message 4')">Try it</button>
+
+</body>
+
+</html>
