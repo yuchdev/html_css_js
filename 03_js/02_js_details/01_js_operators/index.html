@@ -19,6 +19,132 @@
 
 <h1>JavaScript Operators</h1>
 
+<h2>Arithmetic Operators</h2>
+
+<p>
+    Basic arithmetic in JS is intuitive and follows the same rules as in math.<br>
+    Operators precedence also follows the same rules as in math.<br>
+    Available operators are: <code>+, -, *, /, %, ++, --, **</code>,
+    where <code>**</code> is exponentiation, and <code>%</code> is the remainder of the division.
+</p>
+
+<h3>Arithmetic Operators & Assignment</h3>
+
+<p>
+    All arithmetic operations can be combined with assignment operators, e.g.
+    <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>**=</code>.
+</p>
+
+<h3>Operations with strings</h3>
+
+<p>
+    Operation <code>+</code> works as concatenation for strings, e.g. <code>"a" + "b" = "ab"</code>.
+    When a string is added to a number, the result is a string concatenation, e.g.
+    <code>"1" + 2 = "12"</code>
+</p>
+
+<h2>Comparison Operators</h2>
+
+<p>
+    Comparison operators are used to compare two values, and return a boolean value.
+    Available operators are: <code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>,
+    <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>.<br>
+    Note the difference between <code>==</code> and <code>===</code> operators,
+    as well as <code>!=</code> and <code>!==</code> operators.
+    The latter is strict equality, including type of compared values.
+</p>
+
+<h3>Comparison with null, undefined and NaN</h3>
+
+<p>
+    <code>null</code> and <code>undefined</code> are equal to each other, but not to any other value.
+    <code>NaN</code> is result of incorrect mathematical operations, and is not equal to anything,
+    and is not equal to anything, including itself.
+</p>
+
+<h2>Logical Operators</h2>
+
+<p>
+    Logical operators are used to determine the logic between variables or values.
+    Available operators are: <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>.
+</p>
+
+<h3>Nullish Coalescing Operator</h3>
+
+<p>
+    The nullish coalescing operator <code>??</code> returns the first operand if it is not null or undefined,
+    otherwise the second operand, e.g.
+</p>
+
+<code>
+    let a = 1;<br>
+    let b = 0;<br>
+    let c = a ?? b; // c = 1<br>
+    let d = null ?? b; // d = 0<br>
+    let e = undefined ?? b; // e = 0<br>
+    let f = 0 ?? b; // f = 0<br>
+</code>
+
+<h3>Optional Chaining Operator</h3>
+
+<p>
+    The optional chaining operator <code>?.</code> allows to access properties of nested objects without
+    checking if the object exists, e.g.
+</p>
+
+<code>
+    let user = {<br>
+        name: "John",<br>
+        age: 30,<br>
+        address: {<br>
+            street: "Main",<br>
+            number: 1<br>
+        }<br>
+    };<br>
+    let street = user.address.street; // street = "Main"<br>
+    let number = user.address.number; // number = 1<br>
+    let city = user.address.city; // city = undefined<br>
+    let city = user?.address?.city; // city = undefined<br>
+</code>
+
+<h2>Bitwise Operators</h2>
+
+<p>
+    Bitwise operators treat their operands as a set of 32 bits (zeros and ones).
+    Bitwise operators perform their operations on such binary representations,
+    and return standard 64-bits JavaScript number.
+</p>
+
+<p>
+    JS offers standard set of bitwise operators:
+    <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>,
+    <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code>.<br>
+    Note the difference between <code>&gt;&gt;</code> and <code>&gt;&gt;&gt;</code> operators.<br>
+    The first one is signed right shift, which pushing leftmost bit to the right,
+    and the rightmost bits fall off.
+    The second one is unsigned right shift, which pushing zeros from the left,
+    and the rightmost bits fall off.
+</p>
+
+<h2>JS Functions</h2>
+
+<p>
+    Declaring a function in JS is intuitive:
+</p>
+
+<code>
+    &nbsp;&nbsp;function myFunction(p1, p2) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return p1 * p2;<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>
+    Functions in JS are objects, so they can be assigned to variables.
+    They can also be passed as arguments to other functions, and can be returned by other functions.
+    Operator <code>())</code> used to call a function, from the code, or from an event handler.
+    Also, there are self-invoking functions, which are invoked (started) automatically, without being called.
+</p>
+
 </body>
 
 </html>
