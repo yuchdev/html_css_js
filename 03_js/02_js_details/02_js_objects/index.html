@@ -385,6 +385,133 @@
     Person.sayHello(person);
 </code>
 
+<h1>JavaScript Modules</h1>
+
+<h2>Introduction to Modules</h2>
+
+<p>
+    Modules are used to split the code into separate files.
+    Modules are used to avoid name collisions and to make the code more readable.
+    Modules are also used to make the code more maintainable, reusable and testable.
+</p>
+
+<h2>Exporting Modules</h2>
+
+<p>
+    The <code>export</code> keyword is used to export functions, objects, or primitive values from a module.
+    The <code>export</code> keyword can be used in front of function declarations, class declarations, and variable declarations.
+    The <code>export</code> keyword can also be used to export multiple objects from a module:
+</p>
+
+<code>
+    export function sayHello() {<br>
+    &nbsp;&nbsp;console.log("Hello");<br>
+    }<br>
+    export class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, my name is " + this.name);<br>
+    &nbsp;&nbsp;}<br>
+    }<br>
+    export let name = "John";
+</code>
+
+<h3>Default Exports</h3>
+
+<p>
+    The <code>export</code> keyword can also be used to export objects as default exports.
+    Default exports are used when only one object is exported from a module:
+</p>
+
+<code>
+    export default function sayHello() {<br>
+    &nbsp;&nbsp;console.log("Hello");<br>
+    }<br>
+    export default class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, my name is " + this.name);<br>
+    &nbsp;&nbsp;}<br>
+    }<br>
+    export default let name = "John";
+</code>
+
+<h3>Named Exports</h3>
+
+<p>
+    Named exports are used when multiple objects are exported from a module:
+</p>
+
+<code>
+    function sayHello() {<br>
+    &nbsp;&nbsp;console.log("Hello");<br>
+    }<br>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, my name is " + this.name);<br>
+    &nbsp;&nbsp;}<br>
+    }<br>
+    let name = "John";<br>
+    export { sayHello, Person, name };
+</code>
+
+<h3>Renaming Exports</h3>
+
+<p>
+    Renaming exports is used to rename the exported objects:
+</p>
+
+<code>
+    function sayHello() {<br>
+    &nbsp;&nbsp;console.log("Hello");<br>
+    }<br>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, my name is " + this.name);<br>
+    &nbsp;&nbsp;}<br>
+    }<br>
+    let name = "John";<br>
+    export { sayHello as hello, Person as PersonClass, name as personName };
+</code>
+
+
+<h2>Importing Modules</h2>
+
+<p>
+    The <code>import</code> keyword is used to import objects from a module.
+    The <code>import</code> keyword can be used to import a single or multiple named object from a module:
+</p>
+
+<code>
+    &nbsp;&nbsp;// Importing a single named object<br>
+    &nbsp;&nbsp;import { sayHello } from "module1.js";<br>
+    &nbsp;&nbsp;sayHello();<br>
+    &nbsp;&nbsp;// multiple named objects<br>
+    &nbsp;&nbsp;import { sayHello, Person, name } from "module1.js";<br>
+    &nbsp;&nbsp;sayHello();<br>
+    &nbsp;&nbsp;let person = new Person(name);<br>
+    &nbsp;&nbsp;person.sayHello();
+</code>
+
+<p>
+    Importing default exports is done by using the <code>import</code> keyword without curly braces:
+</p>
+
+<code>
+    &nbsp;&nbsp;import sayHello from "module1.js";<br>
+    &nbsp;&nbsp;sayHello();
+</code>
+
 </body>
 
 </html>

@@ -1,0 +1,167 @@
+<!doctype HTML>
+
+<html lang="en" title="HTML DOM Model">
+
+<head>
+    <title>HTML DOM Model</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="HTML DOM Model">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="datetime.js"></script>
+</head>
+
+<body>
+
+<h1>HTML DOM Model</h1>
+
+<h2>HTML DOM Tree</h2>
+
+<p>
+    The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+    Through the HTML DOM, JavaScript can access and change all the elements of an HTML document:
+</p>
+
+<ul>
+    <li>Change all the HTML elements in the page</li>
+    <li>Change all the HTML attributes in the page</li>
+    <li>Change all the CSS styles in the page</li>
+    <li>React to all new and existing HTML events in the page</li>
+    <li>Create and delete HTML elements and attributes</li>
+</ul>
+
+<h2>HTML DOM Methods and Properties</h2>
+
+<p>
+    The HTML DOM is a standard object model and programming interface for HTML.
+    It defines:
+</p>
+
+<ul>
+    <li>The methods (or actions) you can perform on HTML elements</li>
+    <li>The events for all HTML elements</li>
+    <li>The properties (or values) of all HTML elements</li>
+</ul>
+
+<h3>Example: change the content of an HTML element</h3>
+
+<p id="demo">A Paragraph</p>
+<input type="button" value="Click me" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+
+<p>
+    In the example above, we use the <code>innerHTML</code> property to change the content of an HTML element:
+    <code>document.getElementById("demo").innerHTML = "Hello JavaScript!"</code>,
+    where <code>getElementById</code> is a method that finds an element by element id,
+    and <code>innerHTML</code> is a property that sets or returns the HTML content (inner HTML) of an element.
+</p>
+
+<h3>Example: change the style of an HTML element</h3>
+
+<p id="demo2">A Paragraph</p>
+<input type="button" value="Click me" onclick="document.getElementById('demo2').style.color = 'red'">
+
+<p>
+    In the example above, we use the <code>style</code> property to change the style of an HTML element:
+    <code>document.getElementById("demo2").style.color = "red"</code>,
+    where <code>getElementById</code> is a method that finds an element by element id,
+    and <code>style</code> is a property that sets or returns the style of an element.
+</p>
+
+<h3>Finding HTML Elements</h3>
+
+<p>
+    You can access any HTML element on the page, but first you have to find it.
+    These are the most common methods for finding HTML elements:
+</p>
+
+<ul>
+    <li><code>document.getElementById(id)</code></li>
+    <li><code>document.getElementsByTagName(name)</code></li>
+    <li><code>document.getElementsByClassName(name)</code></li>
+    <li><code>document.querySelector(cssSelector)</code></li>
+    <li><code>document.querySelectorAll(cssSelector)</code></li>
+</ul>
+
+<h3>Changing HTML Elements</h3>
+
+<p>
+    After you have found the HTML element you want to change, you can change the element content,
+    attributes, and CSS styles. There are properties and methods to do so:
+</p>
+
+<ul>
+    <li><code>innerHTML</code> - Sets or returns the HTML content (inner HTML) of an element</li>
+    <li><code>attribute</code> - Sets or returns the value of the specified attribute</li>
+    <li><code>style.property</code> - Sets or returns the value of an element's style property</li>
+    <li><code>setAttribute(attribute, value)</code> - Adds a new attribute, or changes the value of an existing attribute</li>
+    <li><code>removeAttribute(attribute)</code> - Removes an attribute</li>
+</ul>
+
+<h3>Adding and Deleting HTML Elements</h3>
+
+<p>
+    You can add new HTML elements to the page, or remove existing HTML elements from the page.
+    These are the methods for adding and deleting HTML elements:
+</p>
+
+<ul>
+    <li><code>document.createElement(element)</code> - Creates an HTML element</li>
+    <li><code>document.removeChild(element)</code> - Removes an HTML element</li>
+    <li><code>document.appendChild(element)</code> - Adds an HTML element</li>
+    <li><code>document.replaceChild(new, old)</code> - Replaces an HTML element</li>
+    <li><code>document.write(text)</code> - Writes into the HTML output stream</li>
+</ul>
+
+<h3>Adding and Removing HTML Event Handlers</h3>
+
+<p>
+    You can add event handlers to HTML elements, to make them react to user input.
+    These are the methods for adding and removing event handlers:
+</p>
+
+<ul>
+    <li><code>document.getElementById(id).onclick = function(){code}</code> - Adds an event handler to an HTML element</li>
+    <li><code>element.addEventListener(event, function, useCapture)</code> - Adds an event handler to the specified element</li>
+    <li><code>element.removeEventListener(event, function, useCapture)</code> - Removes an event handler from the specified element</li>
+</ul>
+
+<h2>HTML DOM Forms</h2>
+
+<h3>Form Validation</h3>
+
+<p>
+    You can validate form input before submitting it to the server.
+    This is done by writing JavaScript code that checks the form input.
+    If the input is not valid, the form should not be submitted.
+    The following example shows how to validate a form input:
+</p>
+
+<script>
+    function validateForm() {
+        let x = document.forms["myForm"]["form_name"].value;
+        if (x === "") {
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+</script>
+<form name="myForm" onsubmit="return validateForm()" method="post">
+    <label for="form_name">Name:</label>
+    <input id="form_name" type="text" name="form_name">
+    <input type="submit" value="Submit">
+</form>
+
+<p>
+    In the example above, we have a form with a <code>onsubmit</code> attribute.
+    When the user clicks the submit button, the form is submitted, and the <code>validateForm()</code> function is executed.
+    The function checks if the input is valid, and returns <code>false</code> if the input is not valid.
+    If the input is valid, the form is submitted.
+</p>
+
+</body>
+
+</html>
