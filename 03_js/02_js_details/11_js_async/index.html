@@ -1,0 +1,217 @@
+<!doctype HTML>
+
+<html lang="en" title="Asynchronous JavaScript">
+
+<head>
+    <title>Asynchronous JavaScript</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="Asynchronous JavaScript">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="async.js"></script>
+</head>
+
+<body>
+
+<h1>Asynchronous JavaScript</h1>
+
+<h2 id="demo"></h2>
+
+<h2>Asynchronous approach in JavaScript</h2>
+
+<p>
+    Asynchronous function is a function that does not block the execution of the code, it is rather executed in the
+    background.
+    A good example of asynchronous JavaScript function is <code>setTimeout()</code> function:
+</p>
+
+<code>
+    &nbsp;&nbsp;setTimeout(callback, 3000);<br>
+    &nbsp;&nbsp;function callback() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Hello World!');<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>
+    The function we passed to <code>setTimeout()</code> will be executed after 3 seconds,
+    is called a callback function, and it is executed asynchronously.
+</p>
+
+<h3>Setting an Interval</h3>
+
+<p>
+    The <code>setInterval()</code> function is used to execute a function repeatedly, with a fixed time delay between each
+    call to that function:
+</p>
+
+<code>
+    &nbsp;&nbsp;setInterval(callback, 3000);<br>
+    &nbsp;&nbsp;function callback() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Hello World!');<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<h2>Waiting for a resource in JavaScript</h2>
+
+<p>
+    Sometimes we have to wait for some resource is ready, e.g. the page is fully loaded, or the user has entered some
+    information, or the user has clicked on a button, etc.
+    For such cases, we can use the <code>onload</code> asynchronous event, which is fired when the page is fully loaded:
+</p>
+
+<code>
+    &nbsp;&nbsp;function fullyLoaded(someText) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log('The page is fully loaded');<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Response: ' + someText);<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;let request = new XMLHttpRequest();<br>
+    &nbsp;&nbsp;request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1');<br>
+    &nbsp;&nbsp;request.onload = function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (request.status === 200) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullyLoaded(request.response);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(request.responseText);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Error: ' + request.status);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;request.send();<br>
+</code>
+
+<h2>Promises in JavaScript</h2>
+
+<p>
+    A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason
+    that it's not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled,
+    rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+    Promise syntax is as follows:
+</p>
+
+<code>
+    &nbsp;&nbsp;let promise = new Promise(function(resolve, reject) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;setTimeout(function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve('Hello World!');<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}, 3000);<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;promise.then(function(text) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(text);<br>
+    &nbsp;&nbsp;});<br>
+</code>
+
+
+<h3>Promise Properties</h3>
+
+<p>
+    The <code>Promise</code> object has the following properties: state and result.
+    There could be 3 states of the promise: <code>pending</code>, when the promise is not fulfilled or rejected yet;
+    <code>fulfilled</code>, when the promise is fulfilled;
+    and <code>rejected</code>, when the promise is rejected.
+</p>
+
+<code>
+    &nbsp;&nbsp;let promise = new Promise(function(resolve, reject) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;setTimeout(function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve('Hello World!');<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}, 3000);<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;console.log(promise.state);<br>
+    &nbsp;&nbsp;console.log(promise.result);<br>
+</code>
+
+
+<p>
+    Promise.then() method returns a Promise. It takes up to two arguments: callback functions for the success and failure.
+    Both are optional, so you can add a callback for the success or failure case only.
+</p>
+
+<h3>Promise Uses</h3>
+
+<p>
+    We can implement previous examples using promises with more clear and readable code. E.g. timeout
+    will be implemented as follows:
+</p>
+
+<code>
+    &nbsp;&nbsp;function timeout(ms) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return new Promise((resolve, reject) => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(resolve, ms, 'done');<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;timeout(3000).then((value) => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
+    &nbsp;&nbsp;});<br>
+</code>
+
+<p>
+    We can also re-implement the previous example with the <code>Promise</code> and <code>fetch()</code> function,
+    which is a modern replacement for the <code>XMLHttpRequest</code> object:
+</p>
+
+<code>
+    &nbsp;&nbsp;function fetchAsync(url) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return new Promise((resolve, reject) => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fetch(url)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(response => response.text())<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(text => resolve(text))<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.catch(err => reject(err));<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;fetchAsync('https://jsonplaceholder.typicode.com/todos/1')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.then(data => console.log(data))<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.catch(reason => console.log(reason.message));<br>
+</code>
+
+
+<h2>Async/Await in JavaScript</h2>
+
+<p>
+    Async functions are a new feature in JavaScript that allow us to write asynchronous code in a synchronous way.
+    Async functions are functions that return a Promise object. Async functions are defined with the <code>async</code>
+    keyword. Async functions always return a value. If the return value of the async function is not explicitly a
+    Promise, it will be implicitly wrapped in a Promise.
+</p>
+
+<p>
+    Async functions can contain zero or more <code>await</code> expressions. An await expression causes async function
+    execution to pause until a Promise is settled (that is, fulfilled or rejected), and to resume execution of the
+    async function after fulfillment. When resumed, the value of the await expression is that of the fulfilled Promise.
+    The syntax of async/await is as follows:
+</p>
+
+<code>
+    &nbsp;&nbsp;async function timeout(ms) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;await new Promise((resolve) => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(resolve, ms);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;async function asyncPrint(value, ms) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;await timeout(ms);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;asyncPrint('Hello World!', 3000);<br>
+</code>
+
+<p>
+    In this example, the <code>asyncPrint()</code> function will be executed after 3 seconds.
+    In the next example, we wait for the page to load using async/await:
+</p>
+
+<code>
+    &nbsp;&nbsp;async function loadJson(url) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;let response = await fetch(url);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (response.status == 200) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let json = await response.json();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return json;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;throw new Error(response.status);<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;loadJson('https://jsonplaceholder.typicode.com/todos/1')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.then(data => console.log(data))<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.catch(err => console.log(err.message));<br>
+</code>
+
+</body>
+
+</html>
