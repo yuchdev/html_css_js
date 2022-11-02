@@ -1,0 +1,240 @@
+<!doctype HTML>
+
+<html lang="en" title="JavaScript Numbers">
+    
+<head>
+    <title>JavaScript Numbers</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="JavaScript Numbers">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="functions.js"></script>
+</head>
+
+<body>
+
+<h1>JavaScript Numbers</h1>
+
+<h2>Numbers Representation</h2>
+
+<p>
+    Unlike other programming languages, JS numbers are represented only as 64-bit floating-point numbers.
+    It can be represented as a decimal, hexadecimal, octal or binary number.
+    In the code it can be written as a whole number, a floating-point number or an exponential number, e.g.
+    <code>123</code>, <code>123.456</code>, <code>123e-2</code>, <code>0x123</code>, <code>0x123.456</code>,
+    <code>0x123p-2</code>, <code>0o123</code>, <code>0b1010</code>.
+</p>
+
+<p>
+    Numbers are primitive values, so they are immutable. Do not create numbers as objects, e.g. <code>new Number(123)</code>.
+    It's not just impractical, but leads to a variety of side effects, e.g. <code>new Number(123) == new Number(123)</code>
+    is <code>false</code>, because the equality operator compares references to objects, not values.
+</p>
+
+<p>
+    In order to effectively work with floating-point numbers, it is recommended to ger familiar with the IEEE 754 standard.
+    For example, the following numbers are not equal: <code>0.1 + 0.2</code> and <code>0.3</code>
+    (the result of the first expression is <code>0.30000000000000004</code>).
+    From the other side, the following numbers are equal: 123e60 and 123e60 + 1,
+    because it's not enough bits in 64-bit floating-point to store the difference.
+</p>
+
+<p>
+    Maximum and minimum integers that can be safely represented in JavaScript could be found in the properties
+    <code>Number.MAX_SAFE_INTEGER</code> and <code>Number.MIN_SAFE_INTEGER</code>, which are equal to
+    <code>2^53 - 1</code> and <code>-2^53 + 1</code> respectively.
+    Also, method Number.isSafeInteger() can be used to check if a number is safe integer.
+</p>
+
+<h2>Implicit string and number conversions</h2>
+
+<h3>From number to string</h3>
+
+<p>
+    Both strings and numbers in JS use operator <code>+</code>,
+    however the result of the operation depends on the type of the operands.
+    Numbers are added, strings are concatenated.
+    While used in the same expression, the operands are converted to the same type.
+    When a string is added to a number, the number is converted to a string.
+    When a string is added to a string, the result is also a string, e.g.
+</p>
+
+<pre>
+    <code>
+        1 + 2 + "3" = "33"
+        "1" + 2 + 3 = "123"
+        "1" + 2 + "3" = "123"
+    </code>
+</pre>
+
+<p>
+    The common mistake is to use mathematical expression with <code>+</code> operator and a string, e.g.
+</p>
+
+<pre>
+    <code>
+        let x = 10;
+        let y = 20;
+        let z = "The result is: " + x + y; // "The result is: 1020"
+    </code>
+</pre>
+
+
+<h3>From string to number</h3>
+
+<p>
+    When we meet a string inside a mathematical expression, it is attempted to convert it to a number, e.g.
+</p>
+
+<pre>
+    <code>
+        let x = "100";
+        let y = "10";
+        let z = x * y; // 1000
+    </code>
+</pre>
+
+<p>
+    Unless we use operator <code>+</code>, in which case the string is concatenated with another string, e.g.
+</p>
+
+<pre>
+    <code>
+        let x = "100";
+        let y = "10";
+        let z = x + y; // "10010"
+    </code>
+</pre>
+
+<p>
+    Summary: it is better not to mix strings and numbers in the same expression,
+    use <code>let</code> to declare variables, and use <code>===</code> and <code>!==</code> to compare values.
+</p>
+
+<h2>Special values</h2>
+
+<h3>NaN</h3>
+
+<p>
+    If the string is not a valid number, the result of such conversion is <code>NaN</code> (not a number), e.g.
+</p>
+
+<pre>
+    <code>
+        let x = "100";
+        let y = "10a";
+        let z = x * y; // NaN
+    </code>
+</pre>
+
+<p>
+    If you use <code>NaN</code> in a mathematical expression, the result is also <code>NaN</code>.
+    However, if you mix it with string values, <code>NaN</code> value will be converted to a string "NaN", e.g.
+</p>
+
+<pre>
+    <code>
+        let x = "100";
+        let y = "10a";
+        let z = x * y; // NaN
+        let a = x + y; // "10010a"
+        let b = x + z; // "100NaN"
+    </code>
+</pre>
+
+<h3>Infinity</h3>
+
+<p>
+    If the number is too large, the result of such conversion is <code>Infinity</code>.
+    Division by zero also results in <code>Infinity</code>.
+    If you use <code>Infinity</code> in a mathematical expression, the result is also <code>Infinity</code>.
+    There are two special values: <code>Infinity</code> and <code>-Infinity</code>, for both directions of the numeric line.
+</p>
+
+<h2>Number methods</h2>
+
+<p>
+    There's a number of methods to work with numbers:
+</p>
+
+<ul>
+    <li><code>Number.isFinite()</code> - checks if the value is a finite number</li>
+    <li><code>Number.isInteger()</code> - checks if the value is an integer</li>
+    <li><code>Number.isNaN()</code> - checks if the value is NaN</li>
+    <li><code>Number.isSafeInteger()</code> - checks if the value is a safe integer</li>
+    <li><code>Number.toExponential()</code> - returns a string, representing the number in exponential notation</li>
+    <li><code>Number.toFixed()</code> - returns a string, representing the number in fixed-point notation</li>
+    <li><code>Number.toLocaleString()</code> - returns a string, representing the number in a local format</li>
+    <li><code>Number.toPrecision()</code> - returns a string, representing the number to a specified precision</li>
+    <li><code>Number.toString()</code> - returns a string, representing the number in a specified base</li>
+    <li><code>Number.valueOf()</code> - returns the primitive value of a number</li>
+</ul>
+
+<p>
+    Also, these methods are used to convert strings (and other types) to numbers:
+</p>
+
+<ul>
+    <li><code>Number()</code> - converts any type to a number</li>
+    <li><code>parseFloat()</code> - parses a string and returns a floating-point number</li>
+    <li><code>parseInt()</code> - parses a string and returns an integer</li>
+</ul>
+
+<h2>Numbers and dates</h2>
+
+<p>
+    Dates are stored as the number of milliseconds that have passed since 1 January 1970 UTC+0.
+    Therefore, we can perform mathematical operations with dates, just like with numbers,
+    and convert dates to numbers, e.g.
+</p>
+
+<pre>
+    <code>
+        let start = new Date(); // start measuring time
+
+        // do the job
+        for (let i = 0; i < 100000; i++) {
+            let doSomething = i * i * i;
+        }
+
+        let end = new Date(); // end measuring time
+
+        alert( `The loop took ${end - start} ms` ); // subtract numbers, not dates
+    </code>
+</pre>
+
+<h2>Big numbers</h2>
+
+<p>
+    There's a special numeric type <code>BigInt</code> to represent integers of arbitrary length.
+    A bigint is created by appending <code>n</code> to the end of an integer,
+    or explicitly call the function <code>BigInt()</code>, e.g.
+</p>
+
+<pre>
+    <code>
+        const bigint1 = 1234567890123456789012345678901234567890n;
+        const bigint2 = BigInt(10); // same as 10n
+    </code>
+</pre>
+
+<p>
+    Because of the possible loss of precision, BigInt is not compatible with regular numbers.
+    Just like numbers, they can be written in decimal, hexadecimal, binary, and octal forms:
+</p>
+
+<code>
+    <pre>
+        0b11111111n // binary form
+        0o377n // octal form
+        0xffn // hexadecimal form
+    </pre>
+</code>
+
+</body>
+
+</html>

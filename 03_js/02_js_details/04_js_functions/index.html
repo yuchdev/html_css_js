@@ -19,6 +19,108 @@
 
 <h1>JavaScript Functions</h1>
 
+<h2>JS Functions</h2>
+
+<p>
+    Declaring a function in JS is intuitive:
+</p>
+
+<code>
+    &nbsp;&nbsp;function myFunction(p1, p2) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return p1 * p2;<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>
+    The function above is called <def>function declaration</def>.
+    It is a function that is bound to an identifier (name).
+    The function can be invoked using operator <code>()</code>. Without it, the function is not executed but rather
+    returns a reference to the function itself. E.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let x = myFunction; // x is a reference to myFunction<br>
+    &nbsp;&nbsp;let y = myFunction(); // y is the result of calling myFunction<br>
+</code>
+
+<h2>Function as Objects</h2>
+
+<p>
+    Functions are objects, and can be used like any other object. For example, they can be stored in variables,
+    passed as arguments to other functions, and returned from functions.
+    Such functions are called <def>first-class functions</def>, e.g.:
+</p>
+
+<code>
+    &nbsp;&nbsp;let x = function (a, b) {return a * b};<br>
+    &nbsp;&nbsp;let z = x(4, 3);<br>
+</code>
+
+<h2>Local Variables</h2>
+
+<p>
+    Variables declared within a JavaScript function, become <def>local</def> to the function.
+    Local variables have <def>function scope</def>: they can only be accessed from within the function.
+    Local variables are created when a function starts, and deleted when the function is completed.
+    Local variables declared only with <code>let</code> or <code>const</code> keywords.
+    Using <code>var</code> keyword result in visibility of the variable outside the function. E.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;function myFunction() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;let carName = "Volvo";<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;var carModel = "XC90";<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;myFunction();<br>
+    &nbsp;&nbsp;console.log(carName); // will result in error<br>
+    &nbsp;&nbsp;console.log(carModel); // will print "XC90"<br>
+</code>
+
+<h2>Arrow Syntax</h2>
+
+<p>
+    Arrow functions are a new way to write functions in JavaScript. They are a shorter syntax for writing function expressions.
+    Arrow functions are always anonymous. They cannot be used as constructors and don't have their own <code>this</code>,
+    <code>arguments</code>, <code>super</code>, or <code>new.target</code>. Arrow functions also cannot be used as
+    <code>object</code> methods. E.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let x = (a, b) => a * b;<br>
+    &nbsp;&nbsp;let z = x(4, 3);<br>
+</code>
+
+<p>
+    Arrow functions handle the <code>this</code> object differently than regular functions.
+    In regular functions, the <code>this</code> keyword represented the object that called the function,
+    which could be the window, the document, an object, etc.
+    With arrow functions, the <code>this</code> keyword always represents the object that defined the arrow function.
+    E.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let person = {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;firstName: "John",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;lastName : "Doe",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;fullName : function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;};<br>
+    &nbsp;&nbsp;console.log(person.fullName()); // will print "John Doe"<br>
+    &nbsp;&nbsp;let person2 = {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;firstName: "Mary",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;lastName : "Doe",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;fullName : () => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;};<br>
+    &nbsp;&nbsp;console.log(person2.fullName()); // will print "undefined undefined"<br>
+</code>
+
+<p>
+    Sometimes regular functions is what you need. E.g. for implementing a constructor function or object methods.
+</p>
+
 </body>
 
 </html>

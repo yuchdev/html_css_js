@@ -1,0 +1,391 @@
+<!doctype HTML>
+
+<html lang="en" title="JavaScript Arrays">
+
+<head>
+    <title>JavaScript Arrays</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="style.css">
+    <meta name="description" content="JavaScript Arrays">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Yurii Cherkasov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="arrays.js"></script>
+</head>
+
+<body>
+
+<h1>JavaScript Arrays</h1>
+
+<h2>Definition</h2>
+
+<p>
+    Just like in other languages, array is a special variable, which can hold more than one value at a time.
+    Using of arrays in JavaScript is intuitive:
+</p>
+
+<code>
+    let cars = ["Saab", "Volvo", "BMW"];
+</code>
+
+<p>
+    Also, you can create an empty array and then add elements to it.
+    Operator <code>[]</code> is used to access array elements.
+</p>
+
+<code>
+    &nbsp;&nbsp;&nbsp;&nbsp;let cars = [];<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;cars[0] = "Saab";<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;cars[1] = "Volvo";<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;cars[2] = "BMW";<br>
+</code>
+
+<p>
+    Array is an object, so it can hold properties and methods.
+    It is a list-like object whose prototype has methods to perform traversal and mutation operations.
+    Array elements can be primitive types, objects, functions and other arrays.
+</p>
+
+<p>
+    NOTE: It is a common practice to declare array <code>const</code>. However, it declares const reference to the array,
+    rather than the array itself. So, it is possible to change array elements, but not to reassign the array.
+</p>
+
+<h2>Array Properties</h2>
+
+<h3>Array.length</h3>
+
+<p>
+    The <code>length</code> property of an object which is an instance of type Array
+    sets or returns the number of elements in that array.
+    The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
+</p>
+
+<h3>Array.prototype</h3>
+
+<p>
+    The <code>prototype</code> property allows you to add new properties and methods to an Array object:
+</p>
+
+<code>
+    &nbsp;&nbsp;Array.prototype.myUcase = function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;for (i = 0; i < this.length; i++) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this[i] = this[i].toUpperCase();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;};<br>
+</code>
+
+<h3>Array.toString()</h3>
+
+<p>
+    The <code>toString()</code> method returns a string representing the specified array and its elements:
+</p>
+
+<code>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let energy = fruits.toString(); // Banana,Orange,Apple,Mango<br>
+</code>
+
+<p>
+    Method <code>join()</code> is similar to <code>toString()</code> but it allows you to specify the separator:
+</p>
+
+<code>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let energy = fruits.join(" * "); // Banana * Orange * Apple * Mango<br>
+</code>
+
+<h2>Array Iteration</h2>
+
+<p>
+    The <code>forEach()</code> method executes a provided function once for each array element, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let cars = ["Saab", "Volvo", "BMW"];
+    &nbsp;&nbsp;cars.forEach(function(item, index, array) {
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(item, index);
+    &nbsp;&nbsp;});
+</code>
+
+<h2>Push and Pop</h2>
+
+<p>
+    JavaScript arrays offer <code>push()</code> and <code>pop()</code> methods to add and remove elements from the end of an array,
+    so as <code>shift()</code> and <code>unshift()</code> to add and remove elements from the beginning of an array, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let cars = ["Saab", "Volvo", "BMW"];<br>
+    &nbsp;&nbsp;cars.push("Audi");<br>
+    &nbsp;&nbsp;cars.pop();<br>
+    &nbsp;&nbsp;cars.shift();<br>
+    &nbsp;&nbsp;cars.unshift("Audi");<br>
+    &nbsp;&nbsp;console.log(cars); // Audi,Volvo,BMW<br>
+</code>
+
+
+<h2>Deleting Elements</h2>
+
+<p>
+    The <code>delete</code> operator removes the specified property or array element from the object.
+    It returns <code>true</code> if the operation succeeds, otherwise it returns <code>false</code>.
+    The <code>delete</code> operator does not affect arrays with numbered indexes.
+    Be aware, it leaves <code>undefined</code> holes in the array.
+    Try to use <code>splice()</code>, <code>pop()</code> or <code>shift()</code> instead.
+</p>
+
+<h2>Splice and Slice</h2>
+
+<p>
+    The <code>splice()</code> method adds/removes items to/from an array, and returns the removed item(s).
+    The first parameter (2) defines the position where new elements should be added (spliced in).
+    The second parameter (0) defines how many elements should be removed.
+    The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+    The <code>slice()</code> method returns the selected elements in an array, as a new array object.
+    The <code>slice()</code> method selects the elements starting at the given start argument, and ends at,
+    but does not include, the given end argument, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;fruits.splice(2, 0, "Lemon", "Kiwi");<br>
+    &nbsp;&nbsp;console.log(fruits); // Banana,Orange,Lemon,Kiwi,Apple,Mango<br>
+    &nbsp;&nbsp;let citrus = fruits.slice(1);<br>
+    &nbsp;&nbsp;console.log(citrus); // Orange,Lemon,Kiwi,Apple,Mango<br>
+</code>
+
+<h2>Array Sorting</h2>
+
+<p>
+    The <code>sort()</code> method sorts the items of an array.
+    The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+    By default, the sort() method sorts the values as strings in alphabetic and ascending order.
+    This works well for strings ("Apple" comes before "Banana").
+    However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+    Because of this, the sort() method will produce an incorrect result when sorting numbers.
+    You can fix this by providing a "compare function".
+    The compare function should return a negative, zero, or positive value, depending on the arguments,
+    like this:
+</p>
+
+<code>
+    &nbsp;&nbsp;let points = [40, 100, 1, 5, 25, 10];<br>
+    &nbsp;&nbsp;points.sort(function(a, b){return a - b});<br>
+    &nbsp;&nbsp;console.log(points); // 1,5,10,25,40,100<br>
+</code>
+
+<p>
+    NOTE: keeping all array elements the same type is a good practice.
+</p>
+
+<p>
+    There's no built-in methods to find the maximum or minimum of an array of numbers.
+    Instead, you can use the <code>Math.max()</code> and <code>Math.min()</code> functions, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let points = [40, 100, 1, 5, 25, 10];<br>
+    &nbsp;&nbsp;let max = Math.max.apply(null, points);<br>
+    &nbsp;&nbsp;let min = Math.min.apply(null, points);<br>
+    &nbsp;&nbsp;console.log(max); // 100<br>
+    &nbsp;&nbsp;console.log(min); // 1<br>
+</code>
+
+<p>
+    If the array contains objects, you can use the <code>sort()</code> method to sort the array by a specific object property.
+    The following example sorts an array of objects by the <code>price</code> property:
+</p>
+
+<code>
+    &nbsp;&nbsp;let cars = [ <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{type:"Volvo", price:50000},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{type:"Saab", price:20000},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{type:"BMW", price:30000}<br>
+    &nbsp;&nbsp;];<br>
+    &nbsp;&nbsp;cars.sort(function(a, b){return a.price - b.price});<br>
+    &nbsp;&nbsp;console.log(cars); // Saab,BMW,Volvo<br>
+</code>
+
+
+<h2>Useful Array Methods</h2>
+
+<h3>Map, Filter and Reduce</h3>
+
+<p>
+    The <code>map()</code> method creates a new array with the results of calling a function for every array element.
+    The <code>map()</code> method creates a new array with the results of calling a function for every array element.
+    The <code>map()</code> method calls the provided function once for each element in an array, in order.
+    Note: <code>map()</code> does not execute the function for array elements without values.
+    Note: <code>map()</code> does not change the original array.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25];<br>
+    &nbsp;&nbsp;let x = numbers.map(Math.sqrt);<br>
+    &nbsp;&nbsp;console.log(x); // 2,3,4,5<br>
+</code>
+
+<p>
+    The <code>filter()</code> method creates a new array with array elements that passes a test.
+    The <code>filter()</code> method creates a new array with array elements that passes a test.
+    The <code>filter()</code> method checks if all array values pass a test.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25];<br>
+    &nbsp;&nbsp;let x = numbers.filter(function(value, index, arr){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return value &gt; 15;<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;console.log(x); // 16,25<br>
+</code>
+
+<p>
+    The <code>reduce()</code> method reduces the array to a single value.
+    The <code>reduce()</code> method runs a function on each array element to produce (reduce it to) a single value.
+    The <code>reduce()</code> method works from left-to-right in the array.
+    There's version of the <code>reduce()</code> method that works from right-to-left, called <code>reduceRight()</code>.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25];<br>
+    &nbsp;&nbsp;let x = numbers.reduce(function(total, value, index, arr){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return total + value;<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;console.log(x); // 54<br>
+</code>
+
+<h3>Every and Some</h3>
+
+<p>
+    The <code>every()</code> method checks if all array values pass a test,
+    and the <code>some()</code> method checks if some array values pass a test, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25];<br>
+    &nbsp;&nbsp;let x = numbers.every(function(value, index, arr){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return value &gt; 15;<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;console.log(x); // false<br>
+    &nbsp;&nbsp;let y = numbers.some(function(value, index, arr){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return value &gt; 15;<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;console.log(y); // true<br>
+</code>
+
+<h2>Search in Array</h2>
+
+<p>
+    The <code>indexOf()</code> method searches an array for a specified item and returns its position.
+    The <code>indexOf()</code> method searches an array for a specified item and returns its position.
+    If the item is not found, it returns -1.
+    The <code>indexOf()</code> method is case sensitive.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let a = fruits.indexOf("Apple");<br>
+    &nbsp;&nbsp;console.log(a); // 2<br>
+</code>
+
+<p>
+    The <code>lastIndexOf()</code> method searches an array for a specified item, and returns its position.
+    The <code>lastIndexOf()</code> method searches an array for a specified item, and returns its position.
+    The search will start at the specified position, or at the end if no start position is specified, and end the search at the first occurrence.
+    If the item is not found, it returns -1.
+    The <code>lastIndexOf()</code> method is case sensitive.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let a = fruits.lastIndexOf("Apple");<br>
+    &nbsp;&nbsp;console.log(a); // 2<br>
+</code>
+
+<p>
+    The <code>find()</code> method returns the value of the first array element that passes a test function.
+    The <code>find()</code> method returns the value of the first array element that passes a test function.
+    If no values pass the test, <code>undefined</code> is returned.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25, 29];<br>
+    &nbsp;&nbsp;let first = numbers.find(function(value, index, arr){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return value &gt; 18;<br>
+    &nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;console.log(first); // 25<br>
+</code>
+
+<p>
+    The <code>findIndex()</code> method returns the index of the first array element that passes a test function,
+    and <code>lastIndexOf()</code> returns the index of the last array element that passes a test function.
+</p>
+
+<p>
+    The <code>includes()</code> method checks if an array contains the specified element.
+    The <code>find()</code> method returns the value of the first array element that passes a test function.
+    Example:
+</p>
+
+<code>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let a = fruits.includes("Mango");<br>
+    &nbsp;&nbsp;let b = fruits.find("Kiwi");<br>
+    &nbsp;&nbsp;console.log(a); // true<br>
+    &nbsp;&nbsp;console.log(b); // undefined<br>
+</code>
+
+
+<h2>JavaScript Iterables</h2>
+
+<p>
+    JS Iterables is a new feature in ECMAScript 6. It is an object that provides a way to iterate over arrays
+    and other collections:
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25];<br>
+    &nbsp;&nbsp;let x = numbers.entries();<br>
+    &nbsp;&nbsp;for (let i of x) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>
+    &nbsp;&nbsp;}<br>
+    // [0, 4], [1, 9], [2, 16], [3, 25]<br>
+</code>
+
+<p>
+    We can iterate over the keys, values, including sets and maps using the <code>keys()</code>, <code>values()</code>,
+    and <code>entries()</code> methods, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;let numbers = [4, 9, 16, 25];<br>
+    &nbsp;&nbsp;let x = numbers.keys();<br>
+    &nbsp;&nbsp;for (let i of x) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>
+    &nbsp;&nbsp;}<br>
+    // 0, 1, 2, 3<br>
+    &nbsp;&nbsp;let y = numbers.values();<br>
+    &nbsp;&nbsp;for (let i of y) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>
+    &nbsp;&nbsp;}<br>
+    // 4, 9, 16, 25<br>
+    &nbsp;&nbsp;let z = numbers.entries();<br>
+    &nbsp;&nbsp;for (let i of z) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>
+    &nbsp;&nbsp;}<br>
+    // [0, 4], [1, 9], [2, 16], [3, 25]<br>
+</code>
+
+
+</body>
+
+</html>

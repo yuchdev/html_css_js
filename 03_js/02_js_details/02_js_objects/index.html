@@ -19,6 +19,372 @@
 
 <h1>JavaScript Objects</h1>
 
+<h2>OOP Support in JavaScript</h2>
+
+<p>
+    JavaScript is a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.
+    It has dynamic typing, prototype-based object-orientation, and first-class functions.
+</p>
+
+<p>
+    JavaScript objects are variables that contain multiple pairs of keys and values, that are also called properties.
+    For example, the following code creates an object named person:
+</p>
+
+<code>
+    let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+</code>
+
+<p>
+    Object can be declared constant with the <code>const</code> keyword.
+    but its properties still can be changed.
+</p>
+
+<h2>Ways of accessing object properties</h2>
+
+<p>
+    There are two ways of accessing object properties:
+</p>
+
+<ul>
+    <li>Dot notation, e.g. <code>person.firstName</code></li>
+    <li>bracket notation, e.g. <code>person["firstName"]</code></li>
+</ul>
+
+
+<h2>Object Methods</h2>
+
+<p>
+    Objects can also store function definitions as properties.
+    Such properties are called <def>methods</def>, e.g.
+</p>
+
+<code>
+    let person = {firstName:"John",<br>
+    &nbsp;&nbsp;lastName:"Doe",<br>
+    &nbsp;&nbsp;age:50,<br>
+    &nbsp;&nbsp;eyeColor:"blue",<br>
+    &nbsp;&nbsp;fullName: function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
+    &nbsp;&nbsp;}<br>
+    };
+</code>
+
+<p>
+    If you access a method without the <code>()</code> parentheses, it will return the function definition as text.
+    E.g. addressing <code>person.fullName</code> will return the function definition:
+</p>
+
+<code>
+    function() {<br>
+    &nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
+    }
+</code>
+
+<h2>Keyword <code>this</code></h2>
+
+<p>
+    Lite in many other OOP programming languages, <code>this</code> keyword refers to the object it belongs to.
+    It has different values depending on where it is used:
+</p>
+
+<ul>
+    <li>In a global scope (including strict mode), it refers to the global object, e.g. <code>let x = this;</code></li>
+    <li>As a method, it refers to the owner object, e.g. <code>person.fullName() { return this; }</code></li>
+    <li>Alone in a function, it refers to the global object, e.g. <code>function myFunction() { return this; }</code></li>
+    <li>As a function, in strict mode, it is undefined</li>
+    <li>As an event, it refers to the element that received the event, e.g. <code>&lt;button
+        onclick="this.style.display='none'"&gt;</code></li>
+    <li>Methods like <code>call()</code> and <code>apply()</code> can refer <code>this</code> to any object</li>
+</ul>
+
+<h3>Strict Mode and <code>this</code></h3>
+
+<p>
+    In strict mode, if you use <code>this</code> in a function, it does not refer to the global object.
+    Instead, it returns <code>undefined</code>.
+    This is because in strict mode, the global object is not allowed to be used as a default object, e.g.
+</p>
+
+<code>
+    &nbsp;&nbsp;"use strict";<br>
+    &nbsp;&nbsp;function myFunction() {
+    &nbsp;&nbsp;&nbsp;&nbsp;return this; // result will be undefined
+    &nbsp;&nbsp;}
+</code>
+
+<h2>Pre-defined methods</h2>
+
+<h3>Method <code>call</code></h3>
+
+<p>
+    The <code>call()</code> method calls a function with a given <code>this</code> value and arguments provided individually.
+    E.g. the following code will call the function <code>myFunction</code> with <code>this</code> referring to the object
+    <code>person</code>:
+</p>
+
+<code>
+    myFunction.call(person, arg1, arg2);
+</code>
+
+<h3>Method <code>apply()</code></h3>
+
+<p>
+    The <code>apply()</code> method calls a function with a given <code>this</code> value and arguments provided as an array.
+    This is the main difference between <code>call()</code> and <code>apply()</code>.
+    E.g. the following code will call the function <code>myFunction</code> with <code>this</code> referring to the object
+    <code>person</code>:
+</p>
+
+<code>
+    myFunction.apply(person, [arg1, arg2]);
+</code>
+
+<h3>Method <code>bind()</code></h3>
+
+<p>
+    The <code>bind()</code> method creates a new function that, when called, has its <code>this</code> keyword set to the
+    provided value, with a given sequence of arguments preceding any provided when the new function is called.
+    E.g. the following code will create a new function <code>myFunction</code> with <code>this</code> referring to the
+    object <code>person</code>:
+</p>
+
+<code>
+    let myFunction = myFunction.bind(person);
+</code>
+
+<h2>Declare variables as objects</h2>
+
+<p>
+    The <code>new</code> keyword is used to create an object from a constructor function.
+    E.g. the following code will create a new object <code>person</code> from the constructor function <code>Person</code>:
+</p>
+
+<code>
+    let person = new Person("John", "Doe", 50, "blue");
+</code>
+
+<p>
+    Avoid using the <code>new</code> keyword when declaring variables of primitive types, e.g.
+    <code>let x = new String;</code> or <code>let x = new Number;</code>. Objects are generally slower than primitives.
+</p>
+
+<h3>JS Objects</h3>
+
+<p>
+    Object in JavaScript is a collection of named values (JSON dictionary), e.g.
+</p>
+
+<code>person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}</code>
+
+<h4>Facts about JS objects</h4>
+
+<ul>
+    <li>Declare objects <code>const</code> when possible, <code>let</code> when required</li>
+    <li>Assigning the object to variable, you actually assign the reference to the object</li>
+    <li>
+        This means, the object itself is mutable, even if the variable is declared <code>const</code>,
+        objects are not actually copied in memory, only the reference is copied
+    </li>
+</ul>
+
+<h4>There are two ways to access the properties of an object</h4>
+
+<ul>
+    <li>objectName.propertyName</li>
+    <li>objectName["propertyName"]</li>
+</ul>
+
+<h4>Methods and keyword <code>this</code></h4>
+
+<p>
+    Objects may contain methods, which are just functions, stored as object properties.
+    Inside the method, you can access the object properties with <code>this</code> keyword,
+    like in many OOP languages.
+    In a global function, <code>this</code> refers to the global object.
+</p>
+
+<h4>Keyword <code>new</code></h4>
+
+<p>
+    The <code>new</code> keyword is used to create an instance of a user-defined object type
+    or of one of the built-in object types that has a constructor function.
+    The <code>new</code> keyword even define basic types like <code>String</code> or <code>Number</code> as objects.
+</p>
+
+<h2>Comparing Objects</h2>
+
+<p>
+    Objects are compared by reference, not by value.
+    Two objects are equal if they refer to the same object.
+    Two variables that refer to the same object are equal.
+    Even if two different objects are same bit-by-bit, they are not equal, e.g.
+</p>
+
+<code>
+    let x = {name: "John"};<br>
+    let y = {name: "John"};<br>
+    let z = x;<br>
+    console.log(x == y); // false<br>
+    console.log(x == z); // true
+</code>
+
+<h1>Classes in JavaScript</h1>
+
+<h2>Introduction into classes</h2>
+
+<p>
+    Classes are a template for creating objects.
+    They encapsulate data with code to work on that data.
+    Classes in JavaScript are introduced in ECMAScript 2015 and are syntactical sugar over JavaScript's existing
+    prototype-based inheritance.
+    The class syntax is not introducing a new object-oriented inheritance model to JavaScript.
+    JavaScript classes just provide a much simpler, clearer and familiar syntax to create objects and deal with inheritance.
+</p>
+
+<h2>Class Syntax in JavaScript</h2>
+
+<p>
+    For declaration of a class, you use the <code>class</code> keyword with the name of the class.
+    The first function inside the class is a constructor, which performs initialization of properties:
+</p>
+
+<code>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+    &nbsp;&nbsp;}<br>
+    }
+</code>
+
+<p>
+    Using previously declared class, you can create a number of objects with the syntax familiar by C# or Java languages:
+</p>
+
+<code>
+    let person = new Person("John");<br>
+    console.log(person.name); // John
+</code>
+
+<h2>Class Methods</h2>
+
+<p>
+    Class methods are defined inside the class declaration with the syntax, also familiar by other OOP languages:
+</p>
+
+<code>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, my name is " + this.name);<br>
+    &nbsp;&nbsp;}<br>
+    }
+</code>
+
+<h2>Class Inheritance</h2>
+
+<p>
+    The <code>extends</code> keyword is used in class declarations or class expressions.
+    The derived class inherits properties and methods from the base class.
+    The <code>super</code> keyword is used to call functions on an object's parent.
+    The <code>super</code> keyword is usually called in the constructor of the parent class to access the parent's constructor:
+</p>
+
+<code>
+    class Student extends Person {<br>
+    &nbsp;&nbsp;constructor(name, studentId) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;super(name);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this.studentId = studentId;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, my name is " + this.name + " and my student ID is " + this.studentId);<br>
+    &nbsp;&nbsp;}<br>
+    }
+</code>
+
+<h2>Getter and Setter</h2>
+
+<p>
+    Getter and setter methods are used to get and set the value of an object's properties.
+    Getter and setter methods are defined with the <code>get</code> and <code>set</code> keywords:
+</p>
+
+<code>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this._name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;get name() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return this._name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;set name(value) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this._name = value;<br>
+    &nbsp;&nbsp;}<br>
+    }
+</code>
+
+<p>
+    The name of getters and setters can not be the same as the name of a property,
+    that's why the class property name is usually prefixed with an underscore.
+</p>
+
+<p>
+    The <code>get</code> and <code>set</code> methods are used instead of the direct access to the property,
+    because the <code>get</code> and <code>set</code> methods can perform some additional logic,
+    such as validation or formatting, e.g.
+</p>
+
+<code>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this._name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;get name() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;assert(this._name.length > 0, "Name must not be empty");<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return this._name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;set name(value) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;assert(this._name.length > 0, "Name must not be empty");<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this._name = value;<br>
+    &nbsp;&nbsp;}<br>
+    }
+</code>
+
+<h2>Static Methods</h2>
+
+<p>
+    Static methods are methods that are called on the class itself, not on the instances of the class.
+    One can not call a static method on an instance of the class, but only on the class itself:
+</p>
+
+<code>
+    class Person {<br>
+    &nbsp;&nbsp;constructor(name) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this._name = name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;get name() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return this._name;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;set name(value) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;this._name = value;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;static sayHello() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, this is Person class");<br>
+    &nbsp;&nbsp;}<br>
+    }
+</code>
+
+<p>
+    However, you can pass an instance of the class to the static method as a parameter:
+</p>
+
+<code>
+    let person = new Person("John");<br>
+    Person.sayHello(person);
+</code>
+
 </body>
 
 </html>

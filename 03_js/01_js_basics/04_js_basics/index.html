@@ -19,33 +19,33 @@
 
 <h1>JavaScript Basic Use</h1>
 
-<h2>JS Variables and Values</h2>
+<h2>JS letiables and Values</h2>
 
 <p>
-    There are two types of variables in JavaScript:
+    There are two types of letiables in JavaScript:
 </p>
 
 <ul>
-    <li>Const (fixed) variables, declared with <code>const</code></li>
-    <li>Variable values, declared with <code>var</code> (old method) or <code>let</code> (new method)</li>
+    <li>Const (fixed) letiables, declared with <code>const</code></li>
+    <li>letiable values, declared with <code>let</code> (old method) or <code>let</code> (new method)</li>
 </ul>
 
 <code>
     &nbsp;&nbsp;const pi = 3.14;<br>
-    &nbsp;&nbsp;var x = 10;<br>
+    &nbsp;&nbsp;let x = 10;<br>
     &nbsp;&nbsp;let y = 20;<br>
 </code>
 
 <p>
-    Note: <code>var</code> should be used only for old browsers support.
+    Note: <code>let</code> should be used only for old browsers support.
     New scripts should use <code>let</code> (its support was implemented in all major browsers in 2015-2017)
     There are important differences between them:
 </p>
 
 <ul>
-    <li><code>var</code> is function-scoped, <code>let</code> is block-scoped</li>
-    <li><code>var</code> can be re-declared, <code>let</code> can't</li>
-    <li><code>var</code> can be re-assigned, <code>let</code> can't</li>
+    <li><code>let</code> is function-scoped, <code>let</code> is block-scoped</li>
+    <li><code>let</code> can be re-declared, <code>let</code> can't</li>
+    <li><code>let</code> can be re-assigned, <code>let</code> can't</li>
 </ul>
 
 <p>
@@ -74,7 +74,7 @@
 <h2>JS Literals</h2>
 
 <p>
-    JavaScript literals are fixed values, not variables.
+    JavaScript literals are fixed values, not letiables.
     There are several types of literals:
 
     <ul>
@@ -110,58 +110,15 @@
 <h2>Naming Conventions</h2>
 
 <p>
-    There are simple rules of naming variables and functions:
+    There are simple rules of naming letiables and functions:
 </p>
 
 <ul>
-    <li>Variable names can contain letters, digits, underscores, and dollar signs.</li>
-    <li>Variable names must begin with a letter</li>
-    <li>Variable names are case sensitive (y and Y are different variables)</li>
-    <li>Reserved words (like JavaScript keywords) cannot be used as variable names</li>
+    <li>letiable names can contain letters, digits, underscores, and dollar signs.</li>
+    <li>letiable names must begin with a letter</li>
+    <li>letiable names are case sensitive (y and Y are different letiables)</li>
+    <li>Reserved words (like JavaScript keywords) cannot be used as letiable names</li>
 </ul>
-
-<h3>JS Objects</h3>
-
-<p>
-    Object in JavaScript is a collection of named values (JSON dictionary), e.g.
-</p>
-
-<code>person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}</code>
-
-<h4>Facts about JS objects</h4>
-
-<ul>
-    <li>Declare objects <code>const</code> when possible, <code>let</code> when required</li>
-    <li>Assigning the object to variable, you actually assign the reference to the object</li>
-    <li>
-        This means, the object itself is mutable, even if the variable is declared <code>const</code>,
-        objects are not actually copied in memory, only the reference is copied
-    </li>
-</ul>
-
-<h4>There are two ways to access the properties of an object</h4>
-
-<ul>
-    <li>objectName.propertyName</li>
-    <li>objectName["propertyName"]</li>
-</ul>
-
-<h4>Methods and keyword <code>this</code></h4>
-
-<p>
-    Objects may contain methods, which are just functions, stored as object properties.
-    Inside the method, you can access the object properties with <code>this</code> keyword,
-    like in many OOP languages.
-    In a global function, <code>this</code> refers to the global object.
-</p>
-
-<h4>Keyword <code>new</code></h4>
-
-<p>
-    The <code>new</code> keyword is used to create an instance of a user-defined object type
-    or of one of the built-in object types that has a constructor function.
-    The <code>new</code> keyword even define basic types like <code>String</code> or <code>Number</code> as objects.
-</p>
 
 <h2>JS Arrays</h2>
 
@@ -172,9 +129,9 @@
 </p>
 
 <code>
-    &nbsp;&nbsp;var cars = ["Saab", "Volvo", "BMW"];<br>
-    &nbsp;&nbsp;var cars = new Array("Saab", "Volvo", "BMW");<br>
-    &nbsp;&nbsp;var cars = new Array(3);<br>
+    &nbsp;&nbsp;let cars = ["Saab", "Volvo", "BMW"];<br>
+    &nbsp;&nbsp;let cars = new Array("Saab", "Volvo", "BMW");<br>
+    &nbsp;&nbsp;let cars = new Array(3);<br>
     &nbsp;&nbsp;cars[0] = "Saab";<br>
     &nbsp;&nbsp;cars[1] = "Volvo";<br>
     &nbsp;&nbsp;cars[2] = "BMW";<br>
@@ -202,7 +159,7 @@
 </p>
 
 <code>
-    &nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
     &nbsp;&nbsp;fruits.push("Kiwi");<br>
     &nbsp;&nbsp;fruits.pop();<br>
 </code>
@@ -212,11 +169,138 @@
 </p>
 
 <code>
-    &nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    &nbsp;&nbsp;let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
     &nbsp;&nbsp;fruits.unshift("Lemon");<br>
     &nbsp;&nbsp;fruits.shift();<br>
 </code>
 
+<h2>Loops in JavaScript</h2>
+
+<p>
+    Like most of the programming languages, JavaScript has several types of loops:
+</p>
+
+<ul>
+    <li><code>for</code> - loops through a block of code a number of times</li>
+    <li><code>for/in</code> - loops through the properties of an object</li>
+    <li><code>for/of</code> - loops through the values of an iterable object</li>
+    <li><code>while</code> - loops through a block of code while a specified condition is true</li>
+    <li><code>do/while</code> - also loops through a block of code while a specified condition is true</li>
+</ul>
+
+<p>The <code>for</code> Loop</p>
+
+<code>
+    &nbsp;&nbsp;for (i = 0; i < 5; i++) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;text += "The number is " + i + "\n";<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>The <code>for/in</code> Loop</p>
+
+<code>
+    &nbsp;&nbsp;let person = {fname:"John", lname:"Doe", age:25};<br>
+    &nbsp;&nbsp;let text = "";<br>
+    &nbsp;&nbsp;let x = "";<br>
+    &nbsp;&nbsp;for (x in person) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;text += person[x];<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>The <code>for/of</code> Loop</p>
+
+<code>
+    &nbsp;&nbsp;let cars = ["BMW", "Volvo", "Mini"];<br>
+    &nbsp;&nbsp;let text = "";<br>
+    &nbsp;&nbsp;let x = "";<br>
+    &nbsp;&nbsp;for (x of cars) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;text += x + "<br>";<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>The <code>while</code> Loop</p>
+
+<code>
+    &nbsp;&nbsp;let text = "";<br>
+    &nbsp;&nbsp;let i = 0;<br>
+    &nbsp;&nbsp;while (i < 10) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;text += "The number is " + i;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>The <code>do/while</code> Loop</p>
+
+<code>
+    &nbsp;&nbsp;let text = "";<br>
+    &nbsp;&nbsp;let i = 0;<br>
+    &nbsp;&nbsp;do {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;text += "The number is " + i;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+    &nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;while (i < 10);<br>
+</code>
+
+<h2>Visibility Scopes</h2>
+
+<p>
+    Visibility scopes are the areas of the code where a variable is visible.
+    In JavaScript, there are 3 types of scopes, intuitive for those who is a familiar with programming:
+</p>
+
+<ul>
+    <li>Global scope</li>
+    <li>Function scope</li>
+    <li>Block scope</li>
+</ul>
+
+<code>
+    &nbsp;&nbsp;let x = 10; // Global scope<br>
+    &nbsp;&nbsp;function myFunction() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;let y = 20; // Function scope<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let z = 30; // Block scope<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>
+    However, in older versions of JavaScript, there was only 2 types of scopes: global and function.
+    Variables declared with <code>var</code> keyword were visible in the whole function, not only in the block.
+    Scopes were constantly violated, and it was a big problem. For example:
+</p>
+
+<code>
+    &nbsp;&nbsp;var x = 10;<br>
+    &nbsp;&nbsp;function myFunction() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = 30;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x = 20;<br>
+    &nbsp;&nbsp;}<br>
+</code>
+
+<p>
+    In modern JavaScript, there are ways to avoid this problem.
+    For example, you can use <code>let</code> keyword instead of <code>var</code>.
+</p>
+
+<h3>Strict Mode</h3>
+
+<p>
+    Strict mode is a way to write secure JavaScript code. It is a string literal that is added to the top of the script.
+    Strict mode changes previously accepted "bad syntax" into real errors, which makes it easier to write "secure" JavaScript.
+    These are a couple of examples of strict mode:
+</p>
+
+<code>
+    &nbsp;&nbsp;"use strict";<br>
+    &nbsp;&nbsp;x = 3.14; // This will cause an error because x is not declared<br>
+    &nbsp;&nbsp;function x(p1, p2) {};
+    &nbsp;&nbsp;delete x; // Deleting a function is not allowed in strict mode<br>
+    &nbsp;&nbsp;let x = 3.14;
+    &nbsp;&nbsp;delete x; // Deleting a variable is not allowed in strict mode<br>
+</code>
 
 </body>
 

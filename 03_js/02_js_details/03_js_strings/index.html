@@ -19,6 +19,125 @@
 
 <h1>JavaScript Strings</h1>
 
+<h2>Definition of a String</h2>
+
+<ul>
+    <li>A string in JavaScript is a sequence of characters</li>
+    <li>A string is a primitive data type, so creating string object using String() constructor is not necessary</li>
+    <li>A string is a sequence of characters that can be used to represent text</li>
+    <li>Strings are immutable, meaning that they cannot be changed once created</li>
+    <li>Strings are created by enclosing characters in single or double quotes</li>
+</ul>
+
+<h2>Use of quotes</h2>
+
+<p>
+    Both single- and double-quoted strings are valid in JavaScript. However, there are some differences between them:
+</p>
+
+<ul>
+    <li>Double-quoted strings can contain single quotes</li>
+    <li>Single-quoted strings can contain double quotes</li>
+    <li>Double-quoted strings can contain escape characters</li>
+    <li>Single-quoted strings cannot contain escape characters</li>
+</ul>
+
+<p>
+    Escape characters are used to represent characters that cannot be typed directly into a string. For example, the
+    <code>\n</code> escape character represents a new line, or double-quote inside a double-quoted string: <code>"\""</code>.
+</p>
+
+<p>Other escape characters valid in JavaScript:</p>
+
+<ul>
+    <li><code>\n</code> - new line</li>
+    <li><code>\t</code> - tab</li>
+    <li><code>\b</code> - backspace</li>
+    <li><code>\r</code> - carriage return</li>
+    <li><code>\f</code> - form feed</li>
+    <li><code>\v</code> - vertical tab</li>
+    <li><code>\\</code> - backslash</li>
+    <li><code>\'</code> - single quote</li>
+    <li><code>\"</code> - double quote</li>
+    <li><code>\xnn</code> - hexadecimal character</li>
+    <li><code>\unnnn</code> - Unicode character</li>
+</ul>
+
+<p>
+    String can be broken into multiple lines by using the <code>\</code> escape character at the end of each line.
+</p>
+
+<h2>String Methods</h2>
+
+<p>
+    JavaScript provides a number of methods for manipulating strings.
+    These methods are called on a string object, and they return a new string object.
+    The original string is not changed.
+</p>
+
+<p>
+    JavaScript string offers several types of methods:
+</p>
+
+<ul>
+    <li>String length: <code>length</code></li>
+    <li>
+        Searching for a string: <code>search()</code>, <code>match()</code>, <code>includes()</code>,
+        <code>startsWith()</code> and others
+    </li>
+    <li>Extracting string parts: <code>slice()</code>, <code>substring()</code>, <code>substr()</code>, <code>split()</code></li>
+    <li>Replacing string content: <code>replace()</code>, <code>replaceAll()</code></li>
+    <li>Converting to upper and lower case: <code>toUpperCase()</code>, <code>toLowerCase()</code></li>
+    <li>Converting a string to an array: <code>split()</code></li>
+    <li>Converting a string to a number: <code>Number()</code>, <code>parseInt()</code>, <code>parseFloat()</code></li>
+    <li>Converting a number to a string: <code>toString()</code></li>
+    <li>String padding: <code>padStart()</code>, <code>padEnd()</code></li>
+</ul>
+
+<p>
+    Since string is immutable, all string methods return a new string.
+    Accessor methods like operator <code>[]</code> and <code>charAt()</code> do not change character in the original string,
+    but if you attempt to change a character in a string, JavaScript will not throw an error:
+</p>
+
+<pre>
+    <code>
+        let str = "Hello";
+        str[0] = "M"; // No error
+        console.log(str); // Hello
+    </code>
+</pre>
+
+<h2>HTML Wrapper Methods</h2>
+
+<p>
+    JavaScript provides a number of non-standard methods for returning HTML-wrapped strings, e.g.
+    <code>anchor()</code> for creating an anchor,
+    <code>big()</code> for creating a big text,
+    <code>bold()</code> for creating a bold text, etc.
+</p>
+
+<h2>Template Literals</h2>
+
+<p>
+    Template literals are string literals allowing embedded expressions.
+    You can use multi-line strings and string interpolation features with them.
+    They were called "template strings" in prior editions of the ES2015 specification.
+</p>
+
+<ul>
+    <li>You can include both single- and double-quoted strings in template literals: <code>`"Hello JS"`</code></li>
+    <li>You can use escape characters in template literals: <code>`Hello \t JS`</code></li>
+    <li>You can use multi-line strings in template literals</li>
+    <li>You can substitute variables and expressions in template literals: <code>`Hello ${name}`</code></li>
+</ul>
+
+<h2>Regular Expressions in JavaScript</h2>
+
+<p>
+    JavaScripts supports regular expressions, which are patterns used to match character combinations in strings.
+</p>
+
 </body>
 
 </html>
