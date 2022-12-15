@@ -1,7 +1,7 @@
 .bg-gradient {
   color: blue;
   width: 400px;
-  height: 400px;
+  height: 100px;
   background: linear-gradient(to right, red, yellow, green);
 }
 

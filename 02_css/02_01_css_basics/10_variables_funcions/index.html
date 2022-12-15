@@ -1,6 +1,6 @@
 <!doctype HTML>
 <html lang="en" title="CSS Units">
-    
+
 <head>
     <title>CSS Variables, Functions and Preprocessor</title>
     <meta charset="UTF-8">
@@ -21,7 +21,40 @@
 
 <h2>Functions</h2>
 
-<h3>Defenition of CSS functions</h3>
+<h3>Gradient functions</h3>
+
+<ul>
+    <li>linear-gradient()</li>
+    <li>radial-gradient()</li>
+    <li>conic-gradient()</li>
+    <li>repeating-linear-gradient()</li>
+    <li>repeating-radial-gradient()</li>
+    <li>repeating-conic-gradient()</li>
+</ul>
+
+<h3>Color-related functions</h3>
+
+<ul>
+    <li>rgb()</li>
+    <li>rgba()</li>
+    <li>hsl()</li>
+    <li>hsla()</li>
+    <li>hwb()</li>
+    <li>gray()</li>
+    <li>color()</li>
+</ul>
+
+<h3>Simple calculations</h3>
+
+<ul>
+    <li>calc()</li>
+    <li>min()</li>
+    <li>max()</li>
+    <li>clamp()</li>
+    <li>counter()</li>
+</ul>
+
+<h3>Definition of CSS functions</h3>
 
 <h3>General functions</h3>
 
@@ -29,27 +62,61 @@
 
 <h2>Variables</h2>
 
-<h3>Defenition of CSS variable</h3>
+<h3>Definition of CSS variable</h3>
 
 <p>
-    CSS variable is actually a function var(), that is used to insert a pair key-value 
-    into a global scope of the document, or a local scope of some particular selector. 
+    CSS variable is actually a function var(), that is used to insert a pair key-value
+    into a global scope of the document, or a local scope of some particular selector.
     CSS variables allow to decrease the necessity of copy&paste of the CSS code,
     declaring the common values as variables, e.g. same colors.
 </p>
 
 <p>
-    CSS variable has the following syntax: var(--name, value),
-    where --name is required, and value is optional.<br>
+    CSS variable has the following syntax: <code>var(--name, value)</code>,
+    where <code>--name</code> is required, and value is optional.<br>
     If we define the value, we set it, when we omit it, we actually read previously stored value.<br>
     Note: variable name is case-sensitive, and two dashes are required!
 </p>
 
+<p>
+    In order to create a global variable, use the <code>:root</code> selector.
+    The <code>:root</code> selector matches the document's root.
+    Example:
+</p>
+
+<code>
+    :root {<br>
+    &nbsp;&nbsp;--main-color: #000;<br>
+    &nbsp;&nbsp;--main-color: #fff;<br>
+    }<br>
+    body {<br>
+    &nbsp;&nbsp;background-color: var(--main-color);<br>
+    }<br>
+</code>
+
 <h3>Redeclaration of variables</h3>
+
+<p>
+    If we declare the same variable twice, the second declaration will overwrite the first one.
+    Local variables have higher priority than global variables.
+</p>
 
 <h3>Variables and JavaScript</h3>
 
-<h3>Example of variables</h3>
+<p>
+    Variables can be accessed and modified by JavaScript through the DOM model
+    and <code>getComputedStyle()</code> method.<br>
+    Example:
+</p>
+
+<code>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp;let root = document.documentElement;<br>
+    &nbsp;&nbsp;root.style.setProperty('--main-color', '#000');<br>
+    &nbsp;&nbsp;console.log(getComputedStyle(root).getPropertyValue('--main-color'));<br>
+    &lt;/script&gt;<br>
+</code>
+
 
 </body>
 
